@@ -33,6 +33,7 @@ export default function ParticleBackground() {
     }));
 
     function animate() {
+      if (!ctx) return;
       ctx.clearRect(0, 0, width, height);
       for (const p of particles) {
         ctx.beginPath();
