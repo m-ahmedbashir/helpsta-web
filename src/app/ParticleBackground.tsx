@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from "react";
 // Simple animated particles (circles) for background
 export default function ParticleBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number | null>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
