@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { SmoothScrollProvider } from '@/components/providers/SmoothScrollProvider';
-import { Footer } from '@/components/sections/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -60,7 +59,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider locale={locale} messages={messages}>
           <SmoothScrollProvider>
             {children}
-            <Footer />
+
           </SmoothScrollProvider>
         </NextIntlClientProvider>
       </body>
