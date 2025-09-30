@@ -32,12 +32,12 @@ export default async function LocaleLayout({
 
   let messages;
   try {
-    messages = (await import(`../../messages/${usedLocale}.json`)).default;
+    messages = (await import(`../../translations/${usedLocale}.json`)).default;
   } catch (error) {
     // If messages fail to load, fall back to default locale messages.
     if (usedLocale !== defaultLocale) {
       try {
-        messages = (await import(`../../messages/${defaultLocale}.json`)).default;
+        messages = (await import(`../../translations/${defaultLocale}.json`)).default;
         usedLocale = defaultLocale;
       } catch (err) {
         // As a last resort, use an empty messages object so the app can render.
