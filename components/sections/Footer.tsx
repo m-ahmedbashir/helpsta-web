@@ -2,8 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useTranslations, useLocale } from 'next-intl';
-import { useRouter, usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
+import { LanguageSwitcher } from '../ui/LanguageSwitcher';
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Heart } from 'lucide-react';
 
 const socialLinks = [
@@ -15,47 +15,27 @@ const socialLinks = [
 
 export function Footer() {
   const t = useTranslations('footer');
-  const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
   
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
+  // Move legal links under company, free up a column for Newsletter
   const footerLinks = {
-    [t('sections.product.title')]: [
-      t('sections.product.features'),
-      t('sections.product.pricing'),
-      t('sections.product.security'),
-      t('sections.product.updates')
-    ],
     [t('sections.company.title')]: [
       t('sections.company.about'),
       t('sections.company.careers'),
-      t('sections.company.blog'),
-      t('sections.company.press')
+      t('sections.legal.privacy'),
+      t('sections.legal.terms'),
     ],
     [t('sections.support.title')]: [
       t('sections.support.helpCenter'),
       t('sections.support.contact'),
-      t('sections.support.documentation'),
-      t('sections.support.community')
-    ],
-    [t('sections.legal.title')]: [
-      t('sections.legal.privacy'),
-      t('sections.legal.terms'),
-      t('sections.legal.cookies'),
-      t('sections.legal.licenses')
     ],
   };
 
-  const switchLanguage = () => {
-    const newLocale = locale === 'de' ? 'en' : 'de';
-    const newPath = pathname.replace(`/${locale}`, `/${newLocale}`);
-    router.push(newPath);
-  };
+
 
   return (
     <footer ref={ref} id="contact" className="bg-gradient-to-br from-main-purple via-purple-800 to-indigo-900 text-white relative overflow-hidden">
@@ -158,12 +138,13 @@ export function Footer() {
           </motion.div>
 
           {/* Links Sections */}
+          
           {Object.entries(footerLinks).map(([category, links], categoryIndex) => (
             <motion.div
               key={category}
               initial={{ opacity: 0, y: 50 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 + categoryIndex * 0.1 }}
+              transition={{ duration: 0.6, delay: 0.3 + categoryIndex * 0.1 }}
             >
               <h4 className="text-xl font-semibold mb-6">{category}</h4>
               <ul className="space-y-3">
@@ -172,7 +153,7 @@ export function Footer() {
                     key={linkIndex}
                     initial={{ opacity: 0, x: -20 }}
                     animate={inView ? { opacity: 1, x: 0 } : {}}
-                    transition={{ duration: 0.4, delay: 0.3 + categoryIndex * 0.1 + linkIndex * 0.05 }}
+                    transition={{ duration: 0.4, delay: 0.4 + categoryIndex * 0.1 + linkIndex * 0.05 }}
                   >
                     <a
                       href="#"
@@ -187,37 +168,7 @@ export function Footer() {
           ))}
         </div>
 
-        {/* Newsletter Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="py-8 border-t border-white/10"
-        >
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h4 className="text-2xl font-semibold mb-2">{t('stayUpdated')}</h4>
-              <p className="text-gray-300">{t('stayUpdatedDesc')}</p>
-            </div>
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              className="flex gap-3"
-            >
-              <input
-                type="email"
-                placeholder={t('emailPlaceholder')}
-                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:border-gradient-app-main-1 backdrop-blur-sm placeholder-gray-400"
-              />
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-orange-main hover:bg-gradient-app-main-1 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
-              >
-                {t('subscribe')}
-              </motion.button>
-            </motion.div>
-          </div>
-        </motion.div>
+
 
         {/* Bottom Bar */}
         <motion.div
@@ -233,15 +184,7 @@ export function Footer() {
             <a href="#" className="hover:text-white transition-colors">{t('privacyPolicy')}</a>
             <a href="#" className="hover:text-white transition-colors">{t('termsOfService')}</a>
             <a href="#" className="hover:text-white transition-colors">{t('cookies')}</a>
-            <button
-              onClick={switchLanguage}
-              className="flex items-center gap-2 px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
-            >
-              <span className="text-xs font-medium">
-                {locale === 'de' ? '🇩🇪 DE' : '🇺🇸 EN'}
-              </span>
-              <span className="text-xs">{t('switchLanguage')}</span>
-            </button>
+            <LanguageSwitcher dropdownClassName="px-3 py-1" />
           </div>
         </motion.div>
       </div>
