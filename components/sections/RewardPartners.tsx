@@ -6,6 +6,7 @@ import { useRef, useEffect, useMemo, useState, useCallback } from 'react';
 import { MapPin, Store, Gift, Star, Navigation, Handshake, Crosshair } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import Link from "next/link";
+import { useLocale } from 'next-intl';
 
 // Map (SSR-safe)
 const MapContainer  = dynamic(() => import('react-leaflet').then(m => m.MapContainer),  { ssr: false });
@@ -86,7 +87,7 @@ const clampToBounds = ([lat, lng]: [number, number]): [number, number] => {
 export function RewardPartners() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
-
+  const locale = useLocale();
   const [isClient, setIsClient] = useState(false);
 
   // Keep the map instance OUT of React state -> no extra renders / no double init
@@ -417,7 +418,7 @@ export function RewardPartners() {
              {/* CTA row (full width) */}
 <div className="mt-8">
   <Link
-    href="/become-partner"
+    href={`/${locale}/become-partner`}
     className="w-full bg-main-purple hover:bg-purple-700 text-white px-6 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition flex items-center justify-center gap-2"
   >
     <Handshake className="w-5 h-5" /> Become a Reward Partner
