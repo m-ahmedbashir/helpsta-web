@@ -20,41 +20,52 @@ const config: Config = {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
-      colors: {
-        // Legacy colors for gradual migration
-        'icon-off': '#DAD7E0',
-        'main-purple': '#4335A7',
-        'orange-main': '#FF7F3E',
-        card: '#F2F8FE',
-        'gradient-app-main-1': '#FE8845',
-        'gradient-app-main-2': '#FDB754',
-        
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
-        primary: {
-          DEFAULT: '#4335A7',
-          foreground: '#FFFFFF',
-        },
-        secondary: {
-          DEFAULT: '#FF7F3E',
-          foreground: '#FFFFFF',
-        },
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
-        },
-        accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
-        },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
-        },
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
-      },
+    colors: {
+  // Legacy / custom colors
+  'icon-off': '#DAD7E0',
+  'main-purple': '#4335A7',
+  'orange-main': '#FF7F3E',
+  card: {
+    DEFAULT: 'hsl(var(--card))',
+    foreground: 'hsl(var(--card-foreground))',
+  },
+  'gradient-app-main-1': '#FE8845',
+  'gradient-app-main-2': '#FDB754',
+
+  background: 'hsl(var(--background))',
+  foreground: 'hsl(var(--foreground))',
+
+  popover: {
+    DEFAULT: 'hsl(var(--popover))',
+    foreground: 'hsl(var(--popover-foreground))',
+  },
+
+  primary: {
+    DEFAULT: '#4335A7', // keep your purple branding
+    foreground: '#FFFFFF',
+  },
+  secondary: {
+    DEFAULT: '#FF7F3E', // keep your orange branding
+    foreground: '#FFFFFF',
+  },
+  muted: {
+    DEFAULT: 'hsl(var(--muted))',
+    foreground: 'hsl(var(--muted-foreground))',
+  },
+  accent: {
+    DEFAULT: 'hsl(var(--accent))',
+    foreground: 'hsl(var(--accent-foreground))',
+  },
+  destructive: {
+    DEFAULT: 'hsl(var(--destructive))',
+    foreground: 'hsl(var(--destructive-foreground))',
+  },
+
+  border: 'hsl(var(--border))',
+  input: 'hsl(var(--input))',
+  ring: 'hsl(var(--ring))',
+},
+
       fontFamily: {
         sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
         poppins: ['Poppins', 'ui-sans-serif', 'system-ui'],

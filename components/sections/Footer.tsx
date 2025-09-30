@@ -115,6 +115,7 @@ export function Footer() {
               </div>
             </motion.div>
 
+ 
             {/* Social Links */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -146,6 +147,7 @@ export function Footer() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 + categoryIndex * 0.1 }}
             >
+
               <h4 className="text-xl font-semibold mb-6">{category}</h4>
               <ul className="space-y-3">
                 {links.map((link, linkIndex) => (
@@ -165,8 +167,21 @@ export function Footer() {
                 ))}
               </ul>
             </motion.div>
+
           ))}
+
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={inView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="flex gap-4"
+            >
+
+              <LanguageSwitcher dropdownClassName="px-3 py-1" />
+            </motion.div>
         </div>
+
+        
 
 
 
@@ -184,7 +199,7 @@ export function Footer() {
             <a href="#" className="hover:text-white transition-colors">{t('privacyPolicy')}</a>
             <a href="#" className="hover:text-white transition-colors">{t('termsOfService')}</a>
             <a href="#" className="hover:text-white transition-colors">{t('cookies')}</a>
-            <LanguageSwitcher dropdownClassName="px-3 py-1" />
+          
           </div>
         </motion.div>
       </div>
