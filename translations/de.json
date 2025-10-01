@@ -407,5 +407,67 @@
       "contact": "Kontakt aufnehmen",
       "careers": "Karrieren ansehen"
     }
+  },
+  "terms": {
+    "title": "Nutzungsbedingungen",
+    "subtitle": "Bitte lesen Sie diese Bedingungen sorgfältig durch, bevor Sie unsere Dienste nutzen. Durch den Zugriff auf oder die Nutzung von Helpsta stimmen Sie diesen Bedingungen zu.",
+    "lastUpdated": "Zuletzt aktualisiert",
+    "effectiveDate": "1. Oktober 2024",
+    "sections": {
+      "acceptance.title": "Annahme der Bedingungen",
+      "acceptance.content": "<p>Durch den Zugriff auf und die Nutzung von Helpsta ('der Dienst') akzeptieren Sie diese Vereinbarung und stimmen zu, an die Bedingungen und Bestimmungen gebunden zu sein. Wenn Sie nicht einverstanden sind, nutzen Sie diesen Dienst bitte nicht.</p><p>Diese Nutzungsbedingungen können jederzeit ohne vorherige Ankündigung aktualisiert werden. Ihre fortgesetzte Nutzung des Dienstes nach Änderungen stellt die Annahme dieser Änderungen dar.</p>",
+      "services.title": "Beschreibung des Dienstes",
+      "services.content": "<p>Helpsta ist eine mobile Plattform, die Nutzer durch unser Belohnungssystem und Community-Features mit lokalen Unternehmen verbindet. Wir bieten:</p><ul><li>Eine mobile Anwendung zur Entdeckung nahegelegener Belohnungspartner</li><li>Ein Belohnungssystem für Nutzer, um Vorteile von teilnehmenden Unternehmen zu erhalten</li><li>Community-Features zur Verbindung von Nutzern mit lokalen Einrichtungen</li><li>Geschäftspartnerschaftsmöglichkeiten für lokale Einrichtungen</li></ul><p>Der Dienst wird 'wie besehen' bereitgestellt und wir behalten uns das Recht vor, jeden Aspekt des Dienstes jederzeit zu ändern, auszusetzen oder einzustellen.</p>",
+      "userAccounts.title": "Benutzerkonten",
+      "userAccounts.content": "<p>Um auf bestimmte Funktionen des Dienstes zuzugreifen, müssen Sie ein Konto erstellen. Sie sind verantwortlich für:</p><ul><li>Die Wahrung der Vertraulichkeit Ihrer Kontodaten</li><li>Alle Aktivitäten, die unter Ihrem Konto auftreten</li><li>Die sofortige Benachrichtigung bei unbefugter Nutzung Ihres Kontos</li></ul><p>Sie müssen bei der Kontoerstellung genaue und vollständige Informationen angeben. Wir behalten uns das Recht vor, Konten zu sperren oder zu kündigen, die gegen diese Bedingungen verstoßen oder falsche Informationen enthalten.</p>",
+      "acceptableUse.title": "Richtlinie für akzeptable Nutzung",
+      "acceptableUse.content": "<p>Sie stimmen zu, den Dienst nicht zu nutzen, um:</p><ul><li>Gesetze, Vorschriften oder Rechte Dritter zu verletzen</li><li>Schädliche, beleidigende oder unangemessene Inhalte zu übertragen</li><li>Unbefugten Zugang zu unseren Systemen oder anderen Nutzerkonten zu erlangen</li><li>Den Dienst oder Server zu stören oder zu beeinträchtigen</li><li>Automatisierte Tools für den Zugang zum Dienst ohne Erlaubnis zu verwenden</li><li>Sich als eine andere Person oder Entität auszugeben</li></ul><p>Verstöße gegen diese Richtlinie können zur sofortigen Kontokündigung und rechtlichen Schritten führen.</p>",
+      "intellectualProperty.title": "Geistige Eigentumsrechte",
+      "intellectualProperty.content": "<p>Der Dienst und seine ursprünglichen Inhalte, Funktionen und Funktionalitäten sind und bleiben das ausschließliche Eigentum von Helpsta und seinen Lizenzgebern. Der Dienst ist durch Urheberrecht, Markenrecht und andere Gesetze geschützt.</p><p>Ihnen wird eine begrenzte, nicht-exklusive, nicht-übertragbare Lizenz zur Nutzung des Dienstes für persönliche, nicht-kommerzielle Zwecke gewährt. Sie dürfen nicht:</p><ul><li>Unsere Inhalte ohne Erlaubnis kopieren, ändern oder verteilen</li><li>Unsere Marken oder unser Branding ohne Autorisierung verwenden</li><li>Reverse Engineering betreiben oder versuchen, Quellcode zu extrahieren</li></ul>",
+      "liability.title": "Haftungsbeschränkung",
+      "liability.content": "<p>Im vollsten gesetzlich zulässigen Umfang haftet Helpsta nicht für indirekte, zufällige, besondere, Folge- oder Strafschäden oder Gewinn- oder Umsatzverluste.</p><p>Unsere Gesamthaftung Ihnen gegenüber für Schäden aus oder im Zusammenhang mit dieser Vereinbarung übersteigt nicht den Betrag, den Sie uns in den zwölf Monaten vor dem Anspruch gezahlt haben.</p><p>Einige Gerichtsbarkeiten erlauben den Ausschluss bestimmter Gewährleistungen oder Haftungsbeschränkungen nicht, sodass einige der oben genannten Beschränkungen möglicherweise nicht für Sie gelten.</p>",
+      "termination.title": "Kündigung",
+      "termination.content": "<p>Wir können Ihr Konto und den Zugang zum Dienst sofort ohne vorherige Ankündigung aus jedem Grund kündigen oder sperren, einschließlich:</p><ul><li>Verstoß gegen diese Nutzungsbedingungen</li><li>Verletzung geltender Gesetze oder Vorschriften</li><li>Betrügerisches, missbräuchliches oder schädliches Verhalten</li><li>Längere Inaktivitätsphasen</li></ul><p>Bei der Kündigung erlischt Ihr Recht zur Nutzung des Dienstes sofort, und wir können Ihr Konto und alle zugehörigen Daten löschen.</p>",
+      "disputes.title": "Streitbeilegung",
+      "disputes.content": "<p>Streitigkeiten aus diesen Bedingungen oder Ihrer Nutzung des Dienstes werden durch verbindliche Schiedsverfahren gelöst, außer wo gesetzlich verboten.</p><p>Diese Nutzungsbedingungen unterliegen deutschem Recht. Jede rechtliche Klage muss vor den Gerichten von Berlin, Deutschland, eingereicht werden.</p><p>Wenn eine Bestimmung dieser Bedingungen als nicht durchsetzbar befunden wird, bleiben die verbleibenden Bestimmungen in Kraft.</p>"
+    },
+    "contact": {
+      "title": "Fragen zu diesen Bedingungen?",
+      "description": "Wenn Sie Fragen zu diesen Nutzungsbedingungen haben, wenden Sie sich bitte an unser Rechtsteam.",
+      "email": "Rechtsteam kontaktieren"
+    }
+  },
+  "privacy": {
+    "title": "Datenschutzrichtlinie",
+    "subtitle": "Ihre Privatsphäre ist uns wichtig. Diese Richtlinie erklärt, wie wir Ihre persönlichen Informationen sammeln, verwenden und schützen, wenn Sie Helpsta nutzen.",
+    "lastUpdated": "Zuletzt aktualisiert",
+    "effectiveDate": "1. Oktober 2024",
+    "sections": {
+      "dataCollection.title": "Informationen, die wir sammeln",
+      "dataCollection.content": "<p>Wir sammeln Informationen, die Sie uns direkt zur Verfügung stellen:</p><ul><li><strong>Kontoinformationen:</strong> Name, E-Mail-Adresse, Telefonnummer</li><li><strong>Profilinformationen:</strong> Profilbild, Präferenzen, Standort</li><li><strong>Nutzungsdaten:</strong> App-Interaktionen, Funktionsnutzung, Geräteinformationen</li><li><strong>Standortdaten:</strong> GPS-Koordinaten (mit Ihrer Erlaubnis) zum Auffinden nahegelegener Partner</li><li><strong>Kommunikationsdaten:</strong> Nachrichten, die Sie über unsere Plattform senden</li></ul><p>Wir sammeln auch automatisch bestimmte Informationen durch Cookies und ähnliche Technologien, wenn Sie unsere Website oder mobile App nutzen.</p>",
+      "dataUsage.title": "Wie wir Ihre Informationen verwenden",
+      "dataUsage.content": "<p>Wir verwenden Ihre Informationen, um:</p><ul><li>Unsere Dienste bereitzustellen und zu verbessern</li><li>Sie mit nahegelegenen Belohnungspartnern zu verbinden</li><li>Belohnungen und Transaktionen zu verarbeiten</li><li>Ihnen wichtige Updates und Mitteilungen zu senden</li><li>Ihre Erfahrung zu personalisieren</li><li>Nutzungsmuster zu analysieren, um unsere Plattform zu verbessern</li><li>Sicherheit zu gewährleisten und Betrug zu verhindern</li><li>Rechtlichen Verpflichtungen nachzukommen</li></ul><p>Wir werden Ihre persönlichen Informationen nicht für andere als die in dieser Richtlinie beschriebenen Zwecke ohne Ihre Zustimmung verwenden.</p>",
+      "dataSharing.title": "Informationsaustausch",
+      "dataSharing.content": "<p>Wir verkaufen Ihre persönlichen Informationen nicht. Wir können Ihre Informationen in folgenden Umständen teilen:</p><ul><li><strong>Mit Geschäftspartnern:</strong> Begrenzte Informationen zur Ermöglichung von Belohnungen und Dienstleistungen</li><li><strong>Dienstanbieter:</strong> Drittunternehmen, die uns beim Betrieb unserer Plattform helfen</li><li><strong>Rechtliche Anforderungen:</strong> Wenn gesetzlich vorgeschrieben oder zum Schutz unserer Rechte</li><li><strong>Geschäftsübertragungen:</strong> Im Zusammenhang mit Fusionen, Übernahmen oder Verkäufen</li><li><strong>Mit Ihrer Zustimmung:</strong> Wenn Sie explizit der Weitergabe zustimmen</li></ul><p>Alle Dritten sind verpflichtet, die Vertraulichkeit Ihrer Informationen zu wahren und sie nur für bestimmte Zwecke zu verwenden.</p>",
+      "dataStorage.title": "Datenspeicherung und -aufbewahrung",
+      "dataStorage.content": "<p>Ihre Informationen werden sicher auf Servern in Deutschland und der Europäischen Union gespeichert. Wir implementieren angemessene technische und organisatorische Maßnahmen zum Schutz Ihrer Daten.</p><p>Wir bewahren Ihre Informationen so lange auf, wie nötig ist, um:</p><ul><li>Unsere Dienste für Sie bereitzustellen</li><li>Rechtlichen Verpflichtungen nachzukommen</li><li>Streitigkeiten zu lösen und Vereinbarungen durchzusetzen</li><li>Sicherheit zu gewährleisten und Betrug zu verhindern</li></ul><p>Sie können jederzeit die Löschung Ihres Kontos und zugehöriger Daten beantragen, vorbehaltlich gesetzlicher Aufbewahrungsanforderungen.</p>",
+      "userRights.title": "Ihre Rechte",
+      "userRights.content": "<p>Unter der DSGVO und anderen anwendbaren Gesetzen haben Sie das Recht auf:</p><ul><li><strong>Zugang:</strong> Kopien Ihrer persönlichen Daten anfordern</li><li><strong>Berichtigung:</strong> Unrichtige oder unvollständige Informationen korrigieren</li><li><strong>Löschung:</strong> Löschung Ihrer persönlichen Daten beantragen</li><li><strong>Portabilität:</strong> Ihre Daten in einem strukturierten, maschinenlesbaren Format erhalten</li><li><strong>Einschränkung:</strong> Wie wir Ihre Informationen verarbeiten, begrenzen</li><li><strong>Widerspruch:</strong> Der Verarbeitung basierend auf berechtigten Interessen widersprechen</li><li><strong>Zustimmung widerrufen:</strong> Zustimmung zur Datenverarbeitung widerrufen</li></ul><p>Um diese Rechte auszuüben, kontaktieren Sie uns unter privacy@helpsta.com</p>",
+      "cookies.title": "Cookies und Tracking",
+      "cookies.content": "<p>Wir verwenden Cookies und ähnliche Technologien, um:</p><ul><li>Ihre Präferenzen und Einstellungen zu merken</li><li>Zu analysieren, wie Sie unsere Plattform nutzen</li><li>Personalisierte Inhalte und Werbung bereitzustellen</li><li>Unsere Dienste und Benutzererfahrung zu verbessern</li></ul><p>Arten von Cookies, die wir verwenden:</p><ul><li><strong>Wesentliche Cookies:</strong> Erforderlich für grundlegende Funktionalität</li><li><strong>Leistungs-Cookies:</strong> Helfen uns zu verstehen, wie Nutzer mit unserer Website interagieren</li><li><strong>Funktionale Cookies:</strong> Merken sich Ihre Präferenzen und Auswahlen</li><li><strong>Marketing-Cookies:</strong> Verwendet zur Bereitstellung relevanter Werbung</li></ul><p>Sie können Cookie-Präferenzen über Ihre Browser-Einstellungen oder unser Cookie-Management-Tool steuern.</p>",
+      "security.title": "Datensicherheit",
+      "security.content": "<p>Wir implementieren umfassende Sicherheitsmaßnahmen zum Schutz Ihrer Informationen:</p><ul><li>Ende-zu-Ende-Verschlüsselung für sensible Daten</li><li>Sichere Datenübertragungsprotokolle (SSL/TLS)</li><li>Regelmäßige Sicherheitsaudits und -bewertungen</li><li>Zugriffskontrollen und Mitarbeiterschulungen</li><li>Vorfallreaktion-Verfahren</li><li>Regelmäßige Software-Updates und Patches</li></ul><p>Während wir uns bemühen, Ihre Informationen zu schützen, ist keine Übertragungsmethode über das Internet 100% sicher. Wir ermutigen Sie, starke Passwörter zu verwenden und Ihre Kontodaten vertraulich zu behandeln.</p>",
+      "contact.title": "Kontakt zum Datenschutz",
+      "contact.content": "<p>Wenn Sie Fragen zu dieser Datenschutzrichtlinie oder zum Umgang mit Ihren persönlichen Informationen haben, kontaktieren Sie bitte unseren Datenschutzbeauftragten:</p><ul><li>E-Mail: privacy@helpsta.com</li><li>Adresse: Musterstraße 123, 10115 Berlin, Deutschland</li><li>Telefon: +49 123 456 7890</li></ul><p>Wir werden auf Ihre datenschutzbezogenen Anfragen innerhalb von 30 Tagen antworten.</p>"
+    },
+    "gdpr": {
+      "title": "DSGVO-Konformität",
+      "description": "Als Unternehmen, das in der Europäischen Union tätig ist, verpflichten wir uns zur vollständigen Einhaltung der Datenschutz-Grundverordnung (DSGVO). Dies beinhaltet die Umsetzung von Privacy-by-Design-Prinzipien und die Gewährleistung, dass Ihre Rechte jederzeit geschützt sind."
+    },
+    "contactUs": {
+      "title": "Datenschutzfragen?",
+      "description": "Wenn Sie Fragen zu dieser Datenschutzrichtlinie oder zum Umgang mit Ihren Daten haben, kontaktieren Sie bitte unseren Datenschutzbeauftragten.",
+      "email": "Datenschutzteam kontaktieren"
+    }
   }
 }

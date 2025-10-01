@@ -205,16 +205,7 @@ export function Navigation() {
               })}
             </motion.ul>
 
-            <div className="mt-auto px-7 pb-8 pt-3 border-t border-white/10">
-              <button
-                onClick={() => setIsOpen(false)}
-                className="w-full bg-orange-main hover:bg-gradient-app-main-1 text-white py-4 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all duration-300 hover:shadow-lg"
-              >
-                <Download className="w-5 h-5" />
-                Download App
-              </button>
-              <p className="text-white/50 text-sm text-center mt-4">© {year} Helpsta</p>
-            </div>
+          
           </div>
         </motion.div>
       </motion.aside>

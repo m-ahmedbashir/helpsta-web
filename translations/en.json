@@ -407,5 +407,67 @@
       "contact": "Get in Touch",
       "careers": "View Careers"
     }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "subtitle": "Please read these terms carefully before using our services. By accessing or using Helpsta, you agree to be bound by these terms.",
+    "lastUpdated": "Last updated",
+    "effectiveDate": "October 1, 2024",
+    "sections": {
+      "acceptance.title": "Acceptance of Terms",
+      "acceptance.content": "<p>By accessing and using Helpsta ('the Service'), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p><p>These Terms of Service may be updated at any time without prior notice. Your continued use of the Service following any changes constitutes acceptance of those changes.</p>",
+      "services.title": "Description of Service",
+      "services.content": "<p>Helpsta is a mobile platform that connects users with local businesses through our reward system and community features. We provide:</p><ul><li>A mobile application for discovering nearby reward partners</li><li>A reward system for users to earn benefits from participating businesses</li><li>Community features to connect users with local establishments</li><li>Business partnership opportunities for local establishments</li></ul><p>The Service is provided 'as is' and we reserve the right to modify, suspend, or discontinue any aspect of the Service at any time.</p>",
+      "userAccounts.title": "User Accounts",
+      "userAccounts.content": "<p>To access certain features of the Service, you must create an account. You are responsible for:</p><ul><li>Maintaining the confidentiality of your account credentials</li><li>All activities that occur under your account</li><li>Notifying us immediately of any unauthorized use of your account</li></ul><p>You must provide accurate and complete information when creating your account. We reserve the right to suspend or terminate accounts that violate these terms or contain false information.</p>",
+      "acceptableUse.title": "Acceptable Use Policy",
+      "acceptableUse.content": "<p>You agree not to use the Service to:</p><ul><li>Violate any laws, regulations, or third-party rights</li><li>Transmit any harmful, offensive, or inappropriate content</li><li>Attempt to gain unauthorized access to our systems or other users' accounts</li><li>Interfere with or disrupt the Service or servers</li><li>Use automated tools to access the Service without permission</li><li>Impersonate any person or entity</li></ul><p>Violation of this policy may result in immediate termination of your account and legal action.</p>",
+      "intellectualProperty.title": "Intellectual Property Rights",
+      "intellectualProperty.content": "<p>The Service and its original content, features, and functionality are and will remain the exclusive property of Helpsta and its licensors. The Service is protected by copyright, trademark, and other laws.</p><p>You are granted a limited, non-exclusive, non-transferable license to use the Service for personal, non-commercial purposes. You may not:</p><ul><li>Copy, modify, or distribute our content without permission</li><li>Use our trademarks or branding without authorization</li><li>Reverse engineer or attempt to extract source code</li></ul>",
+      "liability.title": "Limitation of Liability",
+      "liability.content": "<p>To the fullest extent permitted by applicable law, Helpsta shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues.</p><p>Our total liability to you for any damages arising from or related to this agreement shall not exceed the amount you have paid us in the twelve months preceding the claim.</p><p>Some jurisdictions do not allow the exclusion of certain warranties or limitations of liability, so some of the above limitations may not apply to you.</p>",
+      "termination.title": "Termination",
+      "termination.content": "<p>We may terminate or suspend your account and access to the Service immediately, without prior notice, for any reason, including:</p><ul><li>Breach of these Terms of Service</li><li>Violation of applicable laws or regulations</li><li>Fraudulent, abusive, or harmful behavior</li><li>Extended periods of inactivity</li></ul><p>Upon termination, your right to use the Service will cease immediately, and we may delete your account and all associated data.</p>",
+      "disputes.title": "Dispute Resolution",
+      "disputes.content": "<p>Any disputes arising from these terms or your use of the Service will be resolved through binding arbitration, except where prohibited by law.</p><p>These Terms of Service are governed by the laws of Germany. Any legal action must be brought in the courts of Berlin, Germany.</p><p>If any provision of these terms is found to be unenforceable, the remaining provisions will remain in effect.</p>"
+    },
+    "contact": {
+      "title": "Questions About These Terms?",
+      "description": "If you have any questions about these Terms of Service, please contact our legal team.",
+      "email": "Contact Legal Team"
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "subtitle": "Your privacy is important to us. This policy explains how we collect, use, and protect your personal information when you use Helpsta.",
+    "lastUpdated": "Last updated",
+    "effectiveDate": "October 1, 2024",
+    "sections": {
+      "dataCollection.title": "Information We Collect",
+      "dataCollection.content": "<p>We collect information you provide directly to us:</p><ul><li><strong>Account Information:</strong> Name, email address, phone number</li><li><strong>Profile Information:</strong> Profile picture, preferences, location</li><li><strong>Usage Data:</strong> App interactions, feature usage, device information</li><li><strong>Location Data:</strong> GPS coordinates (with your permission) to find nearby partners</li><li><strong>Communication Data:</strong> Messages you send through our platform</li></ul><p>We also automatically collect certain information through cookies and similar technologies when you use our website or mobile app.</p>",
+      "dataUsage.title": "How We Use Your Information",
+      "dataUsage.content": "<p>We use your information to:</p><ul><li>Provide and improve our services</li><li>Connect you with nearby reward partners</li><li>Process rewards and transactions</li><li>Send you important updates and communications</li><li>Personalize your experience</li><li>Analyze usage patterns to improve our platform</li><li>Ensure security and prevent fraud</li><li>Comply with legal obligations</li></ul><p>We will not use your personal information for purposes other than those described in this policy without your consent.</p>",
+      "dataSharing.title": "Information Sharing",
+      "dataSharing.content": "<p>We do not sell your personal information. We may share your information in the following circumstances:</p><ul><li><strong>With Business Partners:</strong> Limited information to facilitate rewards and services</li><li><strong>Service Providers:</strong> Third-party companies that help us operate our platform</li><li><strong>Legal Requirements:</strong> When required by law or to protect our rights</li><li><strong>Business Transfers:</strong> In connection with mergers, acquisitions, or sales</li><li><strong>With Your Consent:</strong> When you explicitly agree to sharing</li></ul><p>All third parties are required to maintain the confidentiality of your information and use it only for specified purposes.</p>",
+      "dataStorage.title": "Data Storage and Retention",
+      "dataStorage.content": "<p>Your information is stored securely on servers located in Germany and the European Union. We implement appropriate technical and organizational measures to protect your data.</p><p>We retain your information for as long as necessary to:</p><ul><li>Provide our services to you</li><li>Comply with legal obligations</li><li>Resolve disputes and enforce agreements</li><li>Maintain security and prevent fraud</li></ul><p>You can request deletion of your account and associated data at any time, subject to legal retention requirements.</p>",
+      "userRights.title": "Your Rights",
+      "userRights.content": "<p>Under GDPR and other applicable laws, you have the right to:</p><ul><li><strong>Access:</strong> Request copies of your personal data</li><li><strong>Rectification:</strong> Correct inaccurate or incomplete information</li><li><strong>Erasure:</strong> Request deletion of your personal data</li><li><strong>Portability:</strong> Receive your data in a structured, machine-readable format</li><li><strong>Restriction:</strong> Limit how we process your information</li><li><strong>Objection:</strong> Object to processing based on legitimate interests</li><li><strong>Withdraw Consent:</strong> Revoke consent for data processing</li></ul><p>To exercise these rights, contact us at privacy@helpsta.com</p>",
+      "cookies.title": "Cookies and Tracking",
+      "cookies.content": "<p>We use cookies and similar technologies to:</p><ul><li>Remember your preferences and settings</li><li>Analyze how you use our platform</li><li>Provide personalized content and advertisements</li><li>Improve our services and user experience</li></ul><p>Types of cookies we use:</p><ul><li><strong>Essential Cookies:</strong> Required for basic functionality</li><li><strong>Performance Cookies:</strong> Help us understand how users interact with our site</li><li><strong>Functional Cookies:</strong> Remember your preferences and choices</li><li><strong>Marketing Cookies:</strong> Used to deliver relevant advertisements</li></ul><p>You can control cookie preferences through your browser settings or our cookie management tool.</p>",
+      "security.title": "Data Security",
+      "security.content": "<p>We implement comprehensive security measures to protect your information:</p><ul><li>End-to-end encryption for sensitive data</li><li>Secure data transmission protocols (SSL/TLS)</li><li>Regular security audits and assessments</li><li>Access controls and employee training</li><li>Incident response procedures</li><li>Regular software updates and patches</li></ul><p>While we strive to protect your information, no method of transmission over the internet is 100% secure. We encourage you to use strong passwords and keep your account credentials confidential.</p>",
+      "contact.title": "Contact Us About Privacy",
+      "contact.content": "<p>If you have questions about this Privacy Policy or how we handle your personal information, please contact our Data Protection Officer:</p><ul><li>Email: privacy@helpsta.com</li><li>Address: Musterstraße 123, 10115 Berlin, Germany</li><li>Phone: +49 123 456 7890</li></ul><p>We will respond to your privacy-related inquiries within 30 days.</p>"
+    },
+    "gdpr": {
+      "title": "GDPR Compliance",
+      "description": "As a company operating in the European Union, we are committed to full compliance with the General Data Protection Regulation (GDPR). This includes implementing privacy by design principles and ensuring your rights are protected at all times."
+    },
+    "contactUs": {
+      "title": "Privacy Questions?",
+      "description": "If you have any questions about this Privacy Policy or how we handle your data, please contact our Data Protection Officer.",
+      "email": "Contact Privacy Team"
+    }
   }
 }

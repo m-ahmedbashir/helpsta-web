@@ -3,7 +3,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+import Link from 'next/link';
 import { Navigation } from '@/components/navigation/Navigation';
 import { Footer } from '@/components/sections/Footer';
 import {
@@ -17,6 +18,7 @@ import { AuroraBackground } from '@/components/aurora-background';
 
 export default function FAQPage() {
   const t = useTranslations('faq');
+  const locale = useLocale();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -165,14 +167,15 @@ export default function FAQPage() {
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
               {t('contactUsText')}
             </p>
-            <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-block bg-orange-main hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              {t('contactUs')}
-            </motion.a>
+            <Link href={`/${locale}/contact`}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-block bg-orange-main hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer"
+              >
+                {t('contactUs')}
+              </motion.div>
+            </Link>
           </motion.div>
         </div>
       </main>
