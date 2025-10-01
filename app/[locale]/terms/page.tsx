@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
 import { 
   Shield, 
   FileText, 
@@ -13,6 +13,7 @@ import {
   Gavel,
   UserCheck
 } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 import { Navigation } from '@/components/navigation/Navigation';
 import { Footer } from '@/components/sections/Footer';
@@ -27,10 +28,10 @@ const termssections = [
     contentKey: 'acceptance.content'
   },
   {
-    id: 'services',
+    id: 'description',
     icon: FileText,
-    titleKey: 'services.title',
-    contentKey: 'services.content'
+    titleKey: 'description.title',
+    contentKey: 'description.content'
   },
   {
     id: 'userAccounts',
@@ -39,10 +40,22 @@ const termssections = [
     contentKey: 'userAccounts.content'
   },
   {
-    id: 'acceptableUse',
+    id: 'userConduct',
     icon: Shield,
-    titleKey: 'acceptableUse.title',
-    contentKey: 'acceptableUse.content'
+    titleKey: 'userConduct.title',
+    contentKey: 'userConduct.content'
+  },
+  {
+    id: 'fees',
+    icon: Scale,
+    titleKey: 'fees.title',
+    contentKey: 'fees.content'
+  },
+  {
+    id: 'privacy',
+    icon: Lock,
+    titleKey: 'privacy.title',
+    contentKey: 'privacy.content'
   },
   {
     id: 'intellectualProperty',
@@ -51,14 +64,14 @@ const termssections = [
     contentKey: 'intellectualProperty.content'
   },
   {
-    id: 'liability',
+    id: 'limitations',
     icon: AlertTriangle,
-    titleKey: 'liability.title',
-    contentKey: 'liability.content'
+    titleKey: 'limitations.title',
+    contentKey: 'limitations.content'
   },
   {
     id: 'termination',
-    icon: Scale,
+    icon: UserCheck,
     titleKey: 'termination.title',
     contentKey: 'termination.content'
   },
@@ -71,7 +84,8 @@ const termssections = [
 ];
 
 export default function TermsPage() {
-  const t = useTranslations('terms');
+  const locale = useLocale();
+  const [translations, setTranslations] = useState<any>(null);
   
   const [heroRef, heroInView] = useInView({
     triggerOnce: true,
@@ -82,6 +96,21 @@ export default function TermsPage() {
     triggerOnce: true,
     threshold: 0.1,
   });
+
+  useEffect(() => {
+    // Load terms translations from separate file
+    import(`@/translations/terms/${locale}.json`)
+      .then((module) => {
+        setTranslations(module.default);
+      })
+      .catch((error) => {
+        console.error('Error loading terms translations:', error);
+      });
+  }, [locale]);
+
+  if (!translations) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <main className="relative min-h-screen overflow-hidden">
@@ -143,7 +172,7 @@ export default function TermsPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-4xl md:text-6xl font-bold text-main-purple mb-6"
           >
-            {t('title')}
+            {translations.title}
           </motion.h1>
           
           <motion.p
@@ -152,7 +181,7 @@ export default function TermsPage() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-4"
           >
-            {t('subtitle')}
+            {translations.subtitle}
           </motion.p>
           
           <motion.p
@@ -161,7 +190,7 @@ export default function TermsPage() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-sm text-gray-500 max-w-2xl mx-auto"
           >
-            {t('lastUpdated')}: {t('effectiveDate')}
+            {translations.lastUpdated}: {translations.effectiveDate}
           </motion.p>
         </motion.section>
 
@@ -189,14 +218,14 @@ export default function TermsPage() {
                   
                   <div className="flex-1">
                     <h2 className="text-2xl font-bold text-main-purple mb-4">
-                      {t(`sections.${section.titleKey}`)}
+                      {translations.sections[section.id]?.title}
                     </h2>
                     
                     <div className="prose prose-gray max-w-none">
                       <div 
                         className="text-gray-700 leading-relaxed space-y-4"
                         dangerouslySetInnerHTML={{ 
-                          __html: t(`sections.${section.contentKey}`)
+                          __html: translations.sections[section.id]?.content || ''
                         }}
                       />
                     </div>
@@ -216,10 +245,10 @@ export default function TermsPage() {
         >
           <div className="max-w-2xl mx-auto bg-white/80 backdrop-blur rounded-3xl p-8 shadow-xl text-center">
             <h2 className="text-2xl font-bold text-main-purple mb-4">
-              {t('contact.title')}
+              {translations.contact?.title}
             </h2>
             <p className="text-gray-600 mb-6">
-              {t('contact.description')}
+              {translations.contact?.description}
             </p>
             <motion.a
               href="mailto:legal@helpsta.com"
@@ -227,7 +256,7 @@ export default function TermsPage() {
               whileTap={{ scale: 0.95 }}
               className="inline-block bg-orange-main hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              {t('contact.email')}
+              {translations.contact?.email}
             </motion.a>
           </div>
         </motion.section>

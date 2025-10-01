@@ -407,34 +407,5 @@
       "contact": "Kontakt aufnehmen",
       "careers": "Karrieren ansehen"
     }
-  },
-  "terms": {
-    "title": "Nutzungsbedingungen",
-    "subtitle": "Bitte lesen Sie diese Bedingungen sorgfältig durch, bevor Sie unsere Dienste nutzen. Durch den Zugriff auf oder die Nutzung von Helpsta stimmen Sie diesen Bedingungen zu.",
-    "lastUpdated": "Zuletzt aktualisiert",
-    "effectiveDate": "1. Oktober 2024",
-    "sections": {
-      "acceptance.title": "Annahme der Bedingungen",
-      "acceptance.content": "<p>Durch den Zugriff auf und die Nutzung von Helpsta ('der Dienst') akzeptieren Sie diese Vereinbarung und stimmen zu, an die Bedingungen und Bestimmungen gebunden zu sein. Wenn Sie nicht einverstanden sind, nutzen Sie diesen Dienst bitte nicht.</p><p>Diese Nutzungsbedingungen können jederzeit ohne vorherige Ankündigung aktualisiert werden. Ihre fortgesetzte Nutzung des Dienstes nach Änderungen stellt die Annahme dieser Änderungen dar.</p>",
-      "services.title": "Beschreibung des Dienstes",
-      "services.content": "<p>Helpsta ist eine mobile Plattform, die Nutzer durch unser Belohnungssystem und Community-Features mit lokalen Unternehmen verbindet. Wir bieten:</p><ul><li>Eine mobile Anwendung zur Entdeckung nahegelegener Belohnungspartner</li><li>Ein Belohnungssystem für Nutzer, um Vorteile von teilnehmenden Unternehmen zu erhalten</li><li>Community-Features zur Verbindung von Nutzern mit lokalen Einrichtungen</li><li>Geschäftspartnerschaftsmöglichkeiten für lokale Einrichtungen</li></ul><p>Der Dienst wird 'wie besehen' bereitgestellt und wir behalten uns das Recht vor, jeden Aspekt des Dienstes jederzeit zu ändern, auszusetzen oder einzustellen.</p>",
-      "userAccounts.title": "Benutzerkonten",
-      "userAccounts.content": "<p>Um auf bestimmte Funktionen des Dienstes zuzugreifen, müssen Sie ein Konto erstellen. Sie sind verantwortlich für:</p><ul><li>Die Wahrung der Vertraulichkeit Ihrer Kontodaten</li><li>Alle Aktivitäten, die unter Ihrem Konto auftreten</li><li>Die sofortige Benachrichtigung bei unbefugter Nutzung Ihres Kontos</li></ul><p>Sie müssen bei der Kontoerstellung genaue und vollständige Informationen angeben. Wir behalten uns das Recht vor, Konten zu sperren oder zu kündigen, die gegen diese Bedingungen verstoßen oder falsche Informationen enthalten.</p>",
-      "acceptableUse.title": "Richtlinie für akzeptable Nutzung",
-      "acceptableUse.content": "<p>Sie stimmen zu, den Dienst nicht zu nutzen, um:</p><ul><li>Gesetze, Vorschriften oder Rechte Dritter zu verletzen</li><li>Schädliche, beleidigende oder unangemessene Inhalte zu übertragen</li><li>Unbefugten Zugang zu unseren Systemen oder anderen Nutzerkonten zu erlangen</li><li>Den Dienst oder Server zu stören oder zu beeinträchtigen</li><li>Automatisierte Tools für den Zugang zum Dienst ohne Erlaubnis zu verwenden</li><li>Sich als eine andere Person oder Entität auszugeben</li></ul><p>Verstöße gegen diese Richtlinie können zur sofortigen Kontokündigung und rechtlichen Schritten führen.</p>",
-      "intellectualProperty.title": "Geistige Eigentumsrechte",
-      "intellectualProperty.content": "<p>Der Dienst und seine ursprünglichen Inhalte, Funktionen und Funktionalitäten sind und bleiben das ausschließliche Eigentum von Helpsta und seinen Lizenzgebern. Der Dienst ist durch Urheberrecht, Markenrecht und andere Gesetze geschützt.</p><p>Ihnen wird eine begrenzte, nicht-exklusive, nicht-übertragbare Lizenz zur Nutzung des Dienstes für persönliche, nicht-kommerzielle Zwecke gewährt. Sie dürfen nicht:</p><ul><li>Unsere Inhalte ohne Erlaubnis kopieren, ändern oder verteilen</li><li>Unsere Marken oder unser Branding ohne Autorisierung verwenden</li><li>Reverse Engineering betreiben oder versuchen, Quellcode zu extrahieren</li></ul>",
-      "liability.title": "Haftungsbeschränkung",
-      "liability.content": "<p>Im vollsten gesetzlich zulässigen Umfang haftet Helpsta nicht für indirekte, zufällige, besondere, Folge- oder Strafschäden oder Gewinn- oder Umsatzverluste.</p><p>Unsere Gesamthaftung Ihnen gegenüber für Schäden aus oder im Zusammenhang mit dieser Vereinbarung übersteigt nicht den Betrag, den Sie uns in den zwölf Monaten vor dem Anspruch gezahlt haben.</p><p>Einige Gerichtsbarkeiten erlauben den Ausschluss bestimmter Gewährleistungen oder Haftungsbeschränkungen nicht, sodass einige der oben genannten Beschränkungen möglicherweise nicht für Sie gelten.</p>",
-      "termination.title": "Kündigung",
-      "termination.content": "<p>Wir können Ihr Konto und den Zugang zum Dienst sofort ohne vorherige Ankündigung aus jedem Grund kündigen oder sperren, einschließlich:</p><ul><li>Verstoß gegen diese Nutzungsbedingungen</li><li>Verletzung geltender Gesetze oder Vorschriften</li><li>Betrügerisches, missbräuchliches oder schädliches Verhalten</li><li>Längere Inaktivitätsphasen</li></ul><p>Bei der Kündigung erlischt Ihr Recht zur Nutzung des Dienstes sofort, und wir können Ihr Konto und alle zugehörigen Daten löschen.</p>",
-      "disputes.title": "Streitbeilegung",
-      "disputes.content": "<p>Streitigkeiten aus diesen Bedingungen oder Ihrer Nutzung des Dienstes werden durch verbindliche Schiedsverfahren gelöst, außer wo gesetzlich verboten.</p><p>Diese Nutzungsbedingungen unterliegen deutschem Recht. Jede rechtliche Klage muss vor den Gerichten von Berlin, Deutschland, eingereicht werden.</p><p>Wenn eine Bestimmung dieser Bedingungen als nicht durchsetzbar befunden wird, bleiben die verbleibenden Bestimmungen in Kraft.</p>"
-    },
-    "contact": {
-      "title": "Fragen zu diesen Bedingungen?",
-      "description": "Wenn Sie Fragen zu diesen Nutzungsbedingungen haben, wenden Sie sich bitte an unser Rechtsteam.",
-      "email": "Rechtsteam kontaktieren"
-    }
   }
 }

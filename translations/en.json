@@ -407,34 +407,5 @@
       "contact": "Get in Touch",
       "careers": "View Careers"
     }
-  },
-  "terms": {
-    "title": "Terms of Service",
-    "subtitle": "Please read these terms carefully before using our services. By accessing or using Helpsta, you agree to be bound by these terms.",
-    "lastUpdated": "Last updated",
-    "effectiveDate": "October 1, 2024",
-    "sections": {
-      "acceptance.title": "Acceptance of Terms",
-      "acceptance.content": "<p>By accessing and using Helpsta ('the Service'), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p><p>These Terms of Service may be updated at any time without prior notice. Your continued use of the Service following any changes constitutes acceptance of those changes.</p>",
-      "services.title": "Description of Service",
-      "services.content": "<p>Helpsta is a mobile platform that connects users with local businesses through our reward system and community features. We provide:</p><ul><li>A mobile application for discovering nearby reward partners</li><li>A reward system for users to earn benefits from participating businesses</li><li>Community features to connect users with local establishments</li><li>Business partnership opportunities for local establishments</li></ul><p>The Service is provided 'as is' and we reserve the right to modify, suspend, or discontinue any aspect of the Service at any time.</p>",
-      "userAccounts.title": "User Accounts",
-      "userAccounts.content": "<p>To access certain features of the Service, you must create an account. You are responsible for:</p><ul><li>Maintaining the confidentiality of your account credentials</li><li>All activities that occur under your account</li><li>Notifying us immediately of any unauthorized use of your account</li></ul><p>You must provide accurate and complete information when creating your account. We reserve the right to suspend or terminate accounts that violate these terms or contain false information.</p>",
-      "acceptableUse.title": "Acceptable Use Policy",
-      "acceptableUse.content": "<p>You agree not to use the Service to:</p><ul><li>Violate any laws, regulations, or third-party rights</li><li>Transmit any harmful, offensive, or inappropriate content</li><li>Attempt to gain unauthorized access to our systems or other users' accounts</li><li>Interfere with or disrupt the Service or servers</li><li>Use automated tools to access the Service without permission</li><li>Impersonate any person or entity</li></ul><p>Violation of this policy may result in immediate termination of your account and legal action.</p>",
-      "intellectualProperty.title": "Intellectual Property Rights",
-      "intellectualProperty.content": "<p>The Service and its original content, features, and functionality are and will remain the exclusive property of Helpsta and its licensors. The Service is protected by copyright, trademark, and other laws.</p><p>You are granted a limited, non-exclusive, non-transferable license to use the Service for personal, non-commercial purposes. You may not:</p><ul><li>Copy, modify, or distribute our content without permission</li><li>Use our trademarks or branding without authorization</li><li>Reverse engineer or attempt to extract source code</li></ul>",
-      "liability.title": "Limitation of Liability",
-      "liability.content": "<p>To the fullest extent permitted by applicable law, Helpsta shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues.</p><p>Our total liability to you for any damages arising from or related to this agreement shall not exceed the amount you have paid us in the twelve months preceding the claim.</p><p>Some jurisdictions do not allow the exclusion of certain warranties or limitations of liability, so some of the above limitations may not apply to you.</p>",
-      "termination.title": "Termination",
-      "termination.content": "<p>We may terminate or suspend your account and access to the Service immediately, without prior notice, for any reason, including:</p><ul><li>Breach of these Terms of Service</li><li>Violation of applicable laws or regulations</li><li>Fraudulent, abusive, or harmful behavior</li><li>Extended periods of inactivity</li></ul><p>Upon termination, your right to use the Service will cease immediately, and we may delete your account and all associated data.</p>",
-      "disputes.title": "Dispute Resolution",
-      "disputes.content": "<p>Any disputes arising from these terms or your use of the Service will be resolved through binding arbitration, except where prohibited by law.</p><p>These Terms of Service are governed by the laws of Germany. Any legal action must be brought in the courts of Berlin, Germany.</p><p>If any provision of these terms is found to be unenforceable, the remaining provisions will remain in effect.</p>"
-    },
-    "contact": {
-      "title": "Questions About These Terms?",
-      "description": "If you have any questions about these Terms of Service, please contact our legal team.",
-      "email": "Contact Legal Team"
-    }
   }
 }

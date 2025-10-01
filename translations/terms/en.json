@@ -1,0 +1,53 @@
+{
+  "title": "Terms of Service",
+  "subtitle": "Please read these Terms of Service carefully before using Helpsta. By using our service, you agree to be bound by these terms.",
+  "lastUpdated": "Last updated",
+  "effectiveDate": "October 1, 2024",
+  "sections": {
+    "acceptance": {
+      "title": "Acceptance of Terms",
+      "content": "<p>By accessing or using the Helpsta mobile application and website, you agree to be bound by these Terms of Service and all applicable laws and regulations.</p><p>If you do not agree with any part of these terms, you may not use our service.</p><p>These terms apply to all users of the service, including without limitation users who are browsers, vendors, customers, merchants, and contributors of content.</p>"
+    },
+    "description": {
+      "title": "Service Description",
+      "content": "<p>Helpsta is a community platform that connects local people with their neighbors to help each other with various tasks, rewarding helpful behavior through our coin system.</p><p>Our services include:</p><ul><li>Connecting community members with neighbors who need help</li><li>Task posting and completion system for local assistance</li><li>Coin-based reward system for completed help</li><li>Conversion of earned coins into coupons from partner stores</li><li>Community building through mutual assistance</li></ul><p>Currently available only in Germany during our pilot phase in select locations. We reserve the right to modify, suspend, or discontinue any part of our service at any time without notice.</p>"
+    },
+    "userAccounts": {
+      "title": "User Accounts",
+      "content": "<p>To use our service, you must create an account with basic information including name, address, and email.</p><p>Account Requirements:</p><ul><li>Must be an adult capable of performing various types of work</li><li>Only one account per email address is allowed</li><li>Must provide accurate and complete information</li><li>Available only to residents in Germany during pilot phase</li></ul><p>You are responsible for:</p><ul><li>Maintaining the confidentiality of your account credentials</li><li>All activities that occur under your account</li><li>Notifying us immediately of any unauthorized use</li><li>Ensuring your account information remains accurate and up-to-date</li></ul><p>Inactive accounts remain active until you request deletion. No identity verification is currently required.</p>"
+    },
+    "userConduct": {
+      "title": "User Conduct",
+      "content": "<p>You agree not to use our service to:</p><ul><li>Violate any applicable laws or regulations</li><li>Abuse the app or spam the system</li><li>Misuse the reward system or engage in fraudulent activities</li><li>Post 18+ or inappropriate content</li><li>Harass, abuse, or disrespect other community members</li><li>Create multiple accounts with the same email</li><li>Interfere with the proper functioning of our service</li></ul><p>Business Interactions:</p><ul><li>Treat all community members and partners with respect</li><li>Complete tasks with integrity and professionalism</li><li>Be kind and helpful in all interactions</li></ul><p>Violations may result in account termination and legal action for fraud or misuse. We reserve the right to suspend or terminate accounts without prior notice.</p>"
+    },
+    "fees": {
+      "title": "Fees and Monetization",
+      "content": "<p>Current Service Model:</p><ul><li>The platform is currently free to use for community interactions</li><li>We do not currently generate profits from the platform</li><li>Users may be charged a small monthly fee for converting coins into coupons</li><li>This fee helps maintain system integrity and prevent abuse</li></ul><p>Future Changes:</p><ul><li>We may introduce advertising after reaching a certain user base</li><li>Additional fees may be implemented to support system operations</li><li>Any fee changes will be communicated via email or in-app notification</li><li>We reserve the right to modify our monetization model</li></ul>"
+    },
+    "privacy": {
+      "title": "Privacy and Data",
+      "content": "<p>Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy.</p><p>By using our service, you consent to:</p><ul><li>The collection and use of your information as described in our Privacy Policy</li><li>Location data collection for connecting you with nearby community members</li><li>Communication via email or in-app messages about service updates</li><li>Use of your content to train AI systems in the future to improve user experience</li></ul><p>We collect basic account information (name, address, email) and use Firebase Analytics. You may control certain privacy settings through your account preferences.</p>"
+    },
+    "intellectualProperty": {
+      "title": "Intellectual Property",
+      "content": "<p>The Helpsta service and all content, features, and functionality are owned by Helpsta and are protected by copyright, trademark, and other intellectual property laws.</p><p>You may not:</p><ul><li>Copy, modify, or distribute our content without permission</li><li>Use our trademarks, logos, or branding without authorization</li><li>Create your own branded content using our platform</li><li>Reverse engineer or attempt to extract source code</li><li>Create derivative works based on our service</li></ul><p>User-Generated Content:</p><ul><li>You retain ownership of content you create (posts, reviews, photos)</li><li>You grant us license to use your content for service operation</li><li>We may use your content to train AI systems for platform improvement</li><li>We may display, modify, or use your content in marketing materials</li></ul>"
+    },
+    "limitations": {
+      "title": "Limitations of Liability",
+      "content": "<p>Our service is provided \"as is\" without warranties of any kind, either express or implied.</p><p>Important Disclaimers:</p><ul><li>Helpsta is not liable for issues between community members</li><li>We are not responsible for disputes between users and reward partners</li><li>Users enter into agreements independently through the app - we are a third party</li><li>We do not facilitate direct transactions or payments between users and businesses</li></ul><p>To the maximum extent permitted by law, Helpsta shall not be liable for:</p><ul><li>Any indirect, incidental, special, or consequential damages</li><li>Issues arising from task completion or community interactions</li><li>Damages resulting from third-party services or content</li><li>Service interruptions or technical issues</li></ul><p>For disputes between users and reward partners, please contact us and we will assess what assistance we can provide.</p>"
+    },
+    "termination": {
+      "title": "Termination",
+      "content": "<p>We may terminate or suspend your account immediately, without prior notice, for any reason, including:</p><ul><li>Abusive use of the platform</li><li>Breach of these Terms of Service</li><li>Violation of applicable laws or regulations</li><li>Fraudulent activities or system misuse</li><li>Any other issues that compromise platform integrity</li></ul><p>Upon termination:</p><ul><li>Your right to use the Service will cease immediately</li><li>Your data will be retained until you request deletion</li><li>You may request complete data deletion at any time</li><li>We do not provide advance notice before account termination</li></ul>"
+    },
+    "disputes": {
+      "title": "Dispute Resolution and Legal Framework",
+      "content": "<p>These Terms of Service are governed by the laws of Germany as we operate within the European Union.</p><p>Service Updates:</p><ul><li>We may change these terms at any time</li><li>Users will be notified via email or in-app message</li><li>We may change or discontinue services without notice</li><li>Continued use after changes constitutes acceptance</li></ul><p>Third-Party Services:</p><ul><li>We use Firebase Analytics for app performance monitoring</li><li>Future integration with Stripe for payment processing may occur</li><li>OpenStreetMap or similar services for location features</li><li>No current social media integrations or other partnerships</li></ul><p>For disputes or legal matters, please contact our legal team and we will determine appropriate resolution methods.</p>"
+    }
+  },
+  "contact": {
+    "title": "Questions About These Terms?",
+    "description": "If you have any questions about these Terms of Service, please contact our legal team.",
+    "email": "Contact Legal Team"
+  }
+}

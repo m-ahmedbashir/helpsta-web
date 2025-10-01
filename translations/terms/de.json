@@ -1,0 +1,53 @@
+{
+  "title": "Nutzungsbedingungen",
+  "subtitle": "Bitte lesen Sie diese Nutzungsbedingungen sorgfältig durch, bevor Sie Helpsta verwenden. Durch die Nutzung unseres Dienstes erklären Sie sich mit diesen Bedingungen einverstanden.",
+  "lastUpdated": "Zuletzt aktualisiert",
+  "effectiveDate": "1. Oktober 2024",
+  "sections": {
+    "acceptance": {
+      "title": "Annahme der Bedingungen",
+      "content": "<p>Durch den Zugriff auf oder die Nutzung der Helpsta-Mobile-App und -Website erklären Sie sich damit einverstanden, an diese Nutzungsbedingungen und alle anwendbaren Gesetze und Vorschriften gebunden zu sein.</p><p>Wenn Sie mit einem Teil dieser Bedingungen nicht einverstanden sind, dürfen Sie unseren Service nicht nutzen.</p><p>Diese Bedingungen gelten für alle Nutzer des Dienstes, einschließlich, aber nicht beschränkt auf Nutzer, die Browser, Anbieter, Kunden, Händler und Inhaltsersteller sind.</p>"
+    },
+    "description": {
+      "title": "Dienstbeschreibung",
+      "content": "<p>Helpsta ist eine Gemeinschaftsplattform, die lokale Menschen mit ihren Nachbarn verbindet, um sich gegenseitig bei verschiedenen Aufgaben zu helfen und hilfreiches Verhalten durch unser Münzsystem zu belohnen.</p><p>Unsere Dienste umfassen:</p><ul><li>Verbindung von Gemeinschaftsmitgliedern mit Nachbarn, die Hilfe benötigen</li><li>Aufgaben-Posting- und Abschlusssystem für lokale Hilfe</li><li>Münzbasiertes Belohnungssystem für erledigte Hilfe</li><li>Umwandlung verdiente Münzen in Gutscheine von Partnerstores</li><li>Gemeinschaftsaufbau durch gegenseitige Hilfe</li></ul><p>Derzeit nur in Deutschland während unserer Pilotphase an ausgewählten Standorten verfügbar. Wir behalten uns das Recht vor, jeden Teil unseres Dienstes jederzeit ohne Vorankündigung zu ändern, auszusetzen oder einzustellen.</p>"
+    },
+    "userAccounts": {
+      "title": "Benutzerkonten",
+      "content": "<p>Um unseren Service zu nutzen, müssen Sie ein Konto mit grundlegenden Informationen wie Name, Adresse und E-Mail erstellen.</p><p>Kontoanforderungen:</p><ul><li>Muss ein Erwachsener sein, der verschiedene Arten von Arbeit verrichten kann</li><li>Nur ein Konto pro E-Mail-Adresse ist erlaubt</li><li>Muss genaue und vollständige Informationen bereitstellen</li><li>Nur für Einwohner in Deutschland während der Pilotphase verfügbar</li></ul><p>Sie sind verantwortlich für:</p><ul><li>Die Wahrung der Vertraulichkeit Ihrer Kontodaten</li><li>Alle Aktivitäten, die unter Ihrem Konto stattfinden</li><li>Die sofortige Benachrichtigung bei unbefugter Nutzung</li><li>Die Gewährleistung, dass Ihre Kontoinformationen genau und aktuell bleiben</li></ul><p>Inaktive Konten bleiben aktiv, bis Sie eine Löschung beantragen. Derzeit ist keine Identitätsprüfung erforderlich.</p>"
+    },
+    "userConduct": {
+      "title": "Nutzerverhalten",
+      "content": "<p>Sie verpflichten sich, unseren Service nicht zu nutzen, um:</p><ul><li>Anwendbare Gesetze oder Vorschriften zu verletzen</li><li>Die App zu missbrauchen oder das System zu spammen</li><li>Das Belohnungssystem zu missbrauchen oder betrügerische Aktivitäten durchzuführen</li><li>18+ oder unangemessene Inhalte zu posten</li><li>Andere Gemeinschaftsmitglieder zu belästigen, zu missbrauchen oder respektlos zu behandeln</li><li>Mehrere Konten mit derselben E-Mail zu erstellen</li><li>Das ordnungsgemäße Funktionieren unseres Dienstes zu beeinträchtigen</li></ul><p>Geschäftsinteraktionen:</p><ul><li>Behandeln Sie alle Gemeinschaftsmitglieder und Partner mit Respekt</li><li>Erledigen Sie Aufgaben mit Integrität und Professionalität</li><li>Seien Sie freundlich und hilfsbereit in allen Interaktionen</li></ul><p>Verstöße können zur Kontokündigung und rechtlichen Schritten bei Betrug oder Missbrauch führen. Wir behalten uns das Recht vor, Konten ohne Vorankündigung zu sperren oder zu kündigen.</p>"
+    },
+    "fees": {
+      "title": "Gebühren und Monetarisierung",
+      "content": "<p>Aktuelles Service-Modell:</p><ul><li>Die Plattform ist derzeit kostenlos für Gemeinschaftsinteraktionen</li><li>Wir erzielen derzeit keine Gewinne aus der Plattform</li><li>Nutzern kann eine kleine monatliche Gebühr für die Umwandlung von Münzen in Gutscheine berechnet werden</li><li>Diese Gebühr hilft, die Systemintegrität zu wahren und Missbrauch zu verhindern</li></ul><p>Zukünftige Änderungen:</p><ul><li>Wir könnten Werbung einführen, nachdem wir eine bestimmte Nutzerbasis erreicht haben</li><li>Zusätzliche Gebühren könnten implementiert werden, um den Systembetrieb zu unterstützen</li><li>Gebührenänderungen werden per E-Mail oder In-App-Benachrichtigung kommuniziert</li><li>Wir behalten uns das Recht vor, unser Monetarisierungsmodell zu ändern</li></ul>"
+    },
+    "privacy": {
+      "title": "Datenschutz und Daten",
+      "content": "<p>Ihre Privatsphäre ist uns wichtig. Unsere Erhebung und Nutzung persönlicher Informationen wird durch unsere Datenschutzrichtlinie geregelt.</p><p>Durch die Nutzung unseres Dienstes stimmen Sie zu:</p><ul><li>Der Erhebung und Nutzung Ihrer Informationen wie in unserer Datenschutzrichtlinie beschrieben</li><li>Der Standortdatenerfassung zur Verbindung mit nahegelegenen Gemeinschaftsmitgliedern</li><li>Der Kommunikation per E-Mail oder In-App-Nachrichten über Service-Updates</li><li>Der Nutzung Ihrer Inhalte zum Training von KI-Systemen in der Zukunft zur Verbesserung der Benutzererfahrung</li></ul><p>Wir sammeln grundlegende Kontoinformationen (Name, Adresse, E-Mail) und verwenden Firebase Analytics. Sie können bestimmte Datenschutzeinstellungen über Ihre Kontopräferenzen steuern.</p>"
+    },
+    "intellectualProperty": {
+      "title": "Geistiges Eigentum",
+      "content": "<p>Der Helpsta-Service und alle Inhalte, Funktionen und Funktionalitäten sind Eigentum von Helpsta und durch Urheberrecht, Markenrecht und andere Gesetze zum Schutz des geistigen Eigentums geschützt.</p><p>Sie dürfen nicht:</p><ul><li>Unsere Inhalte ohne Erlaubnis kopieren, ändern oder verteilen</li><li>Unsere Marken, Logos oder Branding ohne Autorisierung verwenden</li><li>Eigene gebrandete Inhalte mit unserer Plattform erstellen</li><li>Reverse Engineering betreiben oder versuchen, Quellcode zu extrahieren</li><li>Abgeleitete Werke basierend auf unserem Service erstellen</li></ul><p>Benutzergenerierte Inhalte:</p><ul><li>Sie behalten das Eigentum an von Ihnen erstellten Inhalten (Posts, Bewertungen, Fotos)</li><li>Sie gewähren uns eine Lizenz zur Nutzung Ihrer Inhalte für den Servicebetrieb</li><li>Wir können Ihre Inhalte zum Training von KI-Systemen für Plattformverbesserungen verwenden</li><li>Wir können Ihre Inhalte anzeigen, ändern oder in Marketingmaterialien verwenden</li></ul>"
+    },
+    "limitations": {
+      "title": "Haftungsbeschränkungen",
+      "content": "<p>Unser Service wird \"wie besehen\" ohne Gewährleistungen jeglicher Art, weder ausdrücklich noch stillschweigend, bereitgestellt.</p><p>Wichtige Haftungsausschlüsse:</p><ul><li>Helpsta haftet nicht für Probleme zwischen Gemeinschaftsmitgliedern</li><li>Wir sind nicht verantwortlich für Streitigkeiten zwischen Nutzern und Belohnungspartnern</li><li>Nutzer gehen unabhängig über die App Vereinbarungen ein - wir sind Drittpartei</li><li>Wir ermöglichen keine direkten Transaktionen oder Zahlungen zwischen Nutzern und Unternehmen</li></ul><p>Im größtmöglichen gesetzlich zulässigen Umfang haftet Helpsta nicht für:</p><ul><li>Indirekte, zufällige, besondere oder Folgeschäden</li><li>Probleme aus Aufgabenerledigung oder Gemeinschaftsinteraktionen</li><li>Schäden durch Drittanbieter-Services oder -Inhalte</li><li>Service-Unterbrechungen oder technische Probleme</li></ul><p>Bei Streitigkeiten zwischen Nutzern und Belohnungspartnern kontaktieren Sie uns bitte und wir werden bewerten, welche Hilfe wir leisten können.</p>"
+    },
+    "termination": {
+      "title": "Kündigung",
+      "content": "<p>Wir können Ihr Konto sofort und ohne Vorankündigung kündigen oder sperren, aus jedem Grund, einschließlich:</p><ul><li>Missbräuchliche Nutzung der Plattform</li><li>Verstoß gegen diese Nutzungsbedingungen</li><li>Verletzung anwendbarer Gesetze oder Vorschriften</li><li>Betrügerische Aktivitäten oder Systemmissbrauch</li><li>Andere Probleme, die die Plattformintegrität gefährden</li></ul><p>Bei Kündigung:</p><ul><li>Ihr Recht zur Nutzung des Services erlischt sofort</li><li>Ihre Daten werden aufbewahrt, bis Sie eine Löschung beantragen</li><li>Sie können jederzeit eine vollständige Datenlöschung beantragen</li><li>Wir geben keine Vorankündigung vor Kontokündigung</li></ul>"
+    },
+    "disputes": {
+      "title": "Streitbeilegung und Rechtsrahmen",
+      "content": "<p>Diese Nutzungsbedingungen unterliegen den Gesetzen Deutschlands, da wir innerhalb der Europäischen Union tätig sind.</p><p>Service-Updates:</p><ul><li>Wir können diese Bedingungen jederzeit ändern</li><li>Nutzer werden per E-Mail oder In-App-Nachricht benachrichtigt</li><li>Wir können Services ohne Vorankündigung ändern oder einstellen</li><li>Fortgesetzte Nutzung nach Änderungen gilt als Zustimmung</li></ul><p>Drittanbieter-Services:</p><ul><li>Wir verwenden Firebase Analytics für App-Performance-Überwachung</li><li>Zukünftige Integration mit Stripe für Zahlungsabwicklung kann auftreten</li><li>OpenStreetMap oder ähnliche Services für Standortfunktionen</li><li>Derzeit keine Social-Media-Integrationen oder andere Partnerschaften</li></ul><p>Für Streitigkeiten oder rechtliche Angelegenheiten kontaktieren Sie bitte unser Rechtsteam und wir werden angemessene Lösungsmethoden bestimmen.</p>"
+    }
+  },
+  "contact": {
+    "title": "Fragen zu diesen Bedingungen?",
+    "description": "Wenn Sie Fragen zu diesen Nutzungsbedingungen haben, wenden Sie sich bitte an unser Rechtsteam.",
+    "email": "Rechtsteam kontaktieren"
+  }
+}
