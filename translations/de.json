@@ -1,9 +1,10 @@
 {
   "navigation": {
-    "home": "Home",
+    "home": "Startseite",
+    "about": "Über uns",
     "rewards": "Belohnungen",
     "community": "Gemeinschaft",
-    "howItWorks": "So funktioniert's",
+    "howItWorks": "Wie es funktioniert",
     "faq": "FAQ",
     "contact": "Kontakt",
     "downloadApp": "App herunterladen"
@@ -94,7 +95,7 @@
       },
       "support": {
         "title": "Support",
-        "helpCenter": "Hilfe-Center",
+        "faq": "FAQ",
         "contact": "Kontakt",
         "documentation": "Dokumentation",
         "community": "Gemeinschaft"
@@ -256,6 +257,155 @@
         "question": "Wie kann ich Hilfe oder Support erhalten?",
         "answer": "Unser Support-Team steht Ihnen über mehrere Kanäle zur Verfügung. Sie können uns per E-Mail unter hello@helpsta.com kontaktieren, unser Hilfe-Center für Selbstbedienungsoptionen besuchen oder die In-App-Support-Funktion nutzen. Wir antworten normalerweise innerhalb von 24 Stunden auf Anfragen."
       }
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Nehmen Sie Kontakt mit unserem Team auf. Wir sind hier, um zu helfen und alle Ihre Fragen zu beantworten.",
+    "info": {
+      "title": "Kontakt aufnehmen",
+      "email": {
+        "title": "E-Mail"
+      },
+      "phone": {
+        "title": "Telefon"
+      },
+      "address": {
+        "title": "Adresse"
+      },
+      "hours": {
+        "title": "Geschäftszeiten",
+        "weekdays": "Mo - Fr: 9:00 - 18:00 Uhr",
+        "weekend": "Sa - So: 10:00 - 16:00 Uhr"
+      }
+    },
+    "response": {
+      "title": "Antwortzeit",
+      "description": "Wir bemühen uns, alle Anfragen so schnell wie möglich zu beantworten. Das können Sie erwarten:",
+      "timeframe": "Typische Antwortzeit: 2-4 Stunden während der Geschäftszeiten"
+    },
+    "form": {
+      "title": "Senden Sie uns eine Nachricht",
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "email": "E-Mail-Adresse",
+      "phone": "Telefonnummer",
+      "subject": "Betreff",
+      "message": "Nachricht",
+      "send": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "required": "* Pflichtfelder",
+      "placeholders": {
+        "firstName": "Geben Sie Ihren Vornamen ein",
+        "lastName": "Geben Sie Ihren Nachnamen ein",
+        "email": "ihre.email@beispiel.de",
+        "phone": "+49 123 456 7890",
+        "subject": "Wählen Sie einen Betreff",
+        "message": "Teilen Sie uns mit, wie wir Ihnen helfen können..."
+      },
+      "subjects": {
+        "general-inquiry": "Allgemeine Anfrage",
+        "technical-support": "Technischer Support",
+        "partnership": "Partnerschaftsanfrage",
+        "feedback": "Feedback & Vorschläge",
+        "billing": "Abrechnung & Konto",
+        "other": "Sonstiges"
+      },
+      "errors": {
+        "firstNameRequired": "Vorname ist erforderlich",
+        "lastNameRequired": "Nachname ist erforderlich",
+        "emailRequired": "E-Mail ist erforderlich",
+        "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+        "subjectRequired": "Bitte wählen Sie einen Betreff",
+        "messageRequired": "Nachricht ist erforderlich",
+        "messageTooShort": "Nachricht muss mindestens 10 Zeichen lang sein"
+      }
+    },
+    "success": {
+      "title": "Nachricht gesendet!",
+      "message": "Vielen Dank, dass Sie uns kontaktiert haben. Wir haben Ihre Nachricht erhalten und werden uns innerhalb von 2-4 Geschäftsstunden bei Ihnen melden.",
+      "sendAnother": "Weitere Nachricht senden"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Über Helpsta",
+      "subtitle": "Mobile Erfahrungen für Millionen weltweit revolutionieren",
+      "description": "Wir sind ein leidenschaftliches Team, das sich der Transformation der Interaktion zwischen Menschen und mobiler Technologie widmet und bedeutungsvolle Verbindungen zwischen Nutzern und lokalen Unternehmen schafft."
+    },
+    "stats": {
+      "users": "Aktive Nutzer",
+      "partners": "Geschäftspartner",
+      "cities": "Städte weltweit",
+      "founded": "Gegründet"
+    },
+    "story": {
+      "title": "Unsere Geschichte",
+      "paragraph1": "Helpsta wurde 2019 mit einer einfachen Vision gegründet: die Lücke zwischen mobiler Technologie und lokalen Gemeinschaften zu schließen. Was als kleines Team mit großen Träumen begann, ist zu einer revolutionären Plattform gewachsen, die Millionen von Nutzern mit Tausenden von Unternehmen weltweit verbindet.",
+      "paragraph2": "Unsere Reise begann, als wir die Diskrepanz zwischen digitaler Innovation und lokalem Gemeinschaftsengagement bemerkten. Wir sahen eine Gelegenheit, etwas Bedeutungsvolles zu schaffen - eine Plattform, die nicht nur modernste mobile Erfahrungen bietet, sondern auch lokale Wirtschaften stärkt und echte Verbindungen aufbaut.",
+      "paragraph3": "Heute sind wir stolz darauf, an der Spitze der mobilen Innovation zu stehen und kontinuierlich Grenzen zu verschieben, während wir unserer Kernmission treu bleiben, Werte für Nutzer und lokale Unternehmen zu schaffen."
+    },
+    "mission": {
+      "title": "Unsere Mission",
+      "description": "Mobile Erfahrungen revolutionieren, indem wir bedeutungsvolle Verbindungen zwischen Nutzern und lokalen Unternehmen schaffen und Gemeinschaftswachstum und digitale Innovation fördern."
+    },
+    "vision": {
+      "title": "Unsere Vision",
+      "description": "Die führende Plattform zu sein, die mobile Technologie nahtlos mit lokalen Gemeinschaften integriert und eine Welt schafft, in der digitale Innovation reale Auswirkungen erzielt."
+    },
+    "values": {
+      "title": "Unsere Grundwerte",
+      "subtitle": "Die Prinzipien, die alles leiten, was wir tun, und unsere Unternehmenskultur prägen.",
+      "items": {
+        "innovation": {
+          "title": "Innovation",
+          "description": "Wir verschieben ständig Grenzen und nutzen neue Technologien, um bahnbrechende Lösungen zu schaffen, die Erwartungen übertreffen."
+        },
+        "trust": {
+          "title": "Vertrauen",
+          "description": "Wir bauen dauerhafte Beziehungen durch Transparenz, Zuverlässigkeit und unerschütterliches Engagement für Datensicherheit und Privatsphäre auf."
+        },
+        "community": {
+          "title": "Gemeinschaft",
+          "description": "Wir glauben an die Kraft lokaler Gemeinschaften und arbeiten daran, Verbindungen zwischen Menschen und Unternehmen zu stärken."
+        },
+        "excellence": {
+          "title": "Exzellenz",
+          "description": "Wir streben nach Perfektion in allem, was wir tun, vom Produktdesign bis zum Kundenservice und darüber hinaus."
+        }
+      }
+    },
+    "team": {
+      "title": "Lernen Sie unser Team kennen",
+      "subtitle": "Die talentierten Personen hinter Helpstas Erfolg, die vielfältige Expertise und gemeinsame Leidenschaft für Innovation mitbringen.",
+      "members": {
+        "ceo": {
+          "name": "Sarah Chen",
+          "position": "Geschäftsführerin",
+          "bio": "Ehemalige Technologieführungskraft mit 15+ Jahren Erfahrung in mobiler Innovation und Startup-Leitung."
+        },
+        "cto": {
+          "name": "Marcus Weber",
+          "position": "Technischer Leiter",
+          "bio": "Führt unsere technische Vision mit Expertise in skalierbaren Systemen und mobiler Architektur."
+        },
+        "design": {
+          "name": "Emma Rodriguez",
+          "position": "Leiterin Design",
+          "bio": "Preisgekrönte Designerin, die sich auf intuitive und schöne Benutzererfahrungen konzentriert."
+        },
+        "product": {
+          "name": "David Kim",
+          "position": "VP Produkt",
+          "bio": "Produktstratege mit einer Leidenschaft für die Lösung realer Probleme durch Technologie."
+        }
+      }
+    },
+    "cta": {
+      "title": "Bereit, unserer Reise beizutreten?",
+      "description": "Ob Sie daran interessiert sind, mit uns zu kooperieren, unserem Team beizutreten oder einfach mehr über das erfahren möchten, was wir tun - wir würden gerne von Ihnen hören.",
+      "contact": "Kontakt aufnehmen",
+      "careers": "Karrieren ansehen"
     }
   }
 }

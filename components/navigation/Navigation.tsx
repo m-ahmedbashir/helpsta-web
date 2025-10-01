@@ -2,7 +2,7 @@
 
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
-import { Chrome as Home, Info, Zap, Users, Mail, Download, HelpCircle } from "lucide-react";
+import { Chrome as Home, Info, Zap, Users, Mail, Download, HelpCircle, Building } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
@@ -15,11 +15,12 @@ export function Navigation() {
   
   const MENU: MenuItem[] = [
     { icon: Home, labelKey: "home",            href: "/" },
+    { icon: Building, labelKey: "about",       href: "/about" },
     { icon: Info,  labelKey: "rewards",         href: "#reward-partners" },
     { icon: Zap,   labelKey: "community",       href: "#community-partners" },
     { icon: Users, labelKey: "howItWorks",    href: "#how-it-works" },
     { icon: HelpCircle, labelKey: "faq",       href: "/faq" },
-    { icon: Mail,  labelKey: "contact",         href: "#contact" },
+    { icon: Mail,  labelKey: "contact",         href: "/contact" },
   ];
   const [isOpen, setIsOpen] = useState(false);
   const [cx, setCx] = useState(0);

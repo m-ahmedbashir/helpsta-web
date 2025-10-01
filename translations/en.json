@@ -1,6 +1,7 @@
 {
   "navigation": {
     "home": "Home",
+    "about": "About",
     "rewards": "Rewards",
     "community": "Community",
     "howItWorks": "How It Works",
@@ -94,7 +95,7 @@
       },
       "support": {
         "title": "Support",
-        "helpCenter": "Help Center",
+        "faq": "FAQ",
         "contact": "Contact",
         "documentation": "Documentation",
         "community": "Community"
@@ -256,6 +257,155 @@
         "question": "How can I get help or support?",
         "answer": "Our support team is available to help you through multiple channels. You can contact us via email at hello@helpsta.com, visit our Help Center for self-service options, or use the in-app support feature. We typically respond to inquiries within 24 hours."
       }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our team. We're here to help and answer any questions you might have.",
+    "info": {
+      "title": "Get in Touch",
+      "email": {
+        "title": "Email"
+      },
+      "phone": {
+        "title": "Phone"
+      },
+      "address": {
+        "title": "Address"
+      },
+      "hours": {
+        "title": "Business Hours",
+        "weekdays": "Mon - Fri: 9:00 AM - 6:00 PM",
+        "weekend": "Sat - Sun: 10:00 AM - 4:00 PM"
+      }
+    },
+    "response": {
+      "title": "Response Time",
+      "description": "We strive to respond to all inquiries as quickly as possible. Here's what you can expect:",
+      "timeframe": "Typical response time: 2-4 hours during business hours"
+    },
+    "form": {
+      "title": "Send us a Message",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "required": "* Required fields",
+      "placeholders": {
+        "firstName": "Enter your first name",
+        "lastName": "Enter your last name",
+        "email": "your.email@example.com",
+        "phone": "+49 123 456 7890",
+        "subject": "Select a subject",
+        "message": "Tell us how we can help you..."
+      },
+      "subjects": {
+        "general-inquiry": "General Inquiry",
+        "technical-support": "Technical Support",
+        "partnership": "Partnership Inquiry",
+        "feedback": "Feedback & Suggestions",
+        "billing": "Billing & Account",
+        "other": "Other"
+      },
+      "errors": {
+        "firstNameRequired": "First name is required",
+        "lastNameRequired": "Last name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email address",
+        "subjectRequired": "Please select a subject",
+        "messageRequired": "Message is required",
+        "messageTooShort": "Message must be at least 10 characters long"
+      }
+    },
+    "success": {
+      "title": "Message Sent!",
+      "message": "Thank you for contacting us. We've received your message and will get back to you within 2-4 business hours.",
+      "sendAnother": "Send Another Message"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About Helpsta",
+      "subtitle": "Revolutionizing mobile experiences for millions worldwide",
+      "description": "We're a passionate team dedicated to transforming how people interact with mobile technology, creating meaningful connections between users and local businesses."
+    },
+    "stats": {
+      "users": "Active Users",
+      "partners": "Business Partners",
+      "cities": "Cities Worldwide", 
+      "founded": "Founded"
+    },
+    "story": {
+      "title": "Our Story",
+      "paragraph1": "Founded in 2019, Helpsta began with a simple vision: to bridge the gap between mobile technology and local communities. What started as a small team with big dreams has grown into a revolutionary platform that connects millions of users with thousands of businesses worldwide.",
+      "paragraph2": "Our journey started when we noticed the disconnect between digital innovation and local community engagement. We saw an opportunity to create something meaningful - a platform that not only provides cutting-edge mobile experiences but also strengthens local economies and builds genuine connections.",
+      "paragraph3": "Today, we're proud to be at the forefront of mobile innovation, continuously pushing boundaries while staying true to our core mission of creating value for both users and local businesses."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To revolutionize mobile experiences by creating meaningful connections between users and local businesses, fostering community growth and digital innovation."
+    },
+    "vision": {
+      "title": "Our Vision", 
+      "description": "To be the leading platform that seamlessly integrates mobile technology with local communities, creating a world where digital innovation drives real-world impact."
+    },
+    "values": {
+      "title": "Our Core Values",
+      "subtitle": "The principles that guide everything we do and shape our company culture.",
+      "items": {
+        "innovation": {
+          "title": "Innovation",
+          "description": "We constantly push boundaries and embrace new technologies to create groundbreaking solutions that exceed expectations."
+        },
+        "trust": {
+          "title": "Trust",
+          "description": "We build lasting relationships through transparency, reliability, and unwavering commitment to data security and privacy."
+        },
+        "community": {
+          "title": "Community",
+          "description": "We believe in the power of local communities and work to strengthen connections between people and businesses."
+        },
+        "excellence": {
+          "title": "Excellence",
+          "description": "We strive for perfection in everything we do, from product design to customer service and beyond."
+        }
+      }
+    },
+    "team": {
+      "title": "Meet Our Team",
+      "subtitle": "The talented individuals behind Helpsta's success, bringing diverse expertise and shared passion for innovation.",
+      "members": {
+        "ceo": {
+          "name": "Sarah Chen",
+          "position": "Chief Executive Officer",
+          "bio": "Former tech executive with 15+ years in mobile innovation and startup leadership."
+        },
+        "cto": {
+          "name": "Marcus Weber", 
+          "position": "Chief Technology Officer",
+          "bio": "Leading our technical vision with expertise in scalable systems and mobile architecture."
+        },
+        "design": {
+          "name": "Emma Rodriguez",
+          "position": "Head of Design",
+          "bio": "Award-winning designer focused on creating intuitive and beautiful user experiences."
+        },
+        "product": {
+          "name": "David Kim",
+          "position": "VP of Product",
+          "bio": "Product strategist with a passion for solving real-world problems through technology."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Join Our Journey?",
+      "description": "Whether you're interested in partnering with us, joining our team, or simply want to learn more about what we do, we'd love to hear from you.",
+      "contact": "Get in Touch",
+      "careers": "View Careers"
     }
   }
 }

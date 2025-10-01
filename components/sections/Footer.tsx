@@ -2,10 +2,11 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { LanguageSwitcher } from '../ui/LanguageSwitcher';
 import { FooterBackground } from '../ui/FooterBackground';
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Heart } from 'lucide-react';
+import Link from 'next/link';
 
 const socialLinks = [
   { icon: Facebook, href: '#', label: 'Facebook' },
@@ -18,23 +19,24 @@ const socialLinks = [
 
 export function Footer() {
   const t = useTranslations('footer');
+  const locale = useLocale();
   
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
-  // Move legal links under company, free up a column for Newsletter
+  // Define footer links with proper routing
   const footerLinks = {
     [t('sections.company.title')]: [
-      t('sections.company.about'),
-      t('sections.company.careers'),
-      t('sections.legal.privacy'),
-      t('sections.legal.terms'),
+      { label: t('sections.company.about'), href: `/${locale}/about` },
+      { label: t('sections.company.careers'), href: '#' },
+      { label: t('sections.legal.privacy'), href: '#' },
+      { label: t('sections.legal.terms'), href: '#' },
     ],
     [t('sections.support.title')]: [
-      t('sections.support.helpCenter'),
-      t('sections.support.contact'),
+      { label: t('sections.support.faq'), href: `/${locale}/faq` },
+      { label: t('sections.support.contact'), href: `/${locale}/contact` },
     ],
   };
 
@@ -137,12 +139,21 @@ export function Footer() {
                     animate={inView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.4, delay: 0.4 + categoryIndex * 0.1 + linkIndex * 0.05 }}
                   >
-                    <a
-                      href="#"
-                      className="text-gray-300 hover:text-white transition-colors duration-200 hover:underline"
-                    >
-                      {link}
-                    </a>
+                    {link.href.startsWith('/') ? (
+                      <Link
+                        href={link.href}
+                        className="text-gray-300 hover:text-white transition-colors duration-200 hover:underline"
+                      >
+                        {link.label}
+                      </Link>
+                    ) : (
+                      <a
+                        href={link.href}
+                        className="text-gray-300 hover:text-white transition-colors duration-200 hover:underline"
+                      >
+                        {link.label}
+                      </a>
+                    )}
                   </motion.li>
                 ))}
               </ul>
