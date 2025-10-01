@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useTranslations } from 'next-intl';
 import { LanguageSwitcher } from '../ui/LanguageSwitcher';
+import { FooterBackground } from '../ui/FooterBackground';
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Heart } from 'lucide-react';
 
 const socialLinks = [
@@ -12,6 +13,8 @@ const socialLinks = [
   { icon: Instagram, href: '#', label: 'Instagram' },
   { icon: Linkedin, href: '#', label: 'LinkedIn' },
 ];
+
+
 
 export function Footer() {
   const t = useTranslations('footer');
@@ -40,42 +43,19 @@ export function Footer() {
   return (
     <footer ref={ref} id="contact" className="bg-gradient-to-br from-main-purple via-purple-800 to-indigo-900 text-white relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          animate={{
-            x: [0, 100, 0],
-            y: [0, -50, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
-          className="absolute top-0 left-0 w-96 h-96 bg-orange-main rounded-full mix-blend-multiply filter blur-3xl opacity-10"
-        />
-        <motion.div
-          animate={{
-            x: [0, -100, 0],
-            y: [0, 50, 0],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
-          className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-app-main-1 rounded-full mix-blend-multiply filter blur-3xl opacity-10"
-        />
-      </div>
+      <FooterBackground />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-20 pointer-events-auto">
+
+
         {/* Main Footer Content */}
-        <div className="py-16 grid lg:grid-cols-5 gap-12">
+        <div className="py-16 grid lg:grid-cols-4 gap-12">
           {/* Brand Section */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-2"
+            className="lg:col-span-2 relative"
           >
             <motion.h3
               initial={{ opacity: 0, x: -30 }}
@@ -166,9 +146,21 @@ export function Footer() {
                   </motion.li>
                 ))}
               </ul>
+              
+              {/* Add Language Switcher to Support section */}
+              {category === t('sections.support.title') && (
+                <div className="mt-6">
+                  <h5 className="text-lg font-semibold mb-3 text-white">{t('sections.language.title')}</h5>
+                  <div>
+                    <LanguageSwitcher className="bg-white/10 hover:bg-white/20 text-white border-white/20 hover:border-white/30 transition-all duration-300" />
+                  </div>
+                </div>
+              )}
             </motion.div>
 
           ))}
+
+
 
             
 

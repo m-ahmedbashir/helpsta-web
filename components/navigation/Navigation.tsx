@@ -146,7 +146,7 @@ export function Navigation({ locale }: { locale?: string }) {
         aria-hidden={!isOpen}
         initial={false}
         animate={isOpen ? "open" : "closed"}
-        className="fixed top-0 right-0 h-full w-80 md:w-96 z-[60] pointer-events-auto overflow-hidden"
+        className={`fixed top-0 right-0 h-full w-80 md:w-96 z-[60] overflow-hidden ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}
       >
         <motion.div
           variants={bgVariants}

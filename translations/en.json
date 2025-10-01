@@ -104,6 +104,9 @@
         "terms": "Terms",
         "cookies": "Cookies",
         "licenses": "Licenses"
+      },
+      "language": {
+        "title": "Language"
       }
     }
   },

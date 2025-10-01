@@ -3,8 +3,14 @@
 import { useLocale } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import React from "react";
-import { Button } from '@/components/ui/button';
-// We'll use the design system Button for consistent styling
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+import { GermanFlag, USFlag } from './FlagIcons';
 
 interface LanguageSwitcherProps {
   className?: string;
@@ -13,8 +19,18 @@ interface LanguageSwitcherProps {
 }
 
 const SUPPORTED_LOCALES = [
-  { code: "de", label: "Deutsch", flag: "🇩🇪" },
-  { code: "en", label: "English", flag: "🇺🇸" },
+  { 
+    code: "de", 
+    label: "Deutsch", 
+    flag: GermanFlag,
+    country: "Germany"
+  },
+  { 
+    code: "en", 
+    label: "English", 
+    flag: USFlag,
+    country: "United States"
+  },
 ];
 
 export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
@@ -38,23 +54,32 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
     router.push(newPath);
   };
 
-  // Determine the next locale to switch to (toggle)
-  const other = SUPPORTED_LOCALES.find((l) => l.code !== locale) || SUPPORTED_LOCALES[0];
-
-  const handleClick = () => {
-    handleSwitch(other.code);
-  };
+  const currentLocale = SUPPORTED_LOCALES.find((l) => l.code === locale) || SUPPORTED_LOCALES[0];
 
   return (
-    <Button
-      type="button"
-      variant={"secondary"}
-      aria-label={`Switch language to ${other.label}`}
-      onClick={handleClick}
-      size="sm"
-      className={`${className} rounded-full px-3`}
-    >
-      {other.code.toUpperCase()}
-    </Button>
+    <Select value={locale} onValueChange={handleSwitch}>
+      <SelectTrigger className={`w-[140px] ${className}`}>
+        <SelectValue>
+          <div className="flex items-center gap-2">
+            <currentLocale.flag size={16} />
+            <span>{currentLocale.label}</span>
+          </div>
+        </SelectValue>
+      </SelectTrigger>
+      <SelectContent className={dropdownClassName}>
+        {SUPPORTED_LOCALES.map((localeOption) => (
+          <SelectItem 
+            key={localeOption.code} 
+            value={localeOption.code}
+            className={optionClassName}
+          >
+            <div className="flex items-center gap-2">
+              <localeOption.flag size={16} />
+              <span>{localeOption.label}</span>
+            </div>
+          </SelectItem>
+        ))}
+      </SelectContent>
+    </Select>
   );
 };
