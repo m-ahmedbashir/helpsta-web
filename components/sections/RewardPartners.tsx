@@ -110,8 +110,6 @@ export function RewardPartners() {
   /* ---- mount ---- */
   useEffect(() => {
     setIsClient(true);
-    // Leaflet CSS once
-    import('leaflet/dist/leaflet.css');
     // Marker icons setup once
     import('leaflet').then(L => {
       // @ts-ignore private property
@@ -273,7 +271,7 @@ export function RewardPartners() {
                       maxZoom={17}
                       maxBounds={DE_BOUNDS as any}
                       maxBoundsViscosity={1.0}
-                      whenCreated={(m) => { if (!mapRef.current) mapRef.current = m; }} // set once
+                      ref={mapRef}
                       style={{ height: '100%', width: '100%' }}
                     >
                       <TileLayer

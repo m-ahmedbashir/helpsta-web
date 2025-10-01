@@ -186,13 +186,11 @@ export function Footer() {
           className="py-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4"
         >
           <p className="text-gray-300 flex items-center gap-2">
-            © 2024 {t('brand')}. {t('madeWith')} <Heart className="w-4 h-4 text-red-500 fill-red-500" /> {t('in')} {t('city')}
+            © 2025 {t('brand')}. {t('madeWith')} <Heart className="w-4 h-4 text-red-500 fill-red-500" /> {t('in')} {t('city')}
           </p>
           <div className="flex gap-6 text-sm text-gray-400 items-center">
-            <a href="#" className="hover:text-white transition-colors">{t('privacyPolicy')}</a>
-            <a href="#" className="hover:text-white transition-colors">{t('termsOfService')}</a>
-            <a href="#" className="hover:text-white transition-colors">{t('cookies')}</a>
-          
+            <Link href={`/${locale}/privacy`} className="hover:text-white transition-colors">{t('privacyPolicy')}</Link>
+            <Link href={`/${locale}/terms`} className="hover:text-white transition-colors">{t('termsOfService')}</Link>
           </div>
         </motion.div>
       </div>
