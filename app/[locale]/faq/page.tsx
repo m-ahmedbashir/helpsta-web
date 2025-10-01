@@ -60,36 +60,36 @@ export default function FAQPage() {
       <Navigation />
       
       {/* Main Content */}
-      <main className="relative min-h-screen bg-gradient-to-br from-main-purple via-purple-800 to-indigo-900 overflow-hidden">
+      <main className="relative min-h-screen overflow-hidden">
         {/* Background Elements */}
         <AuroraBackground />
         <GrainOverlay />
         
-        {/* Background Decorative Elements */}
+        {/* Additional subtle animated elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div
             animate={{
-              x: [0, 100, 0],
-              y: [0, -50, 0],
+              x: [0, 50, 0],
+              y: [0, -30, 0],
             }}
             transition={{
-              duration: 20,
+              duration: 25,
               repeat: Infinity,
               repeatType: "reverse",
             }}
-            className="absolute top-0 left-0 w-96 h-96 bg-orange-main rounded-full mix-blend-multiply filter blur-3xl opacity-10"
+            className="absolute top-1/4 left-1/4 w-64 h-64 bg-orange-main rounded-full mix-blend-multiply filter blur-3xl opacity-5"
           />
           <motion.div
             animate={{
-              x: [0, -100, 0],
-              y: [0, 50, 0],
+              x: [0, -50, 0],
+              y: [0, 30, 0],
             }}
             transition={{
-              duration: 15,
+              duration: 30,
               repeat: Infinity,
               repeatType: "reverse",
             }}
-            className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-app-main-1 rounded-full mix-blend-multiply filter blur-3xl opacity-10"
+            className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-main-purple rounded-full mix-blend-multiply filter blur-3xl opacity-5"
           />
         </div>
 
@@ -107,7 +107,7 @@ export default function FAQPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-5xl md:text-6xl font-bold text-white mb-6"
+              className="text-5xl md:text-6xl font-bold text-main-purple mb-6"
             >
               {t('title')}
             </motion.h1>
@@ -115,7 +115,7 @@ export default function FAQPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+              className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
             >
               {t('subtitle')}
             </motion.p>
@@ -138,12 +138,12 @@ export default function FAQPage() {
                 >
                   <AccordionItem 
                     value={item.id}
-                    className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg overflow-hidden"
+                    className="bg-white/80 backdrop-blur-sm border border-white/20 rounded-lg overflow-hidden shadow-lg"
                   >
-                    <AccordionTrigger className="px-6 py-4 text-left text-white hover:bg-white/5 transition-colors duration-300 text-lg font-semibold">
+                    <AccordionTrigger className="px-6 py-4 text-left text-main-purple hover:bg-white/10 transition-colors duration-300 text-lg font-semibold">
                       {item.question}
                     </AccordionTrigger>
-                    <AccordionContent className="px-6 pb-4 text-gray-300 leading-relaxed">
+                    <AccordionContent className="px-6 pb-4 text-gray-700 leading-relaxed">
                       {item.answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -159,10 +159,10 @@ export default function FAQPage() {
             transition={{ duration: 0.8, delay: 1.2 }}
             className="text-center mt-16"
           >
-            <h2 className="text-3xl font-bold text-white mb-4">
+            <h2 className="text-3xl font-bold text-main-purple mb-4">
               {t('stillHaveQuestions')}
             </h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
               {t('contactUsText')}
             </p>
             <motion.a

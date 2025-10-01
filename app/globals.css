@@ -80,3 +80,33 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Fix scrollbar layout shift when modals/dropdowns open */
+@layer utilities {
+  /* Prevent Radix UI from causing layout shifts */
+  body[data-scroll-locked] {
+    overflow: visible !important;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+    pointer-events: auto !important;
+  }
+  
+  /* Force override any dynamic styles applied to body */
+  body[style*="overflow: hidden"] {
+    overflow: visible !important;
+  }
+  
+  body[style*="padding-right"] {
+    padding-right: 0 !important;
+  }
+  
+  body[style*="margin-right"] {
+    margin-right: 0 !important;
+  }
+
+  /* Prevent Radix Portal from creating layout shifts */
+  [data-radix-portal] {
+    position: fixed !important;
+    z-index: 50 !important;
+  }
+}

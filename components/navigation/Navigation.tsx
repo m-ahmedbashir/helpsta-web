@@ -5,12 +5,13 @@ import { motion, AnimatePresence, Variants } from "framer-motion";
 import { Chrome as Home, Info, Zap, Users, Mail, Download, HelpCircle } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 type MenuItem = { icon: React.ComponentType<any>; labelKey: string; href: string };
 
-export function Navigation({ locale }: { locale?: string }) {
+export function Navigation() {
   const t = useTranslations('navigation');
+  const locale = useLocale();
   
   const MENU: MenuItem[] = [
     { icon: Home, labelKey: "home",            href: "/" },
@@ -86,33 +87,28 @@ export function Navigation({ locale }: { locale?: string }) {
     closed: { y: 18, opacity: 0, transition: { y: { stiffness: 900 } } },
   };
 
-  // Smoothly handle hash links without full reload
-  const handleNav = async (href: string) => {
+  // Simplified navigation handler
+  const handleNav = (href: string) => {
     setIsOpen(false);
 
-    // External links: let the browser handle them
-    if (/^https?:\/\//i.test(href)) {
-      window.location.href = href;
-      return;
-    }
-
-    // Hash-only links (in-page sections)
     if (href.startsWith("#")) {
+      // Hash links - scroll to element
       const id = href.slice(1);
       const el = document.getElementById(id);
       if (el) {
-        el.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
       } else {
-        // If element not on current route (e.g., we are not on the home page), push to route with hash
-        const base = locale ? `/${locale}` : "";
-        router.push(`${base}/${href}`);
+        // If not found, navigate to home with hash
+        router.push(`/${locale}/${href}`);
       }
-      return;
     }
+  };
 
-    // Internal route (SPA)
-    const base = locale ? `/${locale}` : "";
-    router.push(`${base}${href === "/" ? "" : href}`);
+  // Get localized href for internal routes
+  const getLocalizedHref = (href: string) => {
+    if (href.startsWith("#")) return href; // Hash links stay as-is
+    if (href === "/") return `/${locale}`;
+    return `/${locale}${href}`;
   };
 
   return (
@@ -169,37 +165,38 @@ export function Navigation({ locale }: { locale?: string }) {
               {MENU.map(({ icon: Icon, labelKey, href }) => {
                 const label = t(labelKey);
                 const isHash = href.startsWith("#");
-                const isActive =
-                  (!isHash && href !== "/" && pathname?.startsWith(href)) ||
-                  (href === "/" && pathname === (locale ? `/${locale}` : "/"));
+                const localizedHref = getLocalizedHref(href);
+                const isActive = pathname === localizedHref || 
+                  (href !== "/" && pathname?.startsWith(localizedHref));
 
-                // For non-hash internal routes, still render Link so prefetch works.
+                const linkProps = {
+                  className: `group flex items-center gap-4 p-4 rounded-xl text-white hover:bg-white/10 transition-all duration-300 ${isActive ? "bg-white/10" : ""}`,
+                  children: (
+                    <>
+                      <span className="grid place-items-center w-10 h-10 rounded-lg bg-white/10 group-hover:bg-orange-main transition-colors">
+                        <Icon className="w-5 h-5" />
+                      </span>
+                      <span className="text-lg font-medium">{label}</span>
+                    </>
+                  )
+                };
+
                 return (
                   <motion.li key={labelKey} variants={itemVariants}>
                     {isHash ? (
                       <button
                         onClick={() => handleNav(href)}
-                        className="w-full text-left group flex items-center gap-4 p-4 rounded-xl text-white hover:bg-white/10 transition-all duration-300"
+                        className={linkProps.className.replace('group', 'w-full text-left group')}
                       >
-                        <span className="grid place-items-center w-10 h-10 rounded-lg bg-white/10 group-hover:bg-orange-main transition-colors">
-                          <Icon className="w-5 h-5" />
-                        </span>
-                        <span className="text-lg font-medium">{label}</span>
+                        {linkProps.children}
                       </button>
                     ) : (
                       <Link
-                        href={locale ? `/${locale}${href === "/" ? "" : href}` : href}
-                        prefetch
-                        onClick={(e) => {
-                          // Close panel immediately; Next handles the SPA nav
-                          setIsOpen(false);
-                        }}
-                        className={`group flex items-center gap-4 p-4 rounded-xl text-white hover:bg-white/10 transition-all duration-300 ${isActive ? "bg-white/10" : ""}`}
+                        href={localizedHref}
+                        onClick={() => setIsOpen(false)}
+                        {...linkProps}
                       >
-                        <span className="grid place-items-center w-10 h-10 rounded-lg bg-white/10 group-hover:bg-orange-main transition-colors">
-                          <Icon className="w-5 h-5" />
-                        </span>
-                        <span className="text-lg font-medium">{label}</span>
+                        {linkProps.children}
                       </Link>
                     )}
                   </motion.li>
