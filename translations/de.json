@@ -1,0 +1,410 @@
+{
+  "navigation": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "rewards": "Belohnungen",
+    "community": "Gemeinschaft",
+    "howItWorks": "Wie es funktioniert",
+    "faq": "FAQ",
+    "contact": "Kontakt",
+    "downloadApp": "App herunterladen"
+  },
+  "hero": {
+    "title": "Revolutionäre",
+    "subtitle": "Mobile Erfahrung",
+    "description": "Verwandeln Sie Ihre tägliche Routine mit unserer hochmodernen mobilen Anwendung. Erleben Sie nahtlose Funktionalität, atemberaubendes Design und unvergleichliche Leistung.",
+    "downloadNow": "Jetzt herunterladen",
+    "watchDemo": "Demo ansehen",
+    "reviews": "50K+ Bewertungen"
+  },
+  "howItWorks": {
+    "title": "Wie es funktioniert",
+    "subtitle": "Scrollen—Karten bleiben in einer Linie mit sanftem Parallax.",
+    "steps": {
+      "download": {
+        "title": "Herunterladen & Installieren",
+        "description": "In Sekunden starten."
+      },
+      "setup": {
+        "title": "Profil einrichten",
+        "description": "Personalisieren Sie Ihre Erfahrung."
+      },
+      "features": {
+        "title": "Hauptfunktionen nutzen",
+        "description": "Mächtige Tools, einfache Benutzeroberfläche."
+      },
+      "connect": {
+        "title": "Verbinden & Teilen",
+        "description": "Der lokalen Gemeinschaft beitreten."
+      }
+    }
+  },
+  "rewardPartners": {
+    "title": "Partner in Ihrer Nähe",
+    "subtitle": "Nutzen Sie die Karte (nur Deutschland) oder durchsuchen Sie die Liste.",
+    "badge": "Belohnungspartner",
+    "searchPlaceholder": "Suche in Deutschland (Stadt, Straße...)",
+    "search": "Suchen",
+    "searching": "Suche läuft...",
+    "useMyLocation": "Meinen Standort verwenden",
+    "showOnMap": "Auf Karte anzeigen",
+    "details": "Details",
+    "becomePartner": "Belohnungspartner werden",
+    "findNearby": "Partner in der Nähe finden",
+    "all": "Alle",
+    "locations": "Standorte",
+    "verified": "Verifiziert"
+  },
+  "communityPartners": {
+    "title": "Die Zukunft gemeinsam gestalten",
+    "subtitle": "Treten Sie unserem florierenden Ökosystem innovativer Partner bei, die die Zukunft der mobilen Technologie prägen und weltweit bedeutungsvolle Verbindungen schaffen.",
+    "badge": "Gemeinschaftspartner",
+    "learnMore": "Mehr erfahren",
+    "ctaTitle": "Bereit, unserer Gemeinschaft beizutreten?",
+    "ctaSubtitle": "Werden Sie unser Partner, um Millionen von Nutzern zu erreichen und Teil der mobilen Revolution zu sein.",
+    "becomePartner": "Partner werden"
+  },
+  "footer": {
+    "brand": "Helpsta",
+    "description": "Die Art und Weise verändern, wie Sie mit mobiler Technologie interagieren. Treten Sie Millionen von Nutzern bei, die unserer Plattform für ihre täglichen Bedürfnisse vertrauen.",
+    "stayUpdated": "Bleiben Sie auf dem Laufenden",
+    "stayUpdatedDesc": "Erhalten Sie die neuesten Nachrichten und Updates in Ihrem Posteingang.",
+    "emailPlaceholder": "Geben Sie Ihre E-Mail ein",
+    "subscribe": "Abonnieren",
+    "madeWith": "Erstellt mit",
+    "in": "in",
+    "city": "Bielefeld",
+    "privacyPolicy": "Datenschutzrichtlinie",
+    "termsOfService": "Nutzungsbedingungen",
+    "switchLanguage": "Sprache wechseln",
+    "sections": {
+      "product": {
+        "title": "Produkt",
+        "features": "Funktionen",
+        "pricing": "Preise",
+        "security": "Sicherheit",
+        "updates": "Updates"
+      },
+      "company": {
+        "title": "Unternehmen",
+        "about": "Über uns",
+        "careers": "Karriere",
+        "blog": "Blog",
+        "press": "Presse"
+      },
+      "support": {
+        "title": "Support",
+        "faq": "FAQ",
+        "contact": "Kontakt",
+        "documentation": "Dokumentation",
+        "community": "Gemeinschaft"
+      },
+      "legal": {
+        "title": "Rechtliches",
+        "privacy": "Datenschutz",
+        "terms": "Bedingungen",
+        "cookies": "Cookies",
+        "licenses": "Lizenzen"
+      },
+      "language": {
+        "title": "Sprache"
+      }
+    }
+  },
+  "becomePartner": {
+    "title": "Belohnungspartner werden",
+    "subtitle": "Treten Sie unserem Partnernetzwerk bei und erreichen Sie Tausende von Nutzern in der Nähe. Einfaches Onboarding, klare Vorteile und ein Dashboard nach der Genehmigung.",
+    "whyPartner": "Warum Partner werden?",
+    "reachCustomers": {
+      "title": "Mehr Kunden erreichen",
+      "description": "Verbinden Sie sich mit Tausenden aktiven Nutzern in Ihrer Nähe, die nach tollen Angeboten suchen."
+    },
+    "increaseRevenue": {
+      "title": "Umsatz steigern",
+      "description": "Steigern Sie den Verkauf mit unserem Belohnungssystem, das Wiederholungsbesuche fördert."
+    },
+    "buildLoyalty": {
+      "title": "Loyalität aufbauen",
+      "description": "Schaffen Sie dauerhafte Beziehungen zu Kunden durch unser Treueprogramm."
+    },
+    "howItWorks": "Wie es funktioniert",
+    "steps": {
+      "submit": "Bewerbung einreichen",
+      "verify": "Verifizierung innerhalb von 2-3 Tagen",
+      "dashboard": "Zugang zu Ihrem Partner-Dashboard",
+      "earn": "Mit Kunden verdienen beginnen"
+    },
+    "form": {
+      "step": "Schritt",
+      "of": "von",
+      "complete": "Vollständig",
+      "businessInfo": {
+        "title": "Geschäftsinformationen",
+        "subtitle": "Erzählen Sie uns von Ihrem Unternehmen",
+        "businessName": "Firmenname",
+        "businessNamePlaceholder": "Geben Sie Ihren Firmennamen ein",
+        "contactEmail": "Kontakt-E-Mail",
+        "contactEmailPlaceholder": "business@example.com",
+        "contactPhone": "Kontakt-Telefon",
+        "contactPhonePlaceholder": "+49 (555) 123-4567",
+        "category": "Geschäftskategorie",
+        "categoryPlaceholder": "Wählen Sie Ihre Geschäftskategorie"
+      },
+      "location": {
+        "title": "Geschäftsstandort",
+        "subtitle": "Wo können Kunden Sie finden?",
+        "streetAddress": "Straßenadresse",
+        "streetAddressPlaceholder": "Musterstraße 123",
+        "apartment": "Wohnung, Suite, etc.",
+        "apartmentPlaceholder": "Suite 100 (optional)",
+        "postalCode": "Postleitzahl",
+        "postalCodePlaceholder": "10001",
+        "city": "Stadt",
+        "cityPlaceholder": "Berlin",
+        "state": "Bundesland",
+        "statePlaceholder": "Berlin",
+        "country": "Land",
+        "countryPlaceholder": "Deutschland"
+      },
+      "onlinePresence": {
+        "title": "Online-Präsenz",
+        "subtitle": "Erzählen Sie Kunden von Ihrem Unternehmen & Website",
+        "description": "Geschäftsbeschreibung",
+        "descriptionPlaceholder": "Was bieten Sie an? Was macht Ihren Ort besonders?",
+        "website": "Website",
+        "websitePlaceholder": "https://www.ihrunternehmen.com"
+      },
+      "review": {
+        "title": "Überprüfen & Einreichen",
+        "subtitle": "Bitte überprüfen Sie Ihre Informationen vor dem Einreichen",
+        "businessDetails": "Geschäftsdetails",
+        "name": "Name",
+        "email": "E-Mail",
+        "category": "Kategorie",
+        "location": "Standort",
+        "onlinePresence": "Online-Präsenz",
+        "description": "Beschreibung",
+        "website": "Website",
+        "whatHappensNext": "Was passiert als nächstes?",
+        "nextSteps": [
+          "Wir prüfen Ihre Bewerbung innerhalb von 2–3 Werktagen",
+          "Unser Team kontaktiert Sie zur Verifizierung",
+          "Nach der Genehmigung erhalten Sie Zugang zum Partner-Dashboard",
+          "Beginnen Sie mit Tausenden aktiven Nutzern zu verdienen"
+        ]
+      },
+      "previous": "Zurück",
+      "nextStep": "Nächster Schritt",
+      "submitting": "Wird eingereicht…",
+      "submitApplication": "Bewerbung einreichen",
+      "required": "erforderlich",
+      "errors": {
+        "businessNameRequired": "Firmenname ist erforderlich",
+        "emailRequired": "E-Mail ist erforderlich",
+        "emailInvalid": "Bitte geben Sie eine gültige E-Mail ein",
+        "categoryRequired": "Bitte wählen Sie eine Kategorie",
+        "addressRequired": "Adresse ist erforderlich",
+        "cityRequired": "Stadt ist erforderlich",
+        "stateRequired": "Bundesland ist erforderlich",
+        "postalCodeRequired": "Postleitzahl ist erforderlich",
+        "descriptionRequired": "Bitte fügen Sie eine kurze Geschäftsbeschreibung hinzu",
+        "websiteInvalid": "Bitte geben Sie eine gültige URL ein (z.B. https://example.com)"
+      }
+    }
+  },
+  "loading": {
+    "brand": "Helpsta",
+    "tagline": "Revolutionäre Mobile Erfahrung",
+    "steps": {
+      "initializing": "Initialisierung...",
+      "loadingComponents": "Komponenten laden...",
+      "connectingPartners": "Partner verbinden...",
+      "settingUpRewards": "Belohnungen einrichten...",
+      "preparingExperience": "Erfahrung vorbereiten...",
+      "almostReady": "Fast bereit..."
+    },
+    "preparing": "Ihre personalisierte Erfahrung wird vorbereitet..."
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Finden Sie Antworten auf häufige Fragen zu Helpsta, unserer mobilen Plattform und wie Sie das Beste aus Ihrer Erfahrung herausholen können.",
+    "stillHaveQuestions": "Haben Sie noch Fragen?",
+    "contactUsText": "Können Sie die gesuchte Antwort nicht finden? Unser Support-Team ist da, um Ihnen zu helfen.",
+    "contactUs": "Kontaktieren Sie uns",
+    "items": {
+      "whatIsHelpsta": {
+        "question": "Was ist Helpsta?",
+        "answer": "Helpsta ist eine revolutionäre mobile Plattform, die die Art und Weise verändert, wie Sie mit mobiler Technologie interagieren. Wir verbinden Nutzer durch unser Belohnungssystem und Community-Features mit lokalen Unternehmen und machen Ihre tägliche mobile Erfahrung lohnender und ansprechender."
+      },
+      "howToDownload": {
+        "question": "Wie lade ich die Helpsta-App herunter?",
+        "answer": "Sie können die Helpsta-App aus dem App Store für iOS-Geräte oder Google Play Store für Android-Geräte herunterladen. Suchen Sie einfach nach 'Helpsta' und schauen Sie nach unserer offiziellen App mit dem orangen Logo. Die App ist kostenlos zum Herunterladen und Verwenden."
+      },
+      "rewardPartners": {
+        "question": "Was sind Belohnungspartner?",
+        "answer": "Belohnungspartner sind lokale Unternehmen, die unserem Netzwerk beigetreten sind, um Helpsta-Nutzern exklusive Angebote, Rabatte und Belohnungen anzubieten. Wenn Sie diese Partnerstandorte besuchen oder dort einkaufen, können Sie Belohnungen sammeln und spezielle Angebote genießen, die nur über unsere Plattform verfügbar sind."
+      },
+      "becomePartner": {
+        "question": "Wie kann mein Unternehmen Belohnungspartner werden?",
+        "answer": "Belohnungspartner zu werden ist einfach! Besuchen Sie unsere 'Partner werden'-Seite und füllen Sie das Bewerbungsformular aus. Unser Team wird Ihre Bewerbung innerhalb von 2-3 Tagen prüfen, und nach der Genehmigung erhalten Sie Zugang zu unserem Partner-Dashboard, wo Sie Ihre Angebote verwalten und Ihre Leistung verfolgen können."
+      },
+      "dataSecurity": {
+        "question": "Wie sicher sind meine persönlichen Daten?",
+        "answer": "Wir nehmen Datensicherheit sehr ernst. Alle persönlichen Informationen werden verschlüsselt und sicher gespeichert. Wir geben Ihre persönlichen Daten niemals ohne Ihre ausdrückliche Zustimmung an Dritte weiter. Sie können unsere detaillierte Datenschutzrichtlinie für weitere Informationen darüber einsehen, wie wir Ihre Daten schützen und handhaben."
+      },
+      "support": {
+        "question": "Wie kann ich Hilfe oder Support erhalten?",
+        "answer": "Unser Support-Team steht Ihnen über mehrere Kanäle zur Verfügung. Sie können uns per E-Mail unter hello@helpsta.com kontaktieren, unser Hilfe-Center für Selbstbedienungsoptionen besuchen oder die In-App-Support-Funktion nutzen. Wir antworten normalerweise innerhalb von 24 Stunden auf Anfragen."
+      }
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Nehmen Sie Kontakt mit unserem Team auf. Wir sind hier, um zu helfen und alle Ihre Fragen zu beantworten.",
+    "info": {
+      "title": "Kontakt aufnehmen",
+      "email": {
+        "title": "E-Mail"
+      },
+      "phone": {
+        "title": "Telefon"
+      },
+      "address": {
+        "title": "Adresse"
+      },
+      "hours": {
+        "title": "Geschäftszeiten",
+        "weekdays": "Mo - Fr: 9:00 - 18:00 Uhr",
+        "weekend": "Sa - So: 10:00 - 16:00 Uhr"
+      }
+    },
+    "response": {
+      "title": "Antwortzeit",
+      "description": "Wir bemühen uns, alle Anfragen so schnell wie möglich zu beantworten. Das können Sie erwarten:",
+      "timeframe": "Typische Antwortzeit: 2-4 Stunden während der Geschäftszeiten"
+    },
+    "form": {
+      "title": "Senden Sie uns eine Nachricht",
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "email": "E-Mail-Adresse",
+      "phone": "Telefonnummer",
+      "subject": "Betreff",
+      "message": "Nachricht",
+      "send": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "required": "* Pflichtfelder",
+      "placeholders": {
+        "firstName": "Geben Sie Ihren Vornamen ein",
+        "lastName": "Geben Sie Ihren Nachnamen ein",
+        "email": "ihre.email@beispiel.de",
+        "phone": "+49 123 456 7890",
+        "subject": "Wählen Sie einen Betreff",
+        "message": "Teilen Sie uns mit, wie wir Ihnen helfen können..."
+      },
+      "subjects": {
+        "general-inquiry": "Allgemeine Anfrage",
+        "technical-support": "Technischer Support",
+        "partnership": "Partnerschaftsanfrage",
+        "feedback": "Feedback & Vorschläge",
+        "billing": "Abrechnung & Konto",
+        "other": "Sonstiges"
+      },
+      "errors": {
+        "firstNameRequired": "Vorname ist erforderlich",
+        "lastNameRequired": "Nachname ist erforderlich",
+        "emailRequired": "E-Mail ist erforderlich",
+        "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+        "subjectRequired": "Bitte wählen Sie einen Betreff",
+        "messageRequired": "Nachricht ist erforderlich",
+        "messageTooShort": "Nachricht muss mindestens 10 Zeichen lang sein"
+      }
+    },
+    "success": {
+      "title": "Nachricht gesendet!",
+      "message": "Vielen Dank, dass Sie uns kontaktiert haben. Wir haben Ihre Nachricht erhalten und werden uns innerhalb von 2-4 Geschäftsstunden bei Ihnen melden.",
+      "sendAnother": "Weitere Nachricht senden"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Über Helpsta",
+      "subtitle": "Mobile Erfahrungen für Millionen weltweit revolutionieren",
+      "description": "Wir sind ein leidenschaftliches Team, das sich der Transformation der Interaktion zwischen Menschen und mobiler Technologie widmet und bedeutungsvolle Verbindungen zwischen Nutzern und lokalen Unternehmen schafft."
+    },
+    "stats": {
+      "users": "Aktive Nutzer",
+      "partners": "Geschäftspartner",
+      "cities": "Städte weltweit",
+      "founded": "Gegründet"
+    },
+    "story": {
+      "title": "Unsere Geschichte",
+      "paragraph1": "Helpsta wurde 2019 mit einer einfachen Vision gegründet: die Lücke zwischen mobiler Technologie und lokalen Gemeinschaften zu schließen. Was als kleines Team mit großen Träumen begann, ist zu einer revolutionären Plattform gewachsen, die Millionen von Nutzern mit Tausenden von Unternehmen weltweit verbindet.",
+      "paragraph2": "Unsere Reise begann, als wir die Diskrepanz zwischen digitaler Innovation und lokalem Gemeinschaftsengagement bemerkten. Wir sahen eine Gelegenheit, etwas Bedeutungsvolles zu schaffen - eine Plattform, die nicht nur modernste mobile Erfahrungen bietet, sondern auch lokale Wirtschaften stärkt und echte Verbindungen aufbaut.",
+      "paragraph3": "Heute sind wir stolz darauf, an der Spitze der mobilen Innovation zu stehen und kontinuierlich Grenzen zu verschieben, während wir unserer Kernmission treu bleiben, Werte für Nutzer und lokale Unternehmen zu schaffen."
+    },
+    "mission": {
+      "title": "Unsere Mission",
+      "description": "Mobile Erfahrungen revolutionieren, indem wir bedeutungsvolle Verbindungen zwischen Nutzern und lokalen Unternehmen schaffen und Gemeinschaftswachstum und digitale Innovation fördern."
+    },
+    "vision": {
+      "title": "Unsere Vision",
+      "description": "Die führende Plattform zu sein, die mobile Technologie nahtlos mit lokalen Gemeinschaften integriert und eine Welt schafft, in der digitale Innovation reale Auswirkungen erzielt."
+    },
+    "values": {
+      "title": "Unsere Grundwerte",
+      "subtitle": "Die Prinzipien, die alles leiten, was wir tun, und unsere Unternehmenskultur prägen.",
+      "items": {
+        "innovation": {
+          "title": "Innovation",
+          "description": "Wir verschieben ständig Grenzen und nutzen neue Technologien, um bahnbrechende Lösungen zu schaffen, die Erwartungen übertreffen."
+        },
+        "trust": {
+          "title": "Vertrauen",
+          "description": "Wir bauen dauerhafte Beziehungen durch Transparenz, Zuverlässigkeit und unerschütterliches Engagement für Datensicherheit und Privatsphäre auf."
+        },
+        "community": {
+          "title": "Gemeinschaft",
+          "description": "Wir glauben an die Kraft lokaler Gemeinschaften und arbeiten daran, Verbindungen zwischen Menschen und Unternehmen zu stärken."
+        },
+        "excellence": {
+          "title": "Exzellenz",
+          "description": "Wir streben nach Perfektion in allem, was wir tun, vom Produktdesign bis zum Kundenservice und darüber hinaus."
+        }
+      }
+    },
+    "team": {
+      "title": "Lernen Sie unser Team kennen",
+      "subtitle": "Die talentierten Personen hinter Helpstas Erfolg, die vielfältige Expertise und gemeinsame Leidenschaft für Innovation mitbringen.",
+      "members": {
+        "ceo": {
+          "name": "Sarah Chen",
+          "position": "Geschäftsführerin",
+          "bio": "Ehemalige Technologieführungskraft mit 15+ Jahren Erfahrung in mobiler Innovation und Startup-Leitung."
+        },
+        "cto": {
+          "name": "Marcus Weber",
+          "position": "Technischer Leiter",
+          "bio": "Führt unsere technische Vision mit Expertise in skalierbaren Systemen und mobiler Architektur."
+        },
+        "design": {
+          "name": "Emma Rodriguez",
+          "position": "Leiterin Design",
+          "bio": "Preisgekrönte Designerin, die sich auf intuitive und schöne Benutzererfahrungen konzentriert."
+        },
+        "product": {
+          "name": "David Kim",
+          "position": "VP Produkt",
+          "bio": "Produktstratege mit einer Leidenschaft für die Lösung realer Probleme durch Technologie."
+        }
+      }
+    },
+    "cta": {
+      "title": "Bereit, unserer Reise beizutreten?",
+      "description": "Ob Sie daran interessiert sind, mit uns zu kooperieren, unserem Team beizutreten oder einfach mehr über das erfahren möchten, was wir tun - wir würden gerne von Ihnen hören.",
+      "contact": "Kontakt aufnehmen",
+      "careers": "Karrieren ansehen"
+    }
+  }
+}

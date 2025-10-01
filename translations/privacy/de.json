@@ -1,0 +1,49 @@
+{
+  "title": "Datenschutzerklärung",
+  "subtitle": "Ihre Privatsphäre ist uns wichtig. Diese Richtlinie erklärt, wie wir Ihre persönlichen Daten sammeln, verwenden und schützen, wenn Sie Helpsta nutzen.",
+  "lastUpdated": "Zuletzt aktualisiert",
+  "effectiveDate": "1. Oktober 2024",
+  "sections": {
+    "dataCollection": {
+      "title": "Informationen, die wir sammeln",
+      "content": "<p>Wir sammeln Informationen, die Sie uns direkt zur Verfügung stellen, und Informationen, die automatisch gesammelt werden, wenn Sie unsere Dienste nutzen:</p><ul><li><strong>Kontoinformationen:</strong> Name, E-Mail-Adresse, Telefonnummer (erforderlich für die App-Funktionalität)</li><li><strong>Standortdaten:</strong> GPS-Koordinaten und Standortinformationen (erforderlich, um nahegelegene Geschäftspartner und Dienste bereitzustellen)</li><li><strong>Nutzungsanalytik:</strong> App-Interaktionen, Feature-Nutzung und Leistungsdaten durch Analysetools zur Verbesserung der Benutzererfahrung und Verfolgung der App-Leistung</li><li><strong>Geräte- und Sicherheitsinformationen:</strong> IP-Adresse, Geräteinformationen und Nutzungsmuster für Sicherheitszwecke und zur Verhinderung von Missbrauch wie Brute-Force-Angriffen</li><li><strong>Kommunikationsdaten:</strong> Nachrichten und Beiträge, die Sie auf unserer Plattform erstellen</li></ul><p>Wir verwenden Analysetools zur Überwachung der App-Leistung, Abstürze und Verbesserungen der Benutzererfahrung.</p>"
+    },
+    "dataUsage": {
+      "title": "Wie wir Ihre Informationen verwenden",
+      "content": "<p>Wir verwenden Ihre Informationen für:</p><ul><li>Bereitstellung und Verbesserung unserer mobilen App und Dienste</li><li>Verbindung mit nahegelegenen Belohnungspartnern basierend auf Ihrem Standort</li><li>Versendung wichtiger Benachrichtigungen wie Passwort-Reset-E-Mails, wichtige Plattform-Updates, Nachrichten von anderen Benutzern und Erinnerungsbenachrichtigungen</li><li>Verbesserung unserer Benutzeroberfläche und -erfahrung durch Nutzungsanalytik</li><li>Verhinderung von Sicherheitsbedrohungen, Spam und Brute-Force-Angriffen durch IP-Adressen-Überwachung</li><li>Training von KI-Systemen in der Zukunft zur Verbesserung der Plattform-Unterstützung (unter Verwendung von Beiträgen und benutzergenerierten Inhalten)</li><li>Gewährleistung der Plattform-Sicherheit und Verhinderung betrügerischer Aktivitäten</li><li>Einhaltung gesetzlicher Verpflichtungen bei Bedarf</li></ul><p>Wir verwenden Ihre Daten nicht für Marketing-E-Mails oder personalisierte Werbung. Wir konzentrieren uns auf die Verbesserung der Funktionalität und Benutzererfahrung.</p>"
+    },
+    "dataSharing": {
+      "title": "Informationsaustausch",
+      "content": "<p>Wir verkaufen Ihre persönlichen Informationen nicht. Wir haben einen sehr begrenzten Ansatz beim Datenaustausch:</p><ul><li><strong>Geschäftspartner (Belohnungspartner):</strong> Wir teilen nur Ihren Namen zur Gutschein-Verifizierung. Keine anderen persönlichen Informationen werden mit Geschäftspartnern geteilt.</li><li><strong>Zahlungsabwickler:</strong> In Zukunft könnten wir Stripe für die Zahlungsabwicklung verwenden, was das sichere Teilen notwendiger Zahlungsinformationen beinhalten würde.</li><li><strong>Gesetzliche Anforderungen:</strong> Als Startup entwickeln wir noch unsere rechtlichen Compliance-Verfahren. Wir könnten Informationen teilen, wenn dies gesetzlich vorgeschrieben oder durch Gerichtsbeschlüsse erforderlich ist.</li><li><strong>Dienstanbieter:</strong> Analytik-Anbieter und wesentliche Dienstanbieter, die uns beim Betrieb der Plattform unter strengen Vertraulichkeitsvereinbarungen helfen.</li><li><strong>Kein Datenverkauf:</strong> Wir verkaufen, vermieten oder tauschen niemals Ihre persönlichen Informationen an Dritte für deren Marketingzwecke.</li></ul><p>Jeder Datenaustausch ist auf das für den spezifischen Zweck Notwendige begrenzt und unter angemessenen Vertraulichkeitsschutzmaßnahmen.</p>"
+    },
+    "dataStorage": {
+      "title": "Datenspeicherung und -aufbewahrung",
+      "content": "<p>Ihre Informationen werden sicher auf Servern in der Europäischen Union gespeichert. Wir implementieren angemessene technische und organisatorische Maßnahmen zum Schutz Ihrer Daten, einschließlich HTTPS/SSL-Verschlüsselung und Passwort-Verschlüsselung.</p><p>Datenaufbewahrungsrichtlinie:</p><ul><li>Wir bewahren Ihre persönlichen Informationen auf, bis Sie die Löschung Ihres Kontos beantragen</li><li>Wenn Sie Ihr Konto löschen, werden Ihre Daten sofort aus unserer Live-Datenbank entfernt</li><li>Daten können bis zu 7 Tage in unseren Backup-Systemen als Teil unseres regulären Backup-Rotationszyklus verbleiben</li><li>Nach 7 Tagen werden die Daten dauerhaft aus allen Backup-Systemen gelöscht</li><li>Wir verwenden reCAPTCHA und andere Sicherheitsmaßnahmen zum Schutz vor unbefugtem Zugriff</li></ul><p>Sie können jederzeit die Löschung Ihres Kontos und der zugehörigen Daten über Ihre Kontoeinstellungen oder durch Kontaktaufnahme mit uns beantragen.</p>"
+    },
+    "userRights": {
+      "title": "Ihre Rechte",
+      "content": "<p>Unter der DSGVO und anderen anwendbaren Gesetzen haben Sie folgende Rechte:</p><ul><li><strong>Kontolöschung:</strong> Sie können Ihr Konto und Ihre persönlichen Daten jederzeit über Ihre Kontoeinstellungen löschen</li><li><strong>Datenkorrektur:</strong> Sie können Ihre persönlichen Informationen über Ihre Kontoeinstellungen aktualisieren und korrigieren</li><li><strong>Datenzugang:</strong> Obwohl wir derzeit keinen automatisierten Datenexport anbieten, können Sie uns kontaktieren, um Ihre Daten zu besprechen</li><li><strong>Widerruf der Einwilligung:</strong> Sie können die Einwilligung zur Datenverarbeitung widerrufen, obwohl dies die App-Funktionalität einschränken kann</li><li><strong>Einschränkung der Verarbeitung:</strong> Sie können Einschränkungen bei der Verarbeitung Ihrer Daten beantragen</li><li><strong>DSGVO-Compliance:</strong> Wir bemühen uns, die DSGVO-Anforderungen für EU-Nutzer zu erfüllen</li></ul><p>Um diese Rechte auszuüben oder Fragen zu Ihren Daten zu stellen, nutzen Sie bitte unser Kontaktformular oder wenden Sie sich an unser Support-Team.</p>"
+    },
+    "cookies": {
+      "title": "Analytik und Tracking",
+      "content": "<p>Wir verwenden Analysetools zur Verbesserung unserer Dienste:</p><ul><li>Analysetools zur Verfolgung der App-Leistung, Abstürze und Benutzererfahrung</li><li>Website-Analytik zur Überwachung der Website-Leistung und Nutzungsmuster</li><li>Wesentliche Cookies, die für die grundlegende Website-Funktionalität erforderlich sind</li><li>Keine Werbe- oder Marketing-Tracking-Cookies</li><li>Keine Social-Media-Tracking-Integrationen</li></ul><p>Arten von Tracking, die wir verwenden:</p><ul><li><strong>Leistungsanalytik:</strong> Überwachung von App-Abstürzen, Ladezeiten und technischen Problemen</li><li><strong>Nutzungsanalytik:</strong> Verstehen, wie Benutzer mit Features interagieren, um die Benutzeroberfläche zu verbessern</li><li><strong>Sicherheitsüberwachung:</strong> Verfolgung von IP-Adressen zur Verhinderung von Missbrauch und Angriffen</li></ul><p>Wir verwenden Tracking nicht für Werbezwecke oder verkaufen Tracking-Daten an Dritte. Sie können Cookie-Präferenzen über Ihre Browser-Einstellungen steuern.</p>"
+    },
+    "security": {
+      "title": "Datensicherheit",
+      "content": "<p>Wir implementieren Sicherheitsmaßnahmen zum Schutz Ihrer Daten:</p><ul><li>Alle Daten werden auf sicheren Servern in der Europäischen Union gespeichert</li><li>Verschlüsselte Verbindungen für alle Datenübertragungen (SSL/TLS)</li><li>Tägliche Sicherheitsüberwachung mit IP-Tracking zur Verhinderung von Missbrauch</li><li>Automatisierte Backup-Systeme mit 7-Tage-Aufbewahrungszyklus</li><li>Regelmäßige Sicherheitsupdates und Wartung</li><li>Strenge Zugriffskontrollen für das Entwicklungsteam</li></ul><p>Als sich entwickelnde Plattform verbessern wir kontinuierlich unsere Sicherheitsmaßnahmen. Obwohl wir uns bemühen, Ihre Informationen zu schützen, ist keine Übertragungsmethode über das Internet 100% sicher. Im Falle eines Sicherheitsvorfalls benachrichtigen wir betroffene Nutzer und relevante Behörden wie von der DSGVO vorgeschrieben innerhalb von 72 Stunden.</p>"
+    },
+    "contact": {
+      "title": "Kontakt bezüglich Datenschutz",
+      "content": "<p>Wenn Sie Fragen zu dieser Datenschutzerklärung oder unserem Umgang mit Ihren persönlichen Informationen haben, kontaktieren Sie uns bitte:</p><ul><li>E-Mail: privacy@helpsta.com</li><li>Website: www.helpsta.com/contact</li><li>Über das Kontaktformular auf unserer Website</li></ul><p>Wir werden auf Ihre datenschutzbezogenen Anfragen innerhalb von 30 Tagen wie von der DSGVO vorgeschrieben antworten.</p>"
+    }
+  },
+  "gdpr": {
+    "title": "DSGVO-Compliance",
+    "description": "Als Unternehmen mit Sitz in der Europäischen Union sind wir der vollständigen Einhaltung der Datenschutz-Grundverordnung (DSGVO) verpflichtet. Dies umfasst die Implementierung von Datenschutz durch Design-Prinzipien und die Gewährleistung, dass Ihre Rechte jederzeit geschützt sind."
+  },
+  "contactUs": {
+    "title": "Datenschutz-Fragen?",
+    "description": "Wenn Sie Fragen zu dieser Datenschutzerklärung oder unserem Umgang mit Ihren Daten haben, kontaktieren Sie bitte unseren Datenschutzbeauftragten.",
+    "email": "Datenschutz-Team kontaktieren"
+  }
+}

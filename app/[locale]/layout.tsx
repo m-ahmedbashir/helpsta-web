@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { SmoothScrollProvider } from '@/components/providers/SmoothScrollProvider';
-import { Footer } from '@/components/sections/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -32,12 +31,12 @@ export default async function LocaleLayout({
 
   let messages;
   try {
-    messages = (await import(`../../messages/${usedLocale}.json`)).default;
+    messages = (await import(`../../translations/${usedLocale}.json`)).default;
   } catch (error) {
     // If messages fail to load, fall back to default locale messages.
     if (usedLocale !== defaultLocale) {
       try {
-        messages = (await import(`../../messages/${defaultLocale}.json`)).default;
+        messages = (await import(`../../translations/${defaultLocale}.json`)).default;
         usedLocale = defaultLocale;
       } catch (err) {
         // As a last resort, use an empty messages object so the app can render.
@@ -57,10 +56,43 @@ export default async function LocaleLayout({
         />
       </head>
       <body className={`${inter.className} font-poppins`}>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            // Prevent Radix UI from causing layout shifts
+            (function() {
+              function preventScrollLock() {
+                const body = document.body;
+                const observer = new MutationObserver(function(mutations) {
+                  mutations.forEach(function(mutation) {
+                    if (mutation.type === 'attributes' && mutation.attributeName === 'data-scroll-locked') {
+                      // Remove the scroll lock immediately
+                      body.removeAttribute('data-scroll-locked');
+                      body.style.overflow = '';
+                      body.style.paddingRight = '';
+                      body.style.marginRight = '';
+                      body.style.pointerEvents = '';
+                    }
+                  });
+                });
+                
+                observer.observe(body, {
+                  attributes: true,
+                  attributeFilter: ['data-scroll-locked']
+                });
+              }
+              
+              if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', preventScrollLock);
+              } else {
+                preventScrollLock();
+              }
+            })();
+          `
+        }} />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <SmoothScrollProvider>
             {children}
-            <Footer />
+
           </SmoothScrollProvider>
         </NextIntlClientProvider>
       </body>

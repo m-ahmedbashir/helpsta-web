@@ -7,8 +7,8 @@ import { Hero } from '@/components/sections/Hero';
 import { HowItWorks } from '@/components/sections/HowItWorks';
 import { RewardPartners } from '@/components/sections/RewardPartners';
 import { CommunityPartners } from '@/components/sections/CommunityPartners';
-import { Footer } from '@/components/sections/Footer';
 import { LoadingScreen } from '@/components/LoadingScreen';
+import { Footer } from '@/components/sections/Footer';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -34,7 +34,7 @@ export default function Home() {
             <HowItWorks />
             <RewardPartners />
             <CommunityPartners />
-            
+            <Footer />
           </main>
         )}
       </AnimatePresence>
