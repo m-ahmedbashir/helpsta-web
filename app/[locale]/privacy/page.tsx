@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
 import { 
   Shield, 
   Database, 
@@ -14,6 +14,7 @@ import {
   Lock,
   Mail
 } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 import { Navigation } from '@/components/navigation/Navigation';
 import { Footer } from '@/components/sections/Footer';
@@ -72,7 +73,8 @@ const privacySections = [
 ];
 
 export default function PrivacyPage() {
-  const t = useTranslations('privacy');
+  const locale = useLocale();
+  const [translations, setTranslations] = useState<any>(null);
   
   const [heroRef, heroInView] = useInView({
     triggerOnce: true,
@@ -83,6 +85,21 @@ export default function PrivacyPage() {
     triggerOnce: true,
     threshold: 0.1,
   });
+
+  useEffect(() => {
+    // Load privacy translations from separate file
+    import(`@/translations/privacy/${locale}.json`)
+      .then((module) => {
+        setTranslations(module.default);
+      })
+      .catch((error) => {
+        console.error('Error loading privacy translations:', error);
+      });
+  }, [locale]);
+
+  if (!translations) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <main className="relative min-h-screen overflow-hidden">
@@ -144,7 +161,7 @@ export default function PrivacyPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-4xl md:text-6xl font-bold text-main-purple mb-6"
           >
-            {t('title')}
+            {translations.title}
           </motion.h1>
           
           <motion.p
@@ -153,7 +170,7 @@ export default function PrivacyPage() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-4"
           >
-            {t('subtitle')}
+            {translations.subtitle}
           </motion.p>
           
           <motion.p
@@ -162,7 +179,7 @@ export default function PrivacyPage() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-sm text-gray-500 max-w-2xl mx-auto"
           >
-            {t('lastUpdated')}: {t('effectiveDate')}
+            {translations.lastUpdated}: {translations.effectiveDate}
           </motion.p>
         </motion.section>
 
@@ -190,14 +207,14 @@ export default function PrivacyPage() {
                   
                   <div className="flex-1">
                     <h2 className="text-2xl font-bold text-main-purple mb-4">
-                      {t(`sections.${section.titleKey}`)}
+                      {translations.sections[section.id]?.title}
                     </h2>
                     
                     <div className="prose prose-gray max-w-none">
                       <div 
                         className="text-gray-700 leading-relaxed space-y-4"
                         dangerouslySetInnerHTML={{ 
-                          __html: t(`sections.${section.contentKey}`)
+                          __html: translations.sections[section.id]?.content || ''
                         }}
                       />
                     </div>
@@ -221,11 +238,11 @@ export default function PrivacyPage() {
                 <Shield className="w-5 h-5 text-white" />
               </div>
               <h3 className="text-xl font-bold text-main-purple">
-                {t('gdpr.title')}
+                {translations.gdpr?.title}
               </h3>
             </div>
             <p className="text-gray-700 leading-relaxed">
-              {t('gdpr.description')}
+              {translations.gdpr?.description}
             </p>
           </div>
         </motion.section>
@@ -239,10 +256,10 @@ export default function PrivacyPage() {
         >
           <div className="max-w-2xl mx-auto bg-white/80 backdrop-blur rounded-3xl p-8 shadow-xl text-center">
             <h2 className="text-2xl font-bold text-main-purple mb-4">
-              {t('contactUs.title')}
+              {translations.contactUs?.title}
             </h2>
             <p className="text-gray-600 mb-6">
-              {t('contactUs.description')}
+              {translations.contactUs?.description}
             </p>
             <motion.a
               href="mailto:privacy@helpsta.com"
@@ -250,7 +267,7 @@ export default function PrivacyPage() {
               whileTap={{ scale: 0.95 }}
               className="inline-block bg-orange-main hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              {t('contactUs.email')}
+              {translations.contactUs?.email}
             </motion.a>
           </div>
         </motion.section>
