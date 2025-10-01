@@ -9,9 +9,6 @@ import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Heart } fr
 import Link from 'next/link';
 
 const socialLinks = [
-  { icon: Facebook, href: '#', label: 'Facebook' },
-  { icon: Twitter, href: '#', label: 'Twitter' },
-  { icon: Instagram, href: '#', label: 'Instagram' },
   { icon: Linkedin, href: '#', label: 'LinkedIn' },
 ];
 
@@ -30,7 +27,6 @@ export function Footer() {
   const footerLinks = {
     [t('sections.company.title')]: [
       { label: t('sections.company.about'), href: `/${locale}/about` },
-      { label: t('sections.company.careers'), href: '#' },
       { label: t('sections.legal.privacy'), href: '#' },
       { label: t('sections.legal.terms'), href: '#' },
     ],
