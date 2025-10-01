@@ -1,0 +1,49 @@
+{
+  "title": "Privacy Policy",
+  "subtitle": "Your privacy is important to us. This policy explains how we collect, use, and protect your personal information when you use Helpsta.",
+  "lastUpdated": "Last updated",
+  "effectiveDate": "October 1, 2024",
+  "sections": {
+    "dataCollection": {
+      "title": "Information We Collect",
+      "content": "<p>We collect information you provide directly to us and information automatically collected when you use our services:</p><ul><li><strong>Account Information:</strong> Name, email address, phone number (required for app functionality)</li><li><strong>Location Data:</strong> GPS coordinates and location information (required to provide nearby business partners and services)</li><li><strong>Usage Analytics:</strong> App interactions, feature usage, and performance data through analytics tools to improve user experience and track app performance</li><li><strong>Device & Security Information:</strong> IP address, device information, and usage patterns for security purposes and to prevent abuse such as brute force attacks</li><li><strong>Communication Data:</strong> Messages and posts you create on our platform</li></ul><p>We use analytics tools to monitor app performance, crashes, and user experience improvements.</p>"
+    },
+    "dataUsage": {
+      "title": "How We Use Your Information",
+      "content": "<p>We use your information to:</p><ul><li>Provide and improve our mobile app and services</li><li>Connect you with nearby reward partners based on your location</li><li>Send essential notifications such as password reset emails, important platform updates, messages from other users, and reminder notifications</li><li>Improve our user interface and experience through usage analytics</li><li>Prevent security threats, spam, and brute force attacks using IP address monitoring</li><li>Train AI systems in the future to enhance platform assistance (using posts and user-generated content)</li><li>Ensure platform security and prevent fraudulent activities</li><li>Comply with legal obligations when required</li></ul><p>We do not use your data for marketing emails or personalized advertising. We focus on improving functionality and user experience.</p>"
+    },
+    "dataSharing": {
+      "title": "Information Sharing",
+      "content": "<p>We do not sell your personal information. We have a very limited approach to data sharing:</p><ul><li><strong>Business Partners (Reward Partners):</strong> We only share your name for coupon verification purposes. No other personal information is shared with business partners.</li><li><strong>Payment Processors:</strong> In the future, we may use Stripe for payment processing, which would involve sharing necessary payment information securely.</li><li><strong>Legal Requirements:</strong> As a startup, we are still developing our legal compliance procedures. We may share information when required by law or court orders.</li><li><strong>Service Providers:</strong> Analytics providers and essential service providers who help us operate the platform under strict confidentiality agreements.</li><li><strong>No Data Sales:</strong> We never sell, rent, or trade your personal information to third parties for their marketing purposes.</li></ul><p>All data sharing is limited to what is necessary for the specific purpose and under appropriate confidentiality protections.</p>"
+    },
+    "dataStorage": {
+      "title": "Data Storage and Retention",
+      "content": "<p>Your information is stored securely on servers located in the European Union. We implement appropriate technical and organizational measures to protect your data including HTTPS/SSL encryption and password encryption.</p><p>Data Retention Policy:</p><ul><li>We retain your personal information until you request deletion of your account</li><li>When you delete your account, your data is immediately removed from our live database</li><li>Data may remain in our backup systems for up to 7 days as part of our regular backup rotation cycle</li><li>After 7 days, the data is permanently deleted from all backup systems</li><li>We use reCAPTCHA and other security measures to protect against unauthorized access</li></ul><p>You can request deletion of your account and associated data at any time through your account settings or by contacting us.</p>"
+    },
+    "userRights": {
+      "title": "Your Rights",
+      "content": "<p>Under GDPR and other applicable laws, you have the following rights:</p><ul><li><strong>Account Deletion:</strong> You can delete your account and personal data at any time through your account settings</li><li><strong>Data Correction:</strong> You can update and correct your personal information through your account settings</li><li><strong>Data Access:</strong> While we don't currently provide automated data export, you can contact us to discuss your data</li><li><strong>Withdrawal of Consent:</strong> You can withdraw consent for data processing, though this may limit app functionality</li><li><strong>Restriction of Processing:</strong> You can request limitations on how we process your data</li><li><strong>GDPR Compliance:</strong> We strive to comply with GDPR requirements for EU users</li></ul><p>To exercise these rights or ask questions about your data, please use our contact form or reach out to our support team.</p>"
+    },
+    "cookies": {
+      "title": "Analytics and Tracking",
+      "content": "<p>We use analytics tools to improve our services:</p><ul><li>Analytics tools to track app performance, crashes, and user experience</li><li>Website analytics to monitor site performance and usage patterns</li><li>Essential cookies required for basic website functionality</li><li>No advertising or marketing tracking cookies</li><li>No social media tracking integrations</li></ul><p>Types of tracking we use:</p><ul><li><strong>Performance Analytics:</strong> Monitor app crashes, loading times, and technical issues</li><li><strong>Usage Analytics:</strong> Understand how users interact with features to improve user interface</li><li><strong>Security Monitoring:</strong> Track IP addresses to prevent abuse and attacks</li></ul><p>We do not use tracking for advertising purposes or sell tracking data to third parties. You can control cookie preferences through your browser settings.</p>"
+    },
+    "security": {
+      "title": "Data Security",
+      "content": "<p>We implement security measures to protect your data:</p><ul><li>All data stored on secure servers in the European Union</li><li>Encrypted connections for all data transmission (SSL/TLS)</li><li>Daily security monitoring with IP tracking to prevent abuse</li><li>Automated backup systems with 7-day retention cycle</li><li>Regular security updates and maintenance</li><li>Strict access controls for development team</li></ul><p>As a developing platform, we continuously improve our security measures. While we strive to protect your information, no method of transmission over the internet is 100% secure. In the event of any security incident, we will notify affected users and relevant authorities as required by GDPR within 72 hours.</p>"
+    },
+    "contact": {
+      "title": "Contact Us About Privacy",
+      "content": "<p>If you have questions about this Privacy Policy or how we handle your personal information, please contact us:</p><ul><li>Email: privacy@helpsta.com</li><li>Website: www.helpsta.com/contact</li><li>Through the contact form on our website</li></ul><p>We will respond to your privacy-related inquiries within 30 days as required by GDPR.</p>"
+    }
+  },
+  "gdpr": {
+    "title": "GDPR Compliance",
+    "description": "As a company operating in the European Union, we are committed to full compliance with the General Data Protection Regulation (GDPR). This includes implementing privacy by design principles and ensuring your rights are protected at all times."
+  },
+  "contactUs": {
+    "title": "Privacy Questions?",
+    "description": "If you have any questions about this Privacy Policy or how we handle your data, please contact our Data Protection Officer.",
+    "email": "Contact Privacy Team"
+  }
+}

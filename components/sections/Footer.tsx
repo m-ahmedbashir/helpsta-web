@@ -3,99 +3,57 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useTranslations, useLocale } from 'next-intl';
-import { useRouter, usePathname } from 'next/navigation';
+import { LanguageSwitcher } from '../ui/LanguageSwitcher';
+import { FooterBackground } from '../ui/FooterBackground';
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Heart } from 'lucide-react';
+import Link from 'next/link';
 
 const socialLinks = [
-  { icon: Facebook, href: '#', label: 'Facebook' },
-  { icon: Twitter, href: '#', label: 'Twitter' },
-  { icon: Instagram, href: '#', label: 'Instagram' },
   { icon: Linkedin, href: '#', label: 'LinkedIn' },
 ];
+
+
 
 export function Footer() {
   const t = useTranslations('footer');
   const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
   
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
+  // Define footer links with proper routing
   const footerLinks = {
-    [t('sections.product.title')]: [
-      t('sections.product.features'),
-      t('sections.product.pricing'),
-      t('sections.product.security'),
-      t('sections.product.updates')
-    ],
     [t('sections.company.title')]: [
-      t('sections.company.about'),
-      t('sections.company.careers'),
-      t('sections.company.blog'),
-      t('sections.company.press')
+      { label: t('sections.company.about'), href: `/${locale}/about` },
+      { label: t('sections.legal.privacy'), href: `/${locale}/privacy` },
+      { label: t('sections.legal.terms'), href: `/${locale}/terms` },
     ],
     [t('sections.support.title')]: [
-      t('sections.support.helpCenter'),
-      t('sections.support.contact'),
-      t('sections.support.documentation'),
-      t('sections.support.community')
-    ],
-    [t('sections.legal.title')]: [
-      t('sections.legal.privacy'),
-      t('sections.legal.terms'),
-      t('sections.legal.cookies'),
-      t('sections.legal.licenses')
+      { label: t('sections.support.faq'), href: `/${locale}/faq` },
+      { label: t('sections.support.contact'), href: `/${locale}/contact` },
     ],
   };
 
-  const switchLanguage = () => {
-    const newLocale = locale === 'de' ? 'en' : 'de';
-    const newPath = pathname.replace(`/${locale}`, `/${newLocale}`);
-    router.push(newPath);
-  };
+
 
   return (
     <footer ref={ref} id="contact" className="bg-gradient-to-br from-main-purple via-purple-800 to-indigo-900 text-white relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          animate={{
-            x: [0, 100, 0],
-            y: [0, -50, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
-          className="absolute top-0 left-0 w-96 h-96 bg-orange-main rounded-full mix-blend-multiply filter blur-3xl opacity-10"
-        />
-        <motion.div
-          animate={{
-            x: [0, -100, 0],
-            y: [0, 50, 0],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
-          className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-app-main-1 rounded-full mix-blend-multiply filter blur-3xl opacity-10"
-        />
-      </div>
+      <FooterBackground />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-20 pointer-events-auto">
+
+
         {/* Main Footer Content */}
-        <div className="py-16 grid lg:grid-cols-5 gap-12">
+        <div className="py-16 grid lg:grid-cols-4 gap-12">
           {/* Brand Section */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-2"
+            className="lg:col-span-2 relative"
           >
             <motion.h3
               initial={{ opacity: 0, x: -30 }}
@@ -135,6 +93,7 @@ export function Footer() {
               </div>
             </motion.div>
 
+ 
             {/* Social Links */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -158,13 +117,15 @@ export function Footer() {
           </motion.div>
 
           {/* Links Sections */}
+          
           {Object.entries(footerLinks).map(([category, links], categoryIndex) => (
             <motion.div
               key={category}
               initial={{ opacity: 0, y: 50 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 + categoryIndex * 0.1 }}
+              transition={{ duration: 0.6, delay: 0.3 + categoryIndex * 0.1 }}
             >
+
               <h4 className="text-xl font-semibold mb-6">{category}</h4>
               <ul className="space-y-3">
                 {links.map((link, linkIndex) => (
@@ -172,52 +133,50 @@ export function Footer() {
                     key={linkIndex}
                     initial={{ opacity: 0, x: -20 }}
                     animate={inView ? { opacity: 1, x: 0 } : {}}
-                    transition={{ duration: 0.4, delay: 0.3 + categoryIndex * 0.1 + linkIndex * 0.05 }}
+                    transition={{ duration: 0.4, delay: 0.4 + categoryIndex * 0.1 + linkIndex * 0.05 }}
                   >
-                    <a
-                      href="#"
-                      className="text-gray-300 hover:text-white transition-colors duration-200 hover:underline"
-                    >
-                      {link}
-                    </a>
+                    {link.href.startsWith('/') ? (
+                      <Link
+                        href={link.href}
+                        className="text-gray-300 hover:text-white transition-colors duration-200 hover:underline"
+                      >
+                        {link.label}
+                      </Link>
+                    ) : (
+                      <a
+                        href={link.href}
+                        className="text-gray-300 hover:text-white transition-colors duration-200 hover:underline"
+                      >
+                        {link.label}
+                      </a>
+                    )}
                   </motion.li>
                 ))}
               </ul>
+              
+              {/* Add Language Switcher to Support section */}
+              {category === t('sections.support.title') && (
+                <div className="mt-6">
+                  <h5 className="text-lg font-semibold mb-3 text-white">{t('sections.language.title')}</h5>
+                  <div>
+                    <LanguageSwitcher className="bg-white/10 hover:bg-white/20 text-white border-white/20 hover:border-white/30 transition-all duration-300" />
+                  </div>
+                </div>
+              )}
             </motion.div>
+
           ))}
+
+
+
+            
+
+            
         </div>
 
-        {/* Newsletter Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="py-8 border-t border-white/10"
-        >
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h4 className="text-2xl font-semibold mb-2">{t('stayUpdated')}</h4>
-              <p className="text-gray-300">{t('stayUpdatedDesc')}</p>
-            </div>
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              className="flex gap-3"
-            >
-              <input
-                type="email"
-                placeholder={t('emailPlaceholder')}
-                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:border-gradient-app-main-1 backdrop-blur-sm placeholder-gray-400"
-              />
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-orange-main hover:bg-gradient-app-main-1 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
-              >
-                {t('subscribe')}
-              </motion.button>
-            </motion.div>
-          </div>
-        </motion.div>
+        
+
+
 
         {/* Bottom Bar */}
         <motion.div
@@ -227,21 +186,11 @@ export function Footer() {
           className="py-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4"
         >
           <p className="text-gray-300 flex items-center gap-2">
-            © 2024 {t('brand')}. {t('madeWith')} <Heart className="w-4 h-4 text-red-500 fill-red-500" /> {t('in')} {t('city')}
+            © 2025 {t('brand')}. {t('madeWith')} <Heart className="w-4 h-4 text-red-500 fill-red-500" /> {t('in')} {t('city')}
           </p>
           <div className="flex gap-6 text-sm text-gray-400 items-center">
-            <a href="#" className="hover:text-white transition-colors">{t('privacyPolicy')}</a>
-            <a href="#" className="hover:text-white transition-colors">{t('termsOfService')}</a>
-            <a href="#" className="hover:text-white transition-colors">{t('cookies')}</a>
-            <button
-              onClick={switchLanguage}
-              className="flex items-center gap-2 px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
-            >
-              <span className="text-xs font-medium">
-                {locale === 'de' ? '🇩🇪 DE' : '🇺🇸 EN'}
-              </span>
-              <span className="text-xs">{t('switchLanguage')}</span>
-            </button>
+            <Link href={`/${locale}/privacy`} className="hover:text-white transition-colors">{t('privacyPolicy')}</Link>
+            <Link href={`/${locale}/terms`} className="hover:text-white transition-colors">{t('termsOfService')}</Link>
           </div>
         </motion.div>
       </div>

@@ -17,6 +17,7 @@ import {
 } from '@/components/ui/select';
 
 import { Navigation } from '@/components/navigation/Navigation';
+import { Footer } from '@/components/sections/Footer';
 
 const businessCategories = [
   'restaurant',
@@ -593,6 +594,7 @@ export default function BecomePartnerPage() {
           </motion.div>
         </div>
       </div>
+      <Footer />
     </main>
   );
 }
