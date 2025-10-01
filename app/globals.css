@@ -109,4 +109,60 @@
     position: fixed !important;
     z-index: 50 !important;
   }
+
+  /* Override default focus ring colors to use orange theme */
+  input:focus,
+  textarea:focus,
+  select:focus,
+  button:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgb(251 146 60 / 0.2) !important;
+    border-color: rgb(251 146 60) !important;
+  }
+
+  /* Remove default browser outlines and rings */
+  *:focus {
+    outline: none !important;
+  }
+
+  /* Style browser autocomplete dropdowns */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.8) inset !important;
+    -webkit-text-fill-color: rgb(17 24 39) !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  /* Hide browser autocomplete dropdown arrow and styling */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  /* Ensure Radix Select components use orange focus */
+  [data-radix-select-trigger]:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgb(251 146 60 / 0.2) !important;
+    border-color: rgb(251 146 60) !important;
+  }
+
+  [data-radix-select-content] {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(251, 146, 60, 0.2) !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  [data-radix-select-item]:focus {
+    background-color: rgb(251 146 60 / 0.1) !important;
+    color: rgb(17 24 39) !important;
+  }
 }

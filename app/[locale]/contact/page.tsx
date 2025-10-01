@@ -349,6 +349,7 @@ export default function ContactPage() {
                         errors.firstName ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20' : ''
                       }`}
                       placeholder={t('form.placeholders.firstName')}
+                      autoComplete="given-name"
                     />
                     {errors.firstName && (
                       <p className="text-sm text-red-600">{errors.firstName}</p>
@@ -367,6 +368,7 @@ export default function ContactPage() {
                         errors.lastName ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20' : ''
                       }`}
                       placeholder={t('form.placeholders.lastName')}
+                      autoComplete="family-name"
                     />
                     {errors.lastName && (
                       <p className="text-sm text-red-600">{errors.lastName}</p>
@@ -388,6 +390,7 @@ export default function ContactPage() {
                       errors.email ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20' : ''
                     }`}
                     placeholder={t('form.placeholders.email')}
+                    autoComplete="email"
                   />
                   {errors.email && (
                     <p className="text-sm text-red-600">{errors.email}</p>
@@ -406,6 +409,8 @@ export default function ContactPage() {
                     onChange={(e) => updateField('phone', e.target.value)}
                     className="bg-white/50 border-gray-200 focus:border-orange-main focus:ring-orange-main/20"
                     placeholder={t('form.placeholders.phone')}
+                    autoComplete="off"
+                    data-form-type="other"
                   />
                 </div>
 
