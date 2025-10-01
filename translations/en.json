@@ -4,6 +4,7 @@
     "rewards": "Rewards",
     "community": "Community",
     "howItWorks": "How It Works",
+    "faq": "FAQ",
     "contact": "Contact",
     "downloadApp": "Download App"
   },
@@ -223,5 +224,38 @@
       "almostReady": "Almost Ready..."
     },
     "preparing": "Preparing your personalized experience..."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about Helpsta, our mobile platform, and how to get the most out of your experience.",
+    "stillHaveQuestions": "Still have questions?",
+    "contactUsText": "Can't find the answer you're looking for? Our support team is here to help you.",
+    "contactUs": "Contact Us",
+    "items": {
+      "whatIsHelpsta": {
+        "question": "What is Helpsta?",
+        "answer": "Helpsta is a revolutionary mobile platform that transforms the way you interact with mobile technology. We connect users with local businesses through our reward system and community features, making your daily mobile experience more rewarding and engaging."
+      },
+      "howToDownload": {
+        "question": "How do I download the Helpsta app?",
+        "answer": "You can download the Helpsta app from the App Store for iOS devices or Google Play Store for Android devices. Simply search for 'Helpsta' and look for our official app with the orange logo. The app is free to download and use."
+      },
+      "rewardPartners": {
+        "question": "What are Reward Partners?",
+        "answer": "Reward Partners are local businesses that have joined our network to offer exclusive deals, discounts, and rewards to Helpsta users. When you visit or shop at these partner locations, you can earn rewards and enjoy special offers that are only available through our platform."
+      },
+      "becomePartner": {
+        "question": "How can my business become a Reward Partner?",
+        "answer": "Becoming a Reward Partner is easy! Visit our 'Become a Partner' page and fill out the application form. Our team will review your application within 2-3 days, and once approved, you'll get access to our partner dashboard where you can manage your offers and track your performance."
+      },
+      "dataSecurity": {
+        "question": "How secure is my personal data?",
+        "answer": "We take data security very seriously. All personal information is encrypted and stored securely. We never share your personal data with third parties without your explicit consent. You can review our detailed privacy policy for more information about how we protect and handle your data."
+      },
+      "support": {
+        "question": "How can I get help or support?",
+        "answer": "Our support team is available to help you through multiple channels. You can contact us via email at hello@helpsta.com, visit our Help Center for self-service options, or use the in-app support feature. We typically respond to inquiries within 24 hours."
+      }
+    }
   }
 }

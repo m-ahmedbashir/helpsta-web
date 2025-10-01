@@ -2,21 +2,24 @@
 
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
-import { Chrome as Home, Info, Zap, Users, Mail, Download } from "lucide-react";
+import { Chrome as Home, Info, Zap, Users, Mail, Download, HelpCircle } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
-type MenuItem = { icon: React.ComponentType<any>; label: string; href: string };
-
-const MENU: MenuItem[] = [
-  { icon: Home, label: "Home",            href: "/" },
-  { icon: Info,  label: "Rewards",         href: "#reward-partners" },
-  { icon: Zap,   label: "Community",       href: "#community-partners" },
-  { icon: Users, label: "How It Works",    href: "#how-it-works" },
-  { icon: Mail,  label: "Contact",         href: "#contact" },
-];
+type MenuItem = { icon: React.ComponentType<any>; labelKey: string; href: string };
 
 export function Navigation({ locale }: { locale?: string }) {
+  const t = useTranslations('navigation');
+  
+  const MENU: MenuItem[] = [
+    { icon: Home, labelKey: "home",            href: "/" },
+    { icon: Info,  labelKey: "rewards",         href: "#reward-partners" },
+    { icon: Zap,   labelKey: "community",       href: "#community-partners" },
+    { icon: Users, labelKey: "howItWorks",    href: "#how-it-works" },
+    { icon: HelpCircle, labelKey: "faq",       href: "/faq" },
+    { icon: Mail,  labelKey: "contact",         href: "#contact" },
+  ];
   const [isOpen, setIsOpen] = useState(false);
   const [cx, setCx] = useState(0);
   const [cy, setCy] = useState(0);
@@ -163,7 +166,8 @@ export function Navigation({ locale }: { locale?: string }) {
             </header>
 
             <motion.ul variants={listVariants} className="px-5 md:px-7 py-6 space-y-2">
-              {MENU.map(({ icon: Icon, label, href }) => {
+              {MENU.map(({ icon: Icon, labelKey, href }) => {
+                const label = t(labelKey);
                 const isHash = href.startsWith("#");
                 const isActive =
                   (!isHash && href !== "/" && pathname?.startsWith(href)) ||
@@ -171,7 +175,7 @@ export function Navigation({ locale }: { locale?: string }) {
 
                 // For non-hash internal routes, still render Link so prefetch works.
                 return (
-                  <motion.li key={label} variants={itemVariants}>
+                  <motion.li key={labelKey} variants={itemVariants}>
                     {isHash ? (
                       <button
                         onClick={() => handleNav(href)}

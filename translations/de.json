@@ -1,9 +1,10 @@
 {
   "navigation": {
-    "home": "Startseite",
+    "home": "Home",
     "rewards": "Belohnungen",
     "community": "Gemeinschaft",
-    "howItWorks": "Wie es funktioniert",
+    "howItWorks": "So funktioniert's",
+    "faq": "FAQ",
     "contact": "Kontakt",
     "downloadApp": "App herunterladen"
   },
@@ -223,5 +224,38 @@
       "almostReady": "Fast bereit..."
     },
     "preparing": "Ihre personalisierte Erfahrung wird vorbereitet..."
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Finden Sie Antworten auf häufige Fragen zu Helpsta, unserer mobilen Plattform und wie Sie das Beste aus Ihrer Erfahrung herausholen können.",
+    "stillHaveQuestions": "Haben Sie noch Fragen?",
+    "contactUsText": "Können Sie die gesuchte Antwort nicht finden? Unser Support-Team ist da, um Ihnen zu helfen.",
+    "contactUs": "Kontaktieren Sie uns",
+    "items": {
+      "whatIsHelpsta": {
+        "question": "Was ist Helpsta?",
+        "answer": "Helpsta ist eine revolutionäre mobile Plattform, die die Art und Weise verändert, wie Sie mit mobiler Technologie interagieren. Wir verbinden Nutzer durch unser Belohnungssystem und Community-Features mit lokalen Unternehmen und machen Ihre tägliche mobile Erfahrung lohnender und ansprechender."
+      },
+      "howToDownload": {
+        "question": "Wie lade ich die Helpsta-App herunter?",
+        "answer": "Sie können die Helpsta-App aus dem App Store für iOS-Geräte oder Google Play Store für Android-Geräte herunterladen. Suchen Sie einfach nach 'Helpsta' und schauen Sie nach unserer offiziellen App mit dem orangen Logo. Die App ist kostenlos zum Herunterladen und Verwenden."
+      },
+      "rewardPartners": {
+        "question": "Was sind Belohnungspartner?",
+        "answer": "Belohnungspartner sind lokale Unternehmen, die unserem Netzwerk beigetreten sind, um Helpsta-Nutzern exklusive Angebote, Rabatte und Belohnungen anzubieten. Wenn Sie diese Partnerstandorte besuchen oder dort einkaufen, können Sie Belohnungen sammeln und spezielle Angebote genießen, die nur über unsere Plattform verfügbar sind."
+      },
+      "becomePartner": {
+        "question": "Wie kann mein Unternehmen Belohnungspartner werden?",
+        "answer": "Belohnungspartner zu werden ist einfach! Besuchen Sie unsere 'Partner werden'-Seite und füllen Sie das Bewerbungsformular aus. Unser Team wird Ihre Bewerbung innerhalb von 2-3 Tagen prüfen, und nach der Genehmigung erhalten Sie Zugang zu unserem Partner-Dashboard, wo Sie Ihre Angebote verwalten und Ihre Leistung verfolgen können."
+      },
+      "dataSecurity": {
+        "question": "Wie sicher sind meine persönlichen Daten?",
+        "answer": "Wir nehmen Datensicherheit sehr ernst. Alle persönlichen Informationen werden verschlüsselt und sicher gespeichert. Wir geben Ihre persönlichen Daten niemals ohne Ihre ausdrückliche Zustimmung an Dritte weiter. Sie können unsere detaillierte Datenschutzrichtlinie für weitere Informationen darüber einsehen, wie wir Ihre Daten schützen und handhaben."
+      },
+      "support": {
+        "question": "Wie kann ich Hilfe oder Support erhalten?",
+        "answer": "Unser Support-Team steht Ihnen über mehrere Kanäle zur Verfügung. Sie können uns per E-Mail unter hello@helpsta.com kontaktieren, unser Hilfe-Center für Selbstbedienungsoptionen besuchen oder die In-App-Support-Funktion nutzen. Wir antworten normalerweise innerhalb von 24 Stunden auf Anfragen."
+      }
+    }
   }
 }
