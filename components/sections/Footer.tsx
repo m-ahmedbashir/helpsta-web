@@ -3,13 +3,14 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useTranslations, useLocale } from 'next-intl';
+import contactConfig from '@/config/contact.json';
 import { LanguageSwitcher } from '../ui/LanguageSwitcher';
 import { FooterBackground } from '../ui/FooterBackground';
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Heart } from 'lucide-react';
 import Link from 'next/link';
 
 const socialLinks = [
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
+  { icon: Linkedin, href: contactConfig.social.linkedin, label: 'LinkedIn' },
 ];
 
 
@@ -85,15 +86,15 @@ export function Footer() {
             >
               <div className="flex items-center gap-3 text-gray-300">
                 <Mail className="w-5 h-5" />
-                <span>support@helpsta.com</span>
+                <span>{contactConfig.email}</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
                 <Phone className="w-5 h-5" />
-                <span>+49 (0) 30 12345678</span>
+                <span>{contactConfig.phone}</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
                 <MapPin className="w-5 h-5" />
-                <span>Berlin, Germany</span>
+                <span>{contactConfig.address.city}, {contactConfig.address.country}</span>
               </div>
             </motion.div>
 

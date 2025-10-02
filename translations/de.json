@@ -75,7 +75,7 @@
     "subscribe": "Abonnieren",
     "madeWith": "Erstellt mit",
     "in": "in",
-    "city": "Bielefeld",
+    "city": "Nürnberg",
     "privacyPolicy": "Datenschutzrichtlinie",
     "termsOfService": "Nutzungsbedingungen",
     "switchLanguage": "Sprache wechseln",
@@ -293,6 +293,7 @@
       "phone": "Telefonnummer",
       "subject": "Betreff",
       "message": "Nachricht",
+      "security": "Sicherheitsverifizierung",
       "send": "Nachricht senden",
       "sending": "Wird gesendet...",
       "required": "* Pflichtfelder",
@@ -319,7 +320,10 @@
         "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
         "subjectRequired": "Bitte wählen Sie einen Betreff",
         "messageRequired": "Nachricht ist erforderlich",
-        "messageTooShort": "Nachricht muss mindestens 10 Zeichen lang sein"
+        "messageTooShort": "Nachricht muss mindestens 10 Zeichen lang sein",
+        "turnstileRequired": "Bitte vervollständigen Sie die Sicherheitsverifizierung",
+        "turnstileError": "Sicherheitsverifizierung fehlgeschlagen. Bitte versuchen Sie es erneut.",
+        "turnstileExpired": "Sicherheitsverifizierung abgelaufen. Bitte erneut verifizieren."
       }
     },
     "success": {

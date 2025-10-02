@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock, Send, User, MessageSquare } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import contactConfig from '@/config/contact.json';
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -21,6 +22,7 @@ import { Navigation } from '@/components/navigation/Navigation';
 import { Footer } from '@/components/sections/Footer';
 import { AuroraBackground } from '@/components/aurora-background';
 import { GrainOverlay } from '@/components/grain-overlay';
+import { Turnstile } from '@/components/ui/Turnstile';
 
 const subjectOptions = [
   'general-inquiry',
@@ -38,6 +40,7 @@ interface FormData {
   phone: string;
   subject: string;
   message: string;
+  turnstileToken: string;
 }
 
 interface FormErrors {
@@ -47,6 +50,7 @@ interface FormErrors {
   phone?: string;
   subject?: string;
   message?: string;
+  turnstile?: string;
 }
 
 export default function ContactPage() {
@@ -59,6 +63,7 @@ export default function ContactPage() {
     phone: '',
     subject: '',
     message: '',
+    turnstileToken: '',
   });
   
   const [errors, setErrors] = useState<FormErrors>({});
@@ -67,7 +72,7 @@ export default function ContactPage() {
 
   const updateField = (field: keyof FormData, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
-    if (errors[field]) {
+    if (field !== 'turnstileToken' && errors[field as keyof FormErrors]) {
       setErrors(prev => ({ ...prev, [field]: undefined }));
     }
   };
@@ -99,6 +104,10 @@ export default function ContactPage() {
       newErrors.message = t('form.errors.messageTooShort');
     }
 
+    if (!formData.turnstileToken) {
+      newErrors.turnstile = t('form.errors.turnstileRequired');
+    }
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -111,20 +120,35 @@ export default function ContactPage() {
     setIsSubmitting(true);
     
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      setIsSubmitted(true);
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: '',
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setIsSubmitted(true);
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: '',
+          turnstileToken: '',
+        });
+      } else {
+        // Handle API errors
+        console.error('Form submission failed:', result.error);
+        setErrors({ turnstile: result.error || 'Submission failed. Please try again.' });
+      }
     } catch (error) {
       console.error('Form submission error:', error);
+      setErrors({ turnstile: 'Network error. Please try again.' });
     } finally {
       setIsSubmitting(false);
     }
@@ -266,7 +290,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">{t('info.email.title')}</h4>
-                    <p className="text-gray-600 text-sm">support@helpsta.com</p>
+                    <p className="text-gray-600 text-sm">{contactConfig.email}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -275,7 +299,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">{t('info.phone.title')}</h4>
-                    <p className="text-gray-600 text-sm">+49 123 456 7890</p>
+                    <p className="text-gray-600 text-sm">{contactConfig.phone}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -285,8 +309,8 @@ export default function ContactPage() {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">{t('info.address.title')}</h4>
                     <p className="text-gray-600 text-sm">
-                      Musterstraße 123<br />
-                      10115 Berlin, Germany
+                      {contactConfig.address.street}<br />
+                      {contactConfig.address.postalCode} {contactConfig.address.city}, {contactConfig.address.country}
                     </p>
                   </div>
                 </div>
@@ -297,8 +321,8 @@ export default function ContactPage() {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">{t('info.hours.title')}</h4>
                     <p className="text-gray-600 text-sm">
-                      {t('info.hours.weekdays')}<br />
-                      {t('info.hours.weekend')}
+                      {contactConfig.hours.weekdays}<br />
+                      {contactConfig.hours.weekend}
                     </p>
                   </div>
                 </div>
@@ -454,6 +478,31 @@ export default function ContactPage() {
                   />
                   {errors.message && (
                     <p className="text-sm text-red-600">{errors.message}</p>
+                  )}
+                </div>
+
+                {/* Turnstile Security Check */}
+                <div className="space-y-2">
+                  <Label className="text-gray-900 font-medium">
+                    {t('form.security')} *
+                  </Label>
+                  <div className="flex justify-center">
+                    <Turnstile
+                      sitekey={process.env.NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY!}
+                      onVerify={(token) => updateField('turnstileToken', token)}
+                      onError={() => {
+                        setErrors(prev => ({ ...prev, turnstile: t('form.errors.turnstileError') }));
+                      }}
+                      onExpire={() => {
+                        updateField('turnstileToken', '');
+                        setErrors(prev => ({ ...prev, turnstile: t('form.errors.turnstileExpired') }));
+                      }}
+                      theme="auto"
+                      size="normal"
+                    />
+                  </div>
+                  {errors.turnstile && (
+                    <p className="text-sm text-red-600">{errors.turnstile}</p>
                   )}
                 </div>
 

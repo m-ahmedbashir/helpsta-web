@@ -1,0 +1,19 @@
+{
+  "email": "info@helpsta.io",
+  "phone": "+49 1515 9850852",
+  "address": {
+    "street": "Musterstraße 123",
+    "city": "Nuremberg",
+    "postalCode": "90402",
+    "country": "Germany"
+  },
+  "hours": {
+    "weekdays": "Monday - Friday: 9:00 AM - 6:00 PM",
+    "weekend": "Saturday - Sunday: 10:00 AM - 4:00 PM"
+  },
+  "social": {
+    "website": "https://helpsta.com",
+    "linkedin": "https://linkedin.com/company/helpsta",
+    "twitter": "https://twitter.com/helpsta"
+  }
+}

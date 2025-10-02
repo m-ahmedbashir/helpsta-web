@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useTranslations, useLocale } from 'next-intl';
 import { Users, Heart, Zap, Globe, Award, Sparkles } from 'lucide-react';
 
 const communityPartners = [
@@ -79,6 +80,8 @@ const stats = [
 ];
 
 export function CommunityPartners() {
+  const t = useTranslations('communityPartners');
+  const locale = useLocale();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -133,7 +136,7 @@ export function CommunityPartners() {
             className="inline-flex items-center gap-2 bg-gradient-to-r from-main-purple to-purple-600 text-white px-6 py-3 rounded-full mb-6"
           >
             <Users className="w-5 h-5" />
-            <span className="font-semibold">Community Partners</span>
+            <span className="font-semibold">{t('badge')}</span>
           </motion.div>
           
           <motion.h2
@@ -142,11 +145,7 @@ export function CommunityPartners() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-4xl lg:text-6xl font-bold text-main-purple mb-6"
           >
-            Building the
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-main to-gradient-app-main-1">
-              Future Together
-            </span>
+            {t('title')}
           </motion.h2>
           
           <motion.p
@@ -155,7 +154,7 @@ export function CommunityPartners() {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
-            Join our thriving ecosystem of innovative partners who are shaping the future of mobile technology and creating meaningful connections worldwide.
+            {t('subtitle')}
           </motion.p>
         </motion.div>
 
@@ -204,7 +203,7 @@ export function CommunityPartners() {
                     whileHover={{ opacity: 1, y: 0 }}
                     className="mt-4 flex items-center gap-2 text-main-purple font-semibold"
                   >
-                    <span className="text-sm">Learn More</span>
+                    <span className="text-sm">{t('learnMore')}</span>
                     <Sparkles className="w-4 h-4" />
                   </motion.div>
                 </div>
@@ -241,7 +240,7 @@ export function CommunityPartners() {
               transition={{ duration: 0.6, delay: 1.6 }}
               className="text-3xl lg:text-4xl font-bold mb-4"
             >
-              Ready to Join Our Community?
+              {t('ctaTitle')}
             </motion.h3>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -249,19 +248,20 @@ export function CommunityPartners() {
               transition={{ duration: 0.6, delay: 1.7 }}
               className="text-xl opacity-90 mb-8 max-w-2xl mx-auto"
             >
-              Partner with us to reach millions of users and be part of the mobile revolution.
+              {t('ctaSubtitle')}
             </motion.p>
-            <motion.button
+            <motion.a
+              href={`/${locale}/contact`}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.6, delay: 1.8 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-orange-main to-gradient-app-main-1 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-2 mx-auto"
+              className="bg-gradient-to-r from-orange-main to-gradient-app-main-1 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-2 mx-auto w-fit"
             >
               <Zap className="w-5 h-5" />
-              Become a Partner
-            </motion.button>
+              {t('becomePartner')}
+            </motion.a>
           </div>
         </motion.div>
       </div>

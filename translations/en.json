@@ -58,12 +58,12 @@
     "verified": "Verified"
   },
   "communityPartners": {
-    "title": "Building the Future Together",
-    "subtitle": "Join our thriving ecosystem of innovative partners who are shaping the future of mobile technology and creating meaningful connections worldwide.",
+    "title": "Shaping the future together",
+    "subtitle": "Join our thriving ecosystem of innovative partners shaping the future of mobile technology and creating meaningful connections around the world.",
     "badge": "Community Partners",
     "learnMore": "Learn More",
-    "ctaTitle": "Ready to Join Our Community?",
-    "ctaSubtitle": "Partner with us to reach millions of users and be part of the mobile revolution.",
+    "ctaTitle": "Ready to join our community?",
+    "ctaSubtitle": "Become our partner to reach millions of users and be part of the mobile revolution.",
     "becomePartner": "Become a Partner"
   },
   "footer": {
@@ -75,7 +75,7 @@
     "subscribe": "Subscribe",
     "madeWith": "Made with",
     "in": "in",
-    "city": "Bielefeld",
+    "city": "Nuremberg",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
     "switchLanguage": "Switch Language",
@@ -293,6 +293,7 @@
       "phone": "Phone Number",
       "subject": "Subject",
       "message": "Message",
+      "security": "Security Verification",
       "send": "Send Message",
       "sending": "Sending...",
       "required": "* Required fields",
@@ -319,7 +320,10 @@
         "emailInvalid": "Please enter a valid email address",
         "subjectRequired": "Please select a subject",
         "messageRequired": "Message is required",
-        "messageTooShort": "Message must be at least 10 characters long"
+        "messageTooShort": "Message must be at least 10 characters long",
+        "turnstileRequired": "Please complete the security verification",
+        "turnstileError": "Security verification failed. Please try again.",
+        "turnstileExpired": "Security verification expired. Please verify again."
       }
     },
     "success": {
