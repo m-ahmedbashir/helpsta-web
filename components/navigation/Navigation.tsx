@@ -120,7 +120,7 @@ export function Navigation() {
         onClick={toggle}
         aria-expanded={isOpen}
         aria-label={isOpen ? "Close menu" : "Open menu"}
-        className="fixed top-6 right-6 z-[70] w-14 h-14 rounded-full flex items-center justify-center border border-white/30 bg-white/15 hover:bg-white/25 backdrop-blur-md transition-all duration-300 shadow-lg"
+        className="fixed top-5 right-5 md:top-6 md:right-6 z-[70] w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center border border-white/30 bg-white/15 hover:bg-white/25 active:bg-white/35 backdrop-blur-md transition-all duration-300 shadow-lg"
         whileTap={{ scale: 0.96 }}
       >
         <BurgerIcon isOpen={isOpen} />
@@ -140,13 +140,13 @@ export function Navigation() {
         )}
       </AnimatePresence>
 
-      {/* Sidebar */}
+      {/* Sidebar - Full screen on mobile, sidebar on desktop */}
       <motion.aside
         ref={panelRef}
         aria-hidden={!isOpen}
         initial={false}
         animate={isOpen ? "open" : "closed"}
-        className={`fixed top-0 right-0 h-full w-80 md:w-96 z-[60] overflow-hidden ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}
+        className={`fixed top-0 left-0 md:left-auto md:right-0 h-full w-full md:w-96 z-[60] overflow-hidden ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}
       >
         <motion.div
           variants={bgVariants}
@@ -154,15 +154,15 @@ export function Navigation() {
         >
           {/* content */}
           <div className="relative z-10 flex h-full flex-col">
-            <header className="px-7 pt-24 pb-5 border-b border-white/10">
+            <header className="px-6 md:px-7 pt-20 md:pt-24 pb-6 md:pb-5 border-b border-white/10">
               {/* Use Link for the brand too */}
-              <Link href={locale ? `/${locale}` : "/"} className="block">
-                <h2 className="text-2xl font-bold text-white">Helpsta</h2>
-                <p className="text-white/70 mt-1">Revolutionary Mobile Experience</p>
+              <Link href={locale ? `/${locale}` : "/"} className="block text-center md:text-left">
+                <h2 className="text-3xl md:text-2xl font-bold text-white">Helpsta</h2>
+                <p className="text-white/70 mt-1 text-base md:text-sm">Revolutionary Mobile Experience</p>
               </Link>
             </header>
 
-            <motion.ul variants={listVariants} className="px-5 md:px-7 py-6 space-y-2">
+            <motion.ul variants={listVariants} className="flex-1 px-6 md:px-7 py-8 md:py-6 space-y-3 md:space-y-2 overflow-y-auto">
               {MENU.map(({ icon: Icon, labelKey, href }) => {
                 const label = t(labelKey);
                 const isHash = href.startsWith("#");
@@ -171,13 +171,13 @@ export function Navigation() {
                   (href !== "/" && pathname?.startsWith(localizedHref));
 
                 const linkProps = {
-                  className: `group flex items-center gap-4 p-4 rounded-xl text-white hover:bg-white/10 transition-all duration-300 ${isActive ? "bg-white/10" : ""}`,
+                  className: `group flex items-center gap-4 md:gap-4 p-5 md:p-4 rounded-xl text-white hover:bg-white/10 active:bg-white/20 transition-all duration-300 ${isActive ? "bg-white/10" : ""}`,
                   children: (
                     <>
-                      <span className="grid place-items-center w-10 h-10 rounded-lg bg-white/10 group-hover:bg-orange-main transition-colors">
-                        <Icon className="w-5 h-5" />
+                      <span className="grid place-items-center w-12 h-12 md:w-10 md:h-10 rounded-lg bg-white/10 group-hover:bg-orange-main transition-colors">
+                        <Icon className="w-6 h-6 md:w-5 md:h-5" />
                       </span>
-                      <span className="text-lg font-medium">{label}</span>
+                      <span className="text-xl md:text-lg font-medium">{label}</span>
                     </>
                   )
                 };
