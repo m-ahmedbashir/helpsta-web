@@ -6,12 +6,14 @@ import { Chrome as Home, Info, Zap, Users, Mail, Download, HelpCircle, Building 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
+import { useScrollToSection } from "@/hooks/useScrollToSection";
 
 type MenuItem = { icon: React.ComponentType<any>; labelKey: string; href: string };
 
 export function Navigation() {
   const t = useTranslations('navigation');
   const locale = useLocale();
+  const { scrollToSection } = useScrollToSection();
   
   const MENU: MenuItem[] = [
     { icon: Home, labelKey: "home",            href: "/" },
@@ -94,12 +96,9 @@ export function Navigation() {
 
     if (href.startsWith("#")) {
       // Hash links - scroll to element
-      const id = href.slice(1);
-      const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
-      } else {
-        // If not found, navigate to home with hash
+      const success = scrollToSection(href);
+      if (!success) {
+        // If section not found, navigate to home with hash
         router.push(`/${locale}/${href}`);
       }
     }
