@@ -20,25 +20,26 @@
     "downloadGoogle": "Get it on Google Play",
     "downloadApple": "Download on the App Store"
   },
-  "howItWorks": {
+  "HowItWorks": {
     "title": "How it works",
-    "subtitle": "Scroll—cards stay in one line with a gentle parallax.",
+    "subtitle": "Join thousands of neighbors building stronger communities together",
+    "subtitleMobile": "Follow these simple steps to start helping your community",
     "steps": {
       "download": {
-        "title": "Download & Install",
-        "description": "Start in seconds."
+        "title": "Download & Join",
+        "description": "Get the Helpsta app and create your community profile in minutes."
       },
-      "setup": {
-        "title": "Setup Your Profile",
-        "description": "Personalize your experience."
-      },
-      "features": {
-        "title": "Use Key Features",
-        "description": "Powerful tools, simple UI."
+      "post": {
+        "title": "Post or Help", 
+        "description": "Share problems you need solved or offer help to neighbors in need."
       },
       "connect": {
-        "title": "Connect & Share",
-        "description": "Join the local community."
+        "title": "Connect & Solve",
+        "description": "Match with community members and collaborate to solve real problems."
+      },
+      "rewards": {
+        "title": "Earn & Redeem",
+        "description": "Collect reward points for helping and redeem them at local partner stores."
       }
     }
   },

@@ -20,25 +20,26 @@
     "downloadGoogle": "Bei Google Play herunterladen",
     "downloadApple": "Im App Store herunterladen"
   },
-  "howItWorks": {
+  "HowItWorks": {
     "title": "Wie es funktioniert",
-    "subtitle": "Scrollen—Karten bleiben in einer Linie mit sanftem Parallax.",
+    "subtitle": "Schließe dich Tausenden von Nachbarn an, die gemeinsam stärkere Gemeinschaften aufbauen",
+    "subtitleMobile": "Folge diesen einfachen Schritten, um deiner Gemeinschaft zu helfen", 
     "steps": {
       "download": {
-        "title": "Herunterladen & Installieren",
-        "description": "In Sekunden starten."
+        "title": "Herunterladen & Beitreten",
+        "description": "Lade die Helpsta-App herunter und erstelle in wenigen Minuten dein Community-Profil."
       },
-      "setup": {
-        "title": "Profil einrichten",
-        "description": "Personalisieren Sie Ihre Erfahrung."
-      },
-      "features": {
-        "title": "Hauptfunktionen nutzen",
-        "description": "Mächtige Tools, einfache Benutzeroberfläche."
+      "post": {
+        "title": "Posten oder Helfen",
+        "description": "Teile Probleme mit, die du gelöst haben möchtest, oder biete Nachbarn in Not deine Hilfe an."
       },
       "connect": {
-        "title": "Verbinden & Teilen",
-        "description": "Der lokalen Gemeinschaft beitreten."
+        "title": "Vernetzen & Lösen", 
+        "description": "Finde Community-Mitglieder und arbeitet zusammen, um echte Probleme zu lösen."
+      },
+      "rewards": {
+        "title": "Sammeln & Einlösen",
+        "description": "Sammle Belohnungspunkte fürs Helfen und löse sie in lokalen Partnershops ein."
       }
     }
   },

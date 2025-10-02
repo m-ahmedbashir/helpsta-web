@@ -8,13 +8,17 @@ import {
   useSpring,
   type MotionValue,
 } from "framer-motion";
-import { Download, Smartphone, Zap, Users } from "lucide-react";
+import { Download, Users, MessageSquare, Gift } from "lucide-react";
+import { useTranslations } from 'next-intl';
 
-const steps = [
-  { icon: Download,   title: "Download & Install", desc: "Start in seconds.",            color: "from-main-purple to-purple-600" },
-  { icon: Smartphone, title: "Setup Your Profile", desc: "Personalize your experience.", color: "from-orange-main to-red-500" },
-  { icon: Zap,        title: "Use Key Features",    desc: "Powerful tools, simple UI.",   color: "from-gradient-app-main-1 to-gradient-app-main-2" },
-  { icon: Users,      title: "Connect & Share",     desc: "Join the local community.",    color: "from-green-500 to-teal-500" },
+// We'll get the steps from translations
+const stepKeys = ['download', 'post', 'connect', 'rewards'] as const;
+const stepIcons = [Download, MessageSquare, Users, Gift] as const;
+const stepColors = [
+  "from-main-purple to-purple-600",
+  "from-orange-main to-red-500", 
+  "from-gradient-app-main-1 to-gradient-app-main-2",
+  "from-green-500 to-teal-500"
 ] as const;
 
 /** Build staggered reveal windows: title + one per card across 0.16..0.9 */
@@ -76,6 +80,46 @@ function ArrowBG({ progress }: { progress: MotionValue<number> }) {
 }
 
 export function HowItWorks() {
+  const t = useTranslations();
+  
+  // Load the how it works translations
+  const howItWorksTranslations = useMemo(() => {
+    try {
+      // We'll access the translations through the t function
+      return {
+        title: t('HowItWorks.title'),
+        subtitle: t('HowItWorks.subtitle'),
+        subtitleMobile: t('HowItWorks.subtitleMobile'),
+        steps: stepKeys.map(key => ({
+          title: t(`HowItWorks.steps.${key}.title`),
+          description: t(`HowItWorks.steps.${key}.description`)
+        }))
+      };
+    } catch (error) {
+      // Fallback to English if translations fail
+      return {
+        title: "How it works",
+        subtitle: "Join thousands of neighbors building stronger communities together",
+        subtitleMobile: "Follow these simple steps to start helping your community",
+        steps: [
+          { title: "Download & Join", description: "Get the Helpsta app and create your community profile in minutes." },
+          { title: "Post or Help", description: "Share problems you need solved or offer help to neighbors in need." },
+          { title: "Connect & Solve", description: "Match with community members and collaborate to solve real problems." },
+          { title: "Earn & Redeem", description: "Collect reward points for helping and redeem them at local partner stores." }
+        ]
+      };
+    }
+  }, [t]);
+  
+  // Create steps with icons and colors
+  const steps = useMemo(() => 
+    howItWorksTranslations.steps.map((step, i) => ({
+      icon: stepIcons[i],
+      title: step.title,
+      desc: step.description,
+      color: stepColors[i]
+    })), [howItWorksTranslations.steps]);
+
   const outerRef = useRef<HTMLDivElement>(null);
 
   // Pin a bit longer so last card fully shows
@@ -136,9 +180,9 @@ export function HowItWorks() {
             style={{ opacity: titleReveal, y: useTransform(titleReveal, [0, 1], [24, 0]) }}
             className="mb-6 md:mb-8 text-center transform-gpu"
           >
-            <h2 className="text-3xl md:text-4xl font-extrabold text-main-purple lg:text-6xl">How it works</h2>
-            <p className="mx-auto mt-3 max-w-2xl text-lg text-gray-600 hidden md:block">Scroll—cards stay in one line with a gentle parallax.</p>
-            <p className="mx-auto mt-2 md:mt-3 max-w-2xl text-sm md:text-base text-gray-600 md:hidden">Follow these simple steps to get started with Helpsta.</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-main-purple lg:text-6xl">{howItWorksTranslations.title}</h2>
+            <p className="mx-auto mt-3 max-w-2xl text-lg text-gray-600 hidden md:block">{howItWorksTranslations.subtitle}</p>
+            <p className="mx-auto mt-2 md:mt-3 max-w-2xl text-sm md:text-base text-gray-600 md:hidden">{howItWorksTranslations.subtitleMobile}</p>
           </motion.div>
 
           {/* DESKTOP: one horizontal line, equal cards */}
