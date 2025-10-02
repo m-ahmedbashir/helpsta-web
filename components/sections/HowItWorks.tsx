@@ -145,7 +145,7 @@ export function HowItWorks() {
       id="how-it-works"
       className="relative h-[500svh] bg-gradient-to-br from-gray-50 to-white"
     >
-      <div className="sticky top-0 h-[100vh] overflow-hidden isolate">
+      <div className="sticky top-0 h-[100vh] md:h-[100vh] overflow-hidden md:overflow-hidden isolate flex flex-col">
         {/* Decorative animated path - hidden on mobile */}
         <div className="hidden md:block">
           <ArrowBG progress={progress} />
@@ -174,15 +174,15 @@ export function HowItWorks() {
         </motion.div>
 
         {/* Content */}
-        <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col justify-start md:justify-center px-6 py-4 md:py-0">
+        <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col justify-start md:justify-center px-4 sm:px-6 py-2 sm:py-4 md:py-0">
           {/* Title */}
           <motion.div
             style={{ opacity: titleReveal, y: useTransform(titleReveal, [0, 1], [24, 0]) }}
-            className="mb-6 md:mb-8 text-center transform-gpu"
+            className="mb-4 sm:mb-6 md:mb-8 text-center transform-gpu flex-shrink-0"
           >
-            <h2 className="text-3xl md:text-4xl font-extrabold text-main-purple lg:text-6xl">{howItWorksTranslations.title}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-main-purple lg:text-6xl">{howItWorksTranslations.title}</h2>
             <p className="mx-auto mt-3 max-w-2xl text-lg text-gray-600 hidden md:block">{howItWorksTranslations.subtitle}</p>
-            <p className="mx-auto mt-2 md:mt-3 max-w-2xl text-sm md:text-base text-gray-600 md:hidden">{howItWorksTranslations.subtitleMobile}</p>
+            <p className="mx-auto mt-1.5 sm:mt-2 md:mt-3 max-w-2xl text-xs sm:text-sm md:text-base text-gray-600 md:hidden px-4">{howItWorksTranslations.subtitleMobile}</p>
           </motion.div>
 
           {/* DESKTOP: one horizontal line, equal cards */}
@@ -225,43 +225,49 @@ export function HowItWorks() {
             </div>
           </div>
 
-          {/* MOBILE: vertical layout with 2x2 grid */}
-          <div className="md:hidden">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-sm sm:max-w-2xl mx-auto pb-8">
+          {/* MOBILE: vertical layout that fits in viewport */}
+          <div className="relative md:hidden flex-1 flex items-center justify-center">
+            <div className="flex flex-col justify-center space-y-4 max-w-sm mx-auto py-8 px-4 w-full">
               {steps.map((s, i) => {
                 const reveal = useSpring(inWindow(progress, windows[i + 1]), { stiffness: 160, damping: 20 });
-                const dir = i % 2 === 0 ? 1 : -1;
-                const drift = useTransform(progress, [0, 1], [dir * 4, -dir * 4]); // Further reduced drift for mobile
-                const y = useSpring(drift, { stiffness: 120, damping: 18 });
                 const scale = useTransform(reveal, [0, 1], [0.96, 1]);
 
                 return (
                   <motion.div 
                     key={s.title} 
-                    style={{ opacity: reveal, y, scale }} 
+                    style={{ opacity: reveal, scale }} 
                     className="transform-gpu"
                   >
                     <motion.div
-                      whileHover={{ rotateX: -2, rotateY: 2, translateZ: 4 }}
-                      transition={{ type: "spring", stiffness: 220, damping: 16 }}
-                      className="relative h-full rounded-2xl border border-gray-100 bg-white p-4 sm:p-5 shadow-lg hover:-translate-y-1 hover:shadow-xl transform-gpu"
+                      whileHover={{ scale: 1.02 }}
+                      transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                      className="relative w-full rounded-2xl border border-gray-100 bg-white shadow-lg hover:shadow-xl transform-gpu overflow-hidden"
                     >
-                      <div className="absolute -top-2 -left-2 sm:-top-3 sm:-left-3">
-                        <div className={`flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-gradient-to-r ${s.color} text-white shadow-lg text-xs sm:text-sm font-bold`}>
+                      {/* Step number badge */}
+                      <div className="absolute top-3 right-3 z-10">
+                        <div className={`flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-r ${s.color} text-white shadow-lg text-xs font-bold`}>
                           {i + 1}
                         </div>
                       </div>
 
-                      <div className={`mx-auto mb-3 sm:mb-4 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-xl bg-gradient-to-r ${s.color}`}>
-                        <s.icon className="h-6 w-6 sm:h-7 sm:w-7 text-white" />
+                      {/* Card content with horizontal layout */}
+                      <div className="flex items-center p-4 gap-3">
+                        {/* Icon */}
+                        <div className={`flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-r ${s.color} flex-shrink-0`}>
+                          <s.icon className="h-6 w-6 text-white" />
+                        </div>
+
+                        {/* Text content */}
+                        <div className="flex-1 min-w-0">
+                          <h3 className="text-base font-bold text-gray-800 mb-1 leading-tight">{s.title}</h3>
+                          <p className="text-sm text-gray-600 leading-snug">{s.desc}</p>
+                        </div>
                       </div>
 
-                      <h3 className="mb-1 sm:mb-2 text-center text-base sm:text-lg font-bold text-gray-800">{s.title}</h3>
-                      <p className="text-center text-xs sm:text-sm leading-relaxed text-gray-600">{s.desc}</p>
-
+                      {/* Progress indicator */}
                       <motion.div 
                         style={{ scaleX: reveal }} 
-                        className="mx-auto mt-3 sm:mt-4 h-0.5 w-12 sm:w-16 origin-left rounded-full bg-gradient-to-r from-gray-200 to-gray-100" 
+                        className="h-1 w-full origin-left bg-gradient-to-r from-gray-100 to-gray-50" 
                       />
                     </motion.div>
                   </motion.div>
