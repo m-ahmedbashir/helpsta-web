@@ -10,12 +10,15 @@
     "downloadApp": "Download App"
   },
   "hero": {
-    "title": "Revolutionary",
-    "subtitle": "Mobile Experience",
-    "description": "Transform your daily routine with our cutting-edge mobile application. Experience seamless functionality, stunning design, and unparalleled performance.",
-    "downloadNow": "Download Now",
-    "watchDemo": "Watch Demo",
-    "reviews": "50K+ Reviews"
+    "title1": "Have a problem",
+    "title2": "that you can solve?",
+    "subtitle1": "Don't worry, let's",
+    "subtitle2": "get started.",
+    "description": "Join Helpsta's community platform where neighbors help each other solve problems. Post your challenges, help others, earn reward points, and redeem them for discounts at partner stores. Building stronger communities, one helping hand at a time.",
+    "rating": "4.9",
+    "reviews": "50K+ Reviews",
+    "downloadGoogle": "Get it on Google Play",
+    "downloadApple": "Download on the App Store"
   },
   "howItWorks": {
     "title": "How it works",

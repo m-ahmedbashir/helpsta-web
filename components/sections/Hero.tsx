@@ -4,8 +4,10 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Play, Star } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export function Hero() {
+  const t = useTranslations('hero');
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -82,7 +84,7 @@ export function Hero() {
                   <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
-              <span className="text-sm opacity-90">4.9 • 50K+ Reviews</span>
+              <span className="text-sm opacity-90">{t('rating')} • {t('reviews')}</span>
             </motion.div>
 
             <motion.h1
@@ -92,13 +94,13 @@ export function Hero() {
               className="text-5xl lg:text-7xl font-bold mb-6 leading-tight"
             >
               <span className="text-white drop-shadow-lg">
-                Have a problem<br />
-                that you can solve?
+                {t('title1')}<br />
+                {t('title2')}
               </span>
               <br />
-              <span className="text-yellow-400 drop-shadow-lg">
-                Don't worry, let's<br />
-                get started.
+              <span className="text-main-purple drop-shadow-lg">
+                {t('subtitle1')}<br />
+                {t('subtitle2')}
               </span>
             </motion.h1>
 
@@ -108,9 +110,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.8 }}
               className="text-xl opacity-90 mb-8 leading-relaxed"
             >
-              Join Helpsta's community platform where neighbors help each other solve problems. 
-              Post your challenges, help others, earn reward points, and redeem them for discounts 
-              at partner stores. Building stronger communities, one helping hand at a time.
+              {t('description')}
             </motion.p>
 
             <motion.div
@@ -125,13 +125,13 @@ export function Hero() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-block transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent rounded-lg"
-                aria-label="Download Helpsta app on Google Play Store"
+                aria-label={t('downloadGoogle')}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <img
                   src="/download-icons/google play.png"
-                  alt="Get it on Google Play"
+                  alt={t('downloadGoogle')}
                   className="h-14 w-auto object-contain"
                   loading="eager"
                 />
@@ -143,13 +143,13 @@ export function Hero() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-block transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent rounded-lg"
-                aria-label="Download Helpsta app on Apple App Store"
+                aria-label={t('downloadApple')}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <img
                   src="/download-icons/app store.png"
-                  alt="Download on the App Store"
+                  alt={t('downloadApple')}
                   className="h-14 w-auto object-contain"
                   loading="eager"
                 />
