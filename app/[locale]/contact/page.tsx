@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock, Send, User, MessageSquare } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import contactConfig from '@/config/contact.json';
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -266,7 +267,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">{t('info.email.title')}</h4>
-                    <p className="text-gray-600 text-sm">support@helpsta.com</p>
+                    <p className="text-gray-600 text-sm">{contactConfig.email}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -275,7 +276,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">{t('info.phone.title')}</h4>
-                    <p className="text-gray-600 text-sm">+49 123 456 7890</p>
+                    <p className="text-gray-600 text-sm">{contactConfig.phone}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -285,8 +286,8 @@ export default function ContactPage() {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">{t('info.address.title')}</h4>
                     <p className="text-gray-600 text-sm">
-                      Musterstraße 123<br />
-                      10115 Berlin, Germany
+                      {contactConfig.address.street}<br />
+                      {contactConfig.address.postalCode} {contactConfig.address.city}, {contactConfig.address.country}
                     </p>
                   </div>
                 </div>
@@ -297,8 +298,8 @@ export default function ContactPage() {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">{t('info.hours.title')}</h4>
                     <p className="text-gray-600 text-sm">
-                      {t('info.hours.weekdays')}<br />
-                      {t('info.hours.weekend')}
+                      {contactConfig.hours.weekdays}<br />
+                      {contactConfig.hours.weekend}
                     </p>
                   </div>
                 </div>
