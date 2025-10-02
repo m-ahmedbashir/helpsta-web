@@ -191,11 +191,11 @@ export default function ContactPage() {
           />
         </div>
 
-        <div className="container mx-auto px-6 py-24 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 py-16 sm:py-24 relative z-10">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="max-w-md mx-auto text-center bg-white/80 backdrop-blur rounded-3xl p-8 shadow-xl ring-1 ring-black/5"
+            className="max-w-md mx-auto text-center bg-white/80 backdrop-blur rounded-3xl p-6 sm:p-8 shadow-xl ring-1 ring-black/5"
           >
             <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
               <Send className="w-8 h-8 text-white" />
@@ -256,23 +256,23 @@ export default function ContactPage() {
         />
       </div>
 
-      <div className="container mx-auto px-6 py-24 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 py-16 sm:py-24 relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-12"
         >
-          <h1 className="text-4xl md:text-6xl font-bold text-main-purple mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-main-purple mb-3 sm:mb-4">
             {t('title')}
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-2">
             {t('subtitle')}
           </p>
         </motion.div>
 
         {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start max-w-7xl mx-auto">
           {/* Left Side - Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -281,9 +281,9 @@ export default function ContactPage() {
             className="space-y-6"
           >
             {/* Contact Info Card */}
-            <div className="bg-white/80 backdrop-blur rounded-3xl p-8 shadow-xl ring-1 ring-black/5">
-              <h3 className="text-2xl font-bold text-main-purple mb-6">{t('info.title')}</h3>
-              <div className="space-y-4">
+            <div className="bg-white/80 backdrop-blur rounded-3xl p-6 sm:p-8 shadow-xl ring-1 ring-black/5">
+              <h3 className="text-xl sm:text-2xl font-bold text-main-purple mb-4 sm:mb-6">{t('info.title')}</h3>
+              <div className="space-y-3 sm:space-y-4">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center shrink-0">
                     <Mail className="w-6 h-6 text-white" />
@@ -309,8 +309,9 @@ export default function ContactPage() {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">{t('info.address.title')}</h4>
                     <p className="text-gray-600 text-sm">
-                      {contactConfig.address.street}<br />
-                      {contactConfig.address.postalCode} {contactConfig.address.city}, {contactConfig.address.country}
+                      {/* {contactConfig.address.street}<br /> */}
+                      {/* {contactConfig.address.postalCode}  */}
+                      {contactConfig.address.city}, {contactConfig.address.country}
                     </p>
                   </div>
                 </div>
@@ -330,12 +331,12 @@ export default function ContactPage() {
             </div>
 
             {/* Response Time Card */}
-            <div className="bg-white/80 backdrop-blur rounded-3xl p-8 shadow-xl ring-1 ring-black/5">
-              <h3 className="text-2xl font-bold text-main-purple mb-4">{t('response.title')}</h3>
-              <p className="text-gray-600 mb-4">
+            <div className="bg-white/80 backdrop-blur rounded-3xl p-6 sm:p-8 shadow-xl ring-1 ring-black/5">
+              <h3 className="text-xl sm:text-2xl font-bold text-main-purple mb-3 sm:mb-4">{t('response.title')}</h3>
+              <p className="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base">
                 {t('response.description')}
               </p>
-              <div className="bg-gradient-to-r from-orange-main/10 to-main-purple/10 rounded-2xl p-4">
+              <div className="bg-gradient-to-r from-orange-main/10 to-main-purple/10 rounded-2xl p-3 sm:p-4">
                 <p className="text-sm text-gray-700 font-medium">
                   {t('response.timeframe')}
                 </p>
@@ -349,15 +350,15 @@ export default function ContactPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <div className="bg-white/80 backdrop-blur rounded-3xl p-8 shadow-xl ring-1 ring-black/5">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-2xl bg-gradient-to-r from-orange-main to-gradient-app-main-1 flex items-center justify-center">
-                  <MessageSquare className="w-5 h-5 text-white" />
+            <div className="bg-white/80 backdrop-blur rounded-3xl p-6 sm:p-8 shadow-xl ring-1 ring-black/5">
+              <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-2xl bg-gradient-to-r from-orange-main to-gradient-app-main-1 flex items-center justify-center">
+                  <MessageSquare className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-main-purple">{t('form.title')}</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-main-purple">{t('form.title')}</h3>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                 {/* Name Fields */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">

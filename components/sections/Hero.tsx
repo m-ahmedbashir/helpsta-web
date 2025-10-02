@@ -33,16 +33,16 @@ export function Hero() {
     >
       {/* Pinned Content Container */}
       <div className="sticky top-0 h-[100vh] overflow-hidden">
-        <div className="w-full h-full flex items-center justify-center">
+        <div className="w-full h-full flex items-center justify-center py-6 xs:py-8 sm:py-12">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Subtle overlay to tone down the gradient */}
         <div className="absolute inset-0 bg-white/5"></div>
         <motion.div
-          className="absolute top-20 left-20 w-72 h-72 bg-main-purple rounded-full mix-blend-multiply filter blur-xl opacity-20"
+          className="absolute top-10 left-10 sm:top-20 sm:left-20 w-48 h-48 sm:w-72 sm:h-72 bg-main-purple rounded-full mix-blend-multiply filter blur-xl opacity-20"
           animate={{
-            x: [0, 100, 0],
-            y: [0, -100, 0],
+            x: [0, 50, 0],
+            y: [0, -50, 0],
           }}
           transition={{
             duration: 20,
@@ -51,10 +51,10 @@ export function Hero() {
           }}
         />
         <motion.div
-          className="absolute top-40 right-20 w-72 h-72 bg-white rounded-full mix-blend-multiply filter blur-xl opacity-10"
+          className="absolute top-20 right-10 sm:top-40 sm:right-20 w-48 h-48 sm:w-72 sm:h-72 bg-white rounded-full mix-blend-multiply filter blur-xl opacity-10"
           animate={{
-            x: [0, -100, 0],
-            y: [0, 100, 0],
+            x: [0, -50, 0],
+            y: [0, 50, 0],
           }}
           transition={{
             duration: 15,
@@ -64,20 +64,20 @@ export function Hero() {
         />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-3 xs:px-4 sm:px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-6 xs:gap-8 lg:gap-12 items-center">
           {/* Content */}
           <motion.header
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-white"
+            className="text-white text-center lg:text-left"
           >
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight"
+              className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 xs:mb-4 sm:mb-6 leading-tight tracking-tight"
             >
               <span className="text-white drop-shadow-lg">
                 {t('title1')}<br />
@@ -94,7 +94,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="text-xl opacity-90 mb-8 leading-relaxed"
+              className="text-sm xs:text-base sm:text-lg md:text-xl opacity-90 mb-5 xs:mb-6 sm:mb-8 leading-relaxed max-w-lg"
             >
               {t('description')}
             </motion.p>
@@ -103,7 +103,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1 }}
-              className="flex flex-col sm:flex-row gap-4 items-start"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center justify-center lg:justify-start"
             >
               {/* Google Play Store Badge */}
               <motion.a
@@ -118,7 +118,7 @@ export function Hero() {
                 <img
                   src="/download-icons/google play.png"
                   alt={t('downloadGoogle')}
-                  className="h-14 w-auto object-contain"
+                  className="h-13 xs:h-16 sm:h-16 md:h-18 w-auto object-contain"
                   loading="eager"
                 />
               </motion.a>
@@ -136,25 +136,25 @@ export function Hero() {
                 <img
                   src="/download-icons/app store.png"
                   alt={t('downloadApple')}
-                  className="h-14 w-auto object-contain"
+                  className="h-13 xs:h-16 sm:h-16 md:h-18 w-auto object-contain"
                   loading="eager"
                 />
               </motion.a>
             </motion.div>
           </motion.header>
 
-          {/* Dual Phone Mockup with Parallax Effect */}
+          {/* Dual Phone Mockup with Parallax Effect - Hidden on Mobile */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative flex justify-center items-center"
+            className="relative hidden lg:flex justify-center items-center mt-6 sm:mt-8 lg:mt-0"
             role="img"
             aria-label="Helpsta mobile app screenshots showing community help interface"
           >
             {/* First Phone - Home Screen (Left Tilted Initially) */}
             <motion.div
-              className="relative w-64 h-[500px] z-20"
+              className="relative w-36 h-64 xs:w-40 xs:h-72 sm:w-48 sm:h-80 md:w-56 md:h-96 lg:w-64 lg:h-[500px] z-20"
               style={{ 
                 rotateZ: phone1Rotate,
                 x: phone1X,
@@ -177,7 +177,7 @@ export function Hero() {
 
             {/* Second Phone - Sign In Screen (Right Tilted Initially) */}
             <motion.div
-              className="relative w-64 h-[500px] -ml-20 z-10"
+              className="relative w-32 h-60 xs:w-36 xs:h-68 sm:w-48 sm:h-80 md:w-56 md:h-96 lg:w-64 lg:h-[500px] -ml-8 xs:-ml-10 sm:-ml-12 md:-ml-16 lg:-ml-20 z-10"
               style={{ 
                 rotateZ: phone2Rotate,
                 x: phone2X,
@@ -200,15 +200,15 @@ export function Hero() {
 
             {/* Floating Elements */}
             <motion.div
-              className="absolute -top-6 -right-6 w-16 h-16 bg-main-purple rounded-2xl shadow-xl flex items-center justify-center z-30"
+              className="absolute -top-3 -right-3 sm:-top-6 sm:-right-6 w-12 h-12 sm:w-16 sm:h-16 bg-main-purple rounded-2xl shadow-xl flex items-center justify-center z-30"
               animate={{ rotate: 360 }}
               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
             >
-              <Star className="w-8 h-8 text-white" />
+              <Star className="w-5 h-5 xs:w-6 xs:h-6 sm:w-8 sm:h-8 text-white" />
             </motion.div>
 
             <motion.div
-              className="absolute -bottom-6 -left-6 w-20 h-20 bg-white/20 rounded-full shadow-xl backdrop-blur-sm z-30"
+              className="absolute -bottom-3 -left-3 sm:-bottom-6 sm:-left-6 w-16 h-16 sm:w-20 sm:h-20 bg-white/20 rounded-full shadow-xl backdrop-blur-sm z-30"
               animate={{ scale: [1, 1.1, 1] }}
               transition={{ duration: 3, repeat: Infinity }}
             />
