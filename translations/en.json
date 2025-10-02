@@ -331,48 +331,52 @@
   "about": {
     "hero": {
       "title": "About Helpsta",
-      "subtitle": "Revolutionizing mobile experiences for millions worldwide",
-      "description": "We're a passionate team dedicated to transforming how people interact with mobile technology, creating meaningful connections between users and local businesses."
+      "subtitle": "Building stronger communities through neighbor-to-neighbor assistance",
+      "description": "We're revolutionizing how communities solve problems together by connecting neighbors who need help with those who can provide it, creating a powerful network of mutual support and collaboration."
     },
     "stats": {
-      "users": "Active Users",
-      "partners": "Business Partners",
-      "cities": "Cities Worldwide", 
+      "users": "Community Members",
+      "partners": "Reward Partners",
+      "cities": "Cities & Towns", 
       "founded": "Founded"
     },
     "story": {
       "title": "Our Story",
-      "paragraph1": "Founded in 2019, Helpsta began with a simple vision: to bridge the gap between mobile technology and local communities. What started as a small team with big dreams has grown into a revolutionary platform that connects millions of users with thousands of businesses worldwide.",
-      "paragraph2": "Our journey started when we noticed the disconnect between digital innovation and local community engagement. We saw an opportunity to create something meaningful - a platform that not only provides cutting-edge mobile experiences but also strengthens local economies and builds genuine connections.",
-      "paragraph3": "Today, we're proud to be at the forefront of mobile innovation, continuously pushing boundaries while staying true to our core mission of creating value for both users and local businesses."
+      "paragraph1": "Helpsta was born from a simple but powerful observation: every community has people who need help and people willing to provide it, but cultural barriers and social hesitation often prevent these connections. We created a platform that bridges this gap, turning isolated problems into community solutions.",
+      "paragraph2": "We recognized that many people, especially in cultures that value privacy and self-reliance, feel uncomfortable directly asking neighbors for help. Our platform removes this social awkwardness by providing a structured, respectful way to request assistance while maintaining dignity and offering fair compensation through our reward system.",
+      "paragraph3": "Today, we're proud to facilitate thousands of helpful interactions daily, breaking down social barriers and building stronger, more resilient communities where neighbors can comfortably support each other without the traditional hesitation of asking for help."
     },
     "mission": {
       "title": "Our Mission",
-      "description": "To revolutionize mobile experiences by creating meaningful connections between users and local businesses, fostering community growth and digital innovation."
+      "description": "To strengthen communities by connecting neighbors who need help with those who can provide it, creating a culture of mutual support where everyone can both give and receive assistance while earning meaningful rewards."
     },
     "vision": {
       "title": "Our Vision", 
-      "description": "To be the leading platform that seamlessly integrates mobile technology with local communities, creating a world where digital innovation drives real-world impact."
+      "description": "A world where every community is self-sufficient and resilient, where neighbors actively support each other, and where asking for help and offering assistance are celebrated as acts of building stronger, more connected neighborhoods."
     },
     "values": {
       "title": "Our Core Values",
-      "subtitle": "The principles that guide everything we do and shape our company culture.",
+      "subtitle": "The principles that guide our mission to build stronger communities through mutual assistance.",
       "items": {
-        "innovation": {
-          "title": "Innovation",
-          "description": "We constantly push boundaries and embrace new technologies to create groundbreaking solutions that exceed expectations."
+        "community": {
+          "title": "Community First",
+          "description": "We believe that strong communities are built on mutual support, trust, and neighbors helping neighbors. Every decision we make prioritizes community wellbeing over profit."
         },
         "trust": {
-          "title": "Trust",
-          "description": "We build lasting relationships through transparency, reliability, and unwavering commitment to data security and privacy."
+          "title": "Trust & Safety",
+          "description": "We create safe spaces for neighbors to connect by implementing robust verification systems, transparent profiles, and community-driven feedback mechanisms."
         },
-        "community": {
-          "title": "Community",
-          "description": "We believe in the power of local communities and work to strengthen connections between people and businesses."
+        "empowerment": {
+          "title": "Empowerment",
+          "description": "We empower every community member to be both a helper and someone who receives help, recognizing that everyone has valuable skills to offer and needs that others can fulfill."
         },
-        "excellence": {
-          "title": "Excellence",
-          "description": "We strive for perfection in everything we do, from product design to customer service and beyond."
+        "fairness": {
+          "title": "Fair Exchange",
+          "description": "We ensure that helping others is rewarded fairly through our points system, creating sustainable incentives for community participation and mutual support."
+        },
+        "dignity": {
+          "title": "Respectful Assistance",
+          "description": "We understand that asking for help can feel uncomfortable. Our platform creates a dignified, structured way to request and offer assistance, removing social awkwardness while building genuine connections."
         }
       }
     },
