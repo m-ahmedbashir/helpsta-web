@@ -293,6 +293,7 @@
       "phone": "Phone Number",
       "subject": "Subject",
       "message": "Message",
+      "security": "Security Verification",
       "send": "Send Message",
       "sending": "Sending...",
       "required": "* Required fields",
@@ -319,7 +320,10 @@
         "emailInvalid": "Please enter a valid email address",
         "subjectRequired": "Please select a subject",
         "messageRequired": "Message is required",
-        "messageTooShort": "Message must be at least 10 characters long"
+        "messageTooShort": "Message must be at least 10 characters long",
+        "turnstileRequired": "Please complete the security verification",
+        "turnstileError": "Security verification failed. Please try again.",
+        "turnstileExpired": "Security verification expired. Please verify again."
       }
     },
     "success": {
