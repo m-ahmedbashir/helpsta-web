@@ -216,7 +216,7 @@
   },
   "loading": {
     "brand": "Helpsta",
-    "tagline": "Revolutionäre Mobile Erfahrung",
+    "tagline": "Gemeinsam stärkere Gemeinschaften aufbauen",
     "steps": {
       "initializing": "Initialisierung...",
       "loadingComponents": "Komponenten laden...",
@@ -225,7 +225,7 @@
       "preparingExperience": "Erfahrung vorbereiten...",
       "almostReady": "Fast bereit..."
     },
-    "preparing": "Ihre personalisierte Erfahrung wird vorbereitet..."
+    "preparing": "Ihre Community-Erfahrung wird vorbereitet..."
   },
   "faq": {
     "title": "Häufig gestellte Fragen",
