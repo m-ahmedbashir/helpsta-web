@@ -140,14 +140,42 @@ export default async function LocaleLayout({
       <body className={`${inter.className} font-poppins`}>
         <script dangerouslySetInnerHTML={{
           __html: `
-            // Prevent Radix UI from causing layout shifts
+            // Prevent unwanted scroll locks while allowing legitimate ones
             (function() {
-              function preventScrollLock() {
+              function manageScrollLock() {
                 const body = document.body;
+                let isSelectOpen = false;
+                
+                // Check if there are any open select dropdowns
+                function hasOpenSelects() {
+                  return document.querySelector('[data-radix-select-content]') !== null;
+                }
+                
                 const observer = new MutationObserver(function(mutations) {
                   mutations.forEach(function(mutation) {
                     if (mutation.type === 'attributes' && mutation.attributeName === 'data-scroll-locked') {
-                      // Remove the scroll lock immediately
+                      // Allow scroll lock if there are open select dropdowns
+                      if (hasOpenSelects()) {
+                        isSelectOpen = true;
+                        return;
+                      }
+                      
+                      // If no select is open but we just closed one, allow a brief moment for cleanup
+                      if (isSelectOpen) {
+                        setTimeout(() => {
+                          if (!hasOpenSelects()) {
+                            isSelectOpen = false;
+                            body.removeAttribute('data-scroll-locked');
+                            body.style.overflow = '';
+                            body.style.paddingRight = '';
+                            body.style.marginRight = '';
+                            body.style.pointerEvents = '';
+                          }
+                        }, 100);
+                        return;
+                      }
+                      
+                      // Remove scroll lock for other cases
                       body.removeAttribute('data-scroll-locked');
                       body.style.overflow = '';
                       body.style.paddingRight = '';
@@ -161,12 +189,33 @@ export default async function LocaleLayout({
                   attributes: true,
                   attributeFilter: ['data-scroll-locked']
                 });
+                
+                // Also observe DOM changes to detect when select content is added/removed
+                const contentObserver = new MutationObserver(function(mutations) {
+                  mutations.forEach(function(mutation) {
+                    if (mutation.type === 'childList') {
+                      // Check if select content was added or removed
+                      if (!hasOpenSelects() && isSelectOpen) {
+                        setTimeout(() => {
+                          if (!hasOpenSelects()) {
+                            isSelectOpen = false;
+                          }
+                        }, 50);
+                      }
+                    }
+                  });
+                });
+                
+                contentObserver.observe(document.body, {
+                  childList: true,
+                  subtree: true
+                });
               }
               
               if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', preventScrollLock);
+                document.addEventListener('DOMContentLoaded', manageScrollLock);
               } else {
-                preventScrollLock();
+                manageScrollLock();
               }
             })();
           `
