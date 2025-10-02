@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { 
   Users, 
   Target, 
@@ -57,21 +57,22 @@ const teamMembers = [
 ];
 
 const companyStats = [
-  { id: 'users', value: '2M+', iconKey: 'users' },
-  { id: 'partners', value: '5,000+', iconKey: 'partners' },
-  { id: 'cities', value: '250+', iconKey: 'cities' },
-  { id: 'founded', value: '2019', iconKey: 'founded' },
+  { id: 'users', value: '50K+', iconKey: 'users' },
+  { id: 'partners', value: '1,200+', iconKey: 'partners' },
+  { id: 'cities', value: '75+', iconKey: 'cities' },
+  { id: 'founded', value: '2024', iconKey: 'founded' },
 ];
 
 const coreValues = [
-  { id: 'innovation', icon: Lightbulb },
-  { id: 'trust', icon: Shield },
   { id: 'community', icon: Users },
-  { id: 'excellence', icon: Star },
+  { id: 'trust', icon: Shield },
+  { id: 'empowerment', icon: Zap },
+  { id: 'dignity', icon: Heart },
 ];
 
 export default function AboutPage() {
   const t = useTranslations('about');
+  const locale = useLocale();
   
   const [heroRef, heroInView] = useInView({
     triggerOnce: true,
@@ -170,7 +171,7 @@ export default function AboutPage() {
         </motion.section>
 
         {/* Company Stats */}
-        <motion.section
+        {/* <motion.section
           ref={statsRef}
           initial={{ opacity: 0, y: 50 }}
           animate={statsInView ? { opacity: 1, y: 0 } : {}}
@@ -197,7 +198,7 @@ export default function AboutPage() {
               </motion.div>
             ))}
           </div>
-        </motion.section>
+        </motion.section> */}
 
         {/* Company Story */}
         <motion.section
@@ -303,7 +304,7 @@ export default function AboutPage() {
           </div>
         </motion.section>
 
-        {/* Team Section */}
+        {/* Team Section
         <motion.section
           ref={teamRef}
           initial={{ opacity: 0, y: 50 }}
@@ -349,7 +350,7 @@ export default function AboutPage() {
               </motion.div>
             ))}
           </div>
-        </motion.section>
+        </motion.section> */}
 
         {/* Call to Action */}
         <motion.section
@@ -365,22 +366,14 @@ export default function AboutPage() {
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
               {t('cta.description')}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <motion.a
-                href="#contact"
+                href={`/${locale}/contact`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-block bg-orange-main hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 {t('cta.contact')}
-              </motion.a>
-              <motion.a
-                href="#careers"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-block bg-main-purple hover:bg-purple-700 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                {t('cta.careers')}
               </motion.a>
             </div>
           </div>

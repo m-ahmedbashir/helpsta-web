@@ -10,32 +10,34 @@
     "downloadApp": "App herunterladen"
   },
   "hero": {
-    "title": "Revolutionäre",
-    "subtitle": "Mobile Erfahrung",
-    "description": "Verwandeln Sie Ihre tägliche Routine mit unserer hochmodernen mobilen Anwendung. Erleben Sie nahtlose Funktionalität, atemberaubendes Design und unvergleichliche Leistung.",
-    "downloadNow": "Jetzt herunterladen",
-    "watchDemo": "Demo ansehen",
-    "reviews": "50K+ Bewertungen"
+    "title1": "Haben Sie ein Problem",
+    "title2": "das Sie lösen können?",
+    "subtitle1": "Keine Sorge, lassen",
+    "subtitle2": "Sie uns anfangen.",
+    "description": "Treten Sie Helpstas Community-Plattform bei, wo Nachbarn einander bei der Lösung von Problemen helfen. Posten Sie Ihre Herausforderungen, helfen Sie anderen, sammeln Sie Belohnungspunkte und lösen Sie sie für Rabatte in Partnershops ein. Stärkere Gemeinschaften aufbauen, eine helfende Hand nach der anderen.",
+    "downloadGoogle": "Bei Google Play herunterladen",
+    "downloadApple": "Im App Store herunterladen"
   },
-  "howItWorks": {
+  "HowItWorks": {
     "title": "Wie es funktioniert",
-    "subtitle": "Scrollen—Karten bleiben in einer Linie mit sanftem Parallax.",
+    "subtitle": "Schließe dich Tausenden von Nachbarn an, die gemeinsam stärkere Gemeinschaften aufbauen",
+    "subtitleMobile": "Folge diesen einfachen Schritten, um deiner Gemeinschaft zu helfen", 
     "steps": {
       "download": {
-        "title": "Herunterladen & Installieren",
-        "description": "In Sekunden starten."
+        "title": "Herunterladen & Beitreten",
+        "description": "Lade die Helpsta-App herunter und erstelle in wenigen Minuten dein Community-Profil."
       },
-      "setup": {
-        "title": "Profil einrichten",
-        "description": "Personalisieren Sie Ihre Erfahrung."
-      },
-      "features": {
-        "title": "Hauptfunktionen nutzen",
-        "description": "Mächtige Tools, einfache Benutzeroberfläche."
+      "post": {
+        "title": "Posten oder Helfen",
+        "description": "Teile Probleme mit, die du gelöst haben möchtest, oder biete Nachbarn in Not deine Hilfe an."
       },
       "connect": {
-        "title": "Verbinden & Teilen",
-        "description": "Der lokalen Gemeinschaft beitreten."
+        "title": "Vernetzen & Lösen", 
+        "description": "Finde Community-Mitglieder und arbeitet zusammen, um echte Probleme zu lösen."
+      },
+      "rewards": {
+        "title": "Sammeln & Einlösen",
+        "description": "Sammle Belohnungspunkte fürs Helfen und löse sie in lokalen Partnershops ein."
       }
     }
   },
@@ -214,7 +216,7 @@
   },
   "loading": {
     "brand": "Helpsta",
-    "tagline": "Revolutionäre Mobile Erfahrung",
+    "tagline": "Gemeinsam stärkere Gemeinschaften aufbauen",
     "steps": {
       "initializing": "Initialisierung...",
       "loadingComponents": "Komponenten laden...",
@@ -223,7 +225,7 @@
       "preparingExperience": "Erfahrung vorbereiten...",
       "almostReady": "Fast bereit..."
     },
-    "preparing": "Ihre personalisierte Erfahrung wird vorbereitet..."
+    "preparing": "Ihre Community-Erfahrung wird vorbereitet..."
   },
   "faq": {
     "title": "Häufig gestellte Fragen",
@@ -329,48 +331,52 @@
   "about": {
     "hero": {
       "title": "Über Helpsta",
-      "subtitle": "Mobile Erfahrungen für Millionen weltweit revolutionieren",
-      "description": "Wir sind ein leidenschaftliches Team, das sich der Transformation der Interaktion zwischen Menschen und mobiler Technologie widmet und bedeutungsvolle Verbindungen zwischen Nutzern und lokalen Unternehmen schafft."
+      "subtitle": "Stärkere Gemeinschaften durch nachbarschaftliche Hilfe aufbauen",
+      "description": "Wir revolutionieren, wie Gemeinschaften gemeinsam Probleme lösen, indem wir Nachbarn, die Hilfe benötigen, mit denen verbinden, die sie anbieten können - und schaffen so ein mächtiges Netzwerk gegenseitiger Unterstützung und Zusammenarbeit."
     },
     "stats": {
-      "users": "Aktive Nutzer",
-      "partners": "Geschäftspartner",
-      "cities": "Städte weltweit",
+      "users": "Gemeinschaftsmitglieder",
+      "partners": "Belohnungspartner",
+      "cities": "Städte & Gemeinden",
       "founded": "Gegründet"
     },
     "story": {
       "title": "Unsere Geschichte",
-      "paragraph1": "Helpsta wurde 2019 mit einer einfachen Vision gegründet: die Lücke zwischen mobiler Technologie und lokalen Gemeinschaften zu schließen. Was als kleines Team mit großen Träumen begann, ist zu einer revolutionären Plattform gewachsen, die Millionen von Nutzern mit Tausenden von Unternehmen weltweit verbindet.",
-      "paragraph2": "Unsere Reise begann, als wir die Diskrepanz zwischen digitaler Innovation und lokalem Gemeinschaftsengagement bemerkten. Wir sahen eine Gelegenheit, etwas Bedeutungsvolles zu schaffen - eine Plattform, die nicht nur modernste mobile Erfahrungen bietet, sondern auch lokale Wirtschaften stärkt und echte Verbindungen aufbaut.",
-      "paragraph3": "Heute sind wir stolz darauf, an der Spitze der mobilen Innovation zu stehen und kontinuierlich Grenzen zu verschieben, während wir unserer Kernmission treu bleiben, Werte für Nutzer und lokale Unternehmen zu schaffen."
+      "paragraph1": "Helpsta entstand aus einer einfachen, aber kraftvollen Beobachtung: Jede Gemeinschaft hat Menschen, die Hilfe benötigen, und Menschen, die bereit sind zu helfen, aber kulturelle Barrieren und soziale Zurückhaltung verhindern oft diese Verbindungen. Wir haben eine Plattform geschaffen, die diese Lücke schließt und isolierte Probleme in Gemeinschaftslösungen verwandelt.",
+      "paragraph2": "Wir erkannten, dass viele Menschen, besonders in Kulturen, die Privatsphäre und Selbständigkeit schätzen, sich unwohl dabei fühlen, Nachbarn direkt um Hilfe zu bitten. Unsere Plattform beseitigt diese soziale Unbeholfenheit, indem sie einen strukturierten, respektvollen Weg bietet, um Unterstützung zu erbitten, während Würde bewahrt und faire Entschädigung durch unser Belohnungssystem angeboten wird.",
+      "paragraph3": "Heute sind wir stolz darauf, täglich Tausende hilfreiche Interaktionen zu ermöglichen, soziale Barrieren abzubauen und stärkere, widerstandsfähigere Gemeinschaften aufzubauen, in denen sich Nachbarn bequem gegenseitig unterstützen können, ohne die traditionelle Zurückhaltung beim Bitten um Hilfe."
     },
     "mission": {
       "title": "Unsere Mission",
-      "description": "Mobile Erfahrungen revolutionieren, indem wir bedeutungsvolle Verbindungen zwischen Nutzern und lokalen Unternehmen schaffen und Gemeinschaftswachstum und digitale Innovation fördern."
+      "description": "Gemeinschaften stärken, indem wir Nachbarn, die Hilfe benötigen, mit denen verbinden, die sie anbieten können, und eine Kultur gegenseitiger Unterstützung schaffen, in der jeder sowohl geben als auch empfangen und dabei bedeutungsvolle Belohnungen verdienen kann."
     },
     "vision": {
       "title": "Unsere Vision",
-      "description": "Die führende Plattform zu sein, die mobile Technologie nahtlos mit lokalen Gemeinschaften integriert und eine Welt schafft, in der digitale Innovation reale Auswirkungen erzielt."
+      "description": "Eine Welt, in der jede Gemeinschaft selbstständig und widerstandsfähig ist, wo sich Nachbarn aktiv gegenseitig unterstützen und wo das Bitten um Hilfe und das Anbieten von Unterstützung als Akte des Aufbaus stärkerer, verbundenerer Nachbarschaften gefeiert werden."
     },
     "values": {
       "title": "Unsere Grundwerte",
-      "subtitle": "Die Prinzipien, die alles leiten, was wir tun, und unsere Unternehmenskultur prägen.",
+      "subtitle": "Die Prinzipien, die unsere Mission leiten, durch gegenseitige Hilfe stärkere Gemeinschaften aufzubauen.",
       "items": {
-        "innovation": {
-          "title": "Innovation",
-          "description": "Wir verschieben ständig Grenzen und nutzen neue Technologien, um bahnbrechende Lösungen zu schaffen, die Erwartungen übertreffen."
+        "community": {
+          "title": "Gemeinschaft zuerst",
+          "description": "Wir glauben, dass starke Gemeinschaften auf gegenseitiger Unterstützung, Vertrauen und nachbarschaftlicher Hilfe aufgebaut sind. Jede Entscheidung priorisiert das Gemeinschaftswohl über Profit."
         },
         "trust": {
-          "title": "Vertrauen",
-          "description": "Wir bauen dauerhafte Beziehungen durch Transparenz, Zuverlässigkeit und unerschütterliches Engagement für Datensicherheit und Privatsphäre auf."
+          "title": "Vertrauen & Sicherheit",
+          "description": "Wir schaffen sichere Räume für nachbarschaftliche Verbindungen durch robuste Verifizierungssysteme, transparente Profile und gemeinschaftsgetriebene Feedback-Mechanismen."
         },
-        "community": {
-          "title": "Gemeinschaft",
-          "description": "Wir glauben an die Kraft lokaler Gemeinschaften und arbeiten daran, Verbindungen zwischen Menschen und Unternehmen zu stärken."
+        "empowerment": {
+          "title": "Befähigung",
+          "description": "Wir befähigen jedes Gemeinschaftsmitglied, sowohl Helfer als auch Hilfeempfänger zu sein, und erkennen an, dass jeder wertvolle Fähigkeiten anzubieten hat und Bedürfnisse, die andere erfüllen können."
         },
-        "excellence": {
-          "title": "Exzellenz",
-          "description": "Wir streben nach Perfektion in allem, was wir tun, vom Produktdesign bis zum Kundenservice und darüber hinaus."
+        "fairness": {
+          "title": "Fairer Austausch",
+          "description": "Wir stellen sicher, dass das Helfen anderer durch unser Punktesystem fair belohnt wird und nachhaltige Anreize für Gemeinschaftsteilnahme und gegenseitige Unterstützung schafft."
+        },
+        "dignity": {
+          "title": "Respektvolle Hilfe",
+          "description": "Wir verstehen, dass um Hilfe zu bitten unangenehm sein kann. Unsere Plattform schafft einen würdevollen, strukturierten Weg, um Unterstützung zu erbitten und anzubieten, beseitigt soziale Unbeholfenheit und baut echte Verbindungen auf."
         }
       }
     },
