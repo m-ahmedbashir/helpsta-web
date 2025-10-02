@@ -157,8 +157,11 @@ export function Navigation() {
             <header className="px-6 md:px-7 pt-20 md:pt-24 pb-6 md:pb-5 border-b border-white/10">
               {/* Use Link for the brand too */}
               <Link href={locale ? `/${locale}` : "/"} className="block text-center md:text-left">
-                <h2 className="text-3xl md:text-2xl font-bold text-white">Helpsta</h2>
-                <p className="text-white/70 mt-1 text-base md:text-sm">Revolutionary Mobile Experience</p>
+                <img 
+                  src="/logo-bg-none.png" 
+                  alt="Helpsta Logo" 
+                  className="h-8 md:h-10 w-auto mx-auto md:mx-0"
+                />
               </Link>
             </header>
 
