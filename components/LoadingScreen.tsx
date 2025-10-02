@@ -25,18 +25,18 @@ export function LoadingScreen({ onComplete, duration = 1300 }: LoadingScreenProp
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.35, ease: "easeOut" }}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-main-purple via-purple-800 to-indigo-900 overflow-hidden"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-white overflow-hidden"
     >
       {/* Subtle animated blobs (GPU-cheap) */}
       {!prefersReduced && (
         <>
           <motion.div
-            className="absolute -top-24 -left-24 w-[28rem] h-[28rem] rounded-full bg-orange-main mix-blend-multiply blur-3xl opacity-20"
+            className="absolute -top-24 -left-24 w-[28rem] h-[28rem] rounded-full bg-main-purple/5 blur-3xl opacity-60"
             animate={{ x: [0, 40, 0], y: [0, -30, 0], scale: [1, 1.05, 1] }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           />
           <motion.div
-            className="absolute -bottom-24 -right-24 w-[28rem] h-[28rem] rounded-full bg-gradient-app-main-1 mix-blend-multiply blur-3xl opacity-20"
+            className="absolute -bottom-24 -right-24 w-[28rem] h-[28rem] rounded-full bg-orange-main/5 blur-3xl opacity-60"
             animate={{ x: [0, -40, 0], y: [0, 30, 0], scale: [1, 1.06, 1] }}
             transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
           />
@@ -50,7 +50,7 @@ export function LoadingScreen({ onComplete, duration = 1300 }: LoadingScreenProp
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="text-5xl md:text-6xl font-extrabold tracking-tight text-white"
+          className="text-5xl md:text-6xl font-extrabold tracking-tight text-main-purple"
         >
           {t("brand")}
         </motion.h1>
@@ -60,9 +60,9 @@ export function LoadingScreen({ onComplete, duration = 1300 }: LoadingScreenProp
           initial={{ opacity: 0, y: 6 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, delay: 0.15, ease: "easeOut" }}
-          className="mt-3 text-white/80 text-lg md:text-xl"
+          className="mt-3 text-gray-600 text-lg md:text-xl"
         >
-          <span className="bg-gradient-to-r from-white/70 via-white to-white/70 bg-clip-text text-transparent [background-size:200%_100%] animate-[shimmer_1.6s_ease_infinite]">
+          <span className="bg-gradient-to-r from-main-purple/70 via-main-purple to-main-purple/70 bg-clip-text text-transparent [background-size:200%_100%] animate-[shimmer_1.6s_ease_infinite]">
             {t("tagline")}
           </span>
         </motion.p>
@@ -82,7 +82,7 @@ export function LoadingScreen({ onComplete, duration = 1300 }: LoadingScreenProp
                 cy="12"
                 r="9"
                 fill="none"
-                stroke="rgba(255,255,255,0.25)"
+                stroke="rgba(67,53,167,0.15)"
                 strokeWidth="3"
               />
               <path

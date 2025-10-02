@@ -8,13 +8,17 @@ import {
   useSpring,
   type MotionValue,
 } from "framer-motion";
-import { Download, Smartphone, Zap, Users } from "lucide-react";
+import { Download, Users, MessageSquare, Gift } from "lucide-react";
+import { useTranslations } from 'next-intl';
 
-const steps = [
-  { icon: Download,   title: "Download & Install", desc: "Start in seconds.",            color: "from-main-purple to-purple-600" },
-  { icon: Smartphone, title: "Setup Your Profile", desc: "Personalize your experience.", color: "from-orange-main to-red-500" },
-  { icon: Zap,        title: "Use Key Features",    desc: "Powerful tools, simple UI.",   color: "from-gradient-app-main-1 to-gradient-app-main-2" },
-  { icon: Users,      title: "Connect & Share",     desc: "Join the local community.",    color: "from-green-500 to-teal-500" },
+// We'll get the steps from translations
+const stepKeys = ['download', 'post', 'connect', 'rewards'] as const;
+const stepIcons = [Download, MessageSquare, Users, Gift] as const;
+const stepColors = [
+  "from-main-purple to-purple-600",
+  "from-orange-main to-red-500", 
+  "from-gradient-app-main-1 to-gradient-app-main-2",
+  "from-green-500 to-teal-500"
 ] as const;
 
 /** Build staggered reveal windows: title + one per card across 0.16..0.9 */
@@ -76,6 +80,46 @@ function ArrowBG({ progress }: { progress: MotionValue<number> }) {
 }
 
 export function HowItWorks() {
+  const t = useTranslations();
+  
+  // Load the how it works translations
+  const howItWorksTranslations = useMemo(() => {
+    try {
+      // We'll access the translations through the t function
+      return {
+        title: t('HowItWorks.title'),
+        subtitle: t('HowItWorks.subtitle'),
+        subtitleMobile: t('HowItWorks.subtitleMobile'),
+        steps: stepKeys.map(key => ({
+          title: t(`HowItWorks.steps.${key}.title`),
+          description: t(`HowItWorks.steps.${key}.description`)
+        }))
+      };
+    } catch (error) {
+      // Fallback to English if translations fail
+      return {
+        title: "How it works",
+        subtitle: "Join thousands of neighbors building stronger communities together",
+        subtitleMobile: "Follow these simple steps to start helping your community",
+        steps: [
+          { title: "Download & Join", description: "Get the Helpsta app and create your community profile in minutes." },
+          { title: "Post or Help", description: "Share problems you need solved or offer help to neighbors in need." },
+          { title: "Connect & Solve", description: "Match with community members and collaborate to solve real problems." },
+          { title: "Earn & Redeem", description: "Collect reward points for helping and redeem them at local partner stores." }
+        ]
+      };
+    }
+  }, [t]);
+  
+  // Create steps with icons and colors
+  const steps = useMemo(() => 
+    howItWorksTranslations.steps.map((step, i) => ({
+      icon: stepIcons[i],
+      title: step.title,
+      desc: step.description,
+      color: stepColors[i]
+    })), [howItWorksTranslations.steps]);
+
   const outerRef = useRef<HTMLDivElement>(null);
 
   // Pin a bit longer so last card fully shows
@@ -102,8 +146,26 @@ export function HowItWorks() {
       className="relative h-[500svh] bg-gradient-to-br from-gray-50 to-white"
     >
       <div className="sticky top-0 h-[100vh] overflow-hidden isolate">
-        {/* Decorative animated path */}
-        <ArrowBG progress={progress} />
+        {/* Decorative animated path - hidden on mobile */}
+        <div className="hidden md:block">
+          <ArrowBG progress={progress} />
+        </div>
+
+        {/* Mobile-specific decorative elements */}
+        <div className="md:hidden pointer-events-none absolute inset-0 -z-10">
+          {/* Vertical connecting line */}
+          <motion.div 
+            className="absolute left-1/2 top-1/2 h-[60%] w-0.5 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-b from-main-purple/20 via-orange-main/20 to-gradient-app-main-1/20"
+            style={{ 
+              scaleY: useTransform(progress, [0.2, 0.8], [0, 1]),
+              opacity: useTransform(progress, [0.1, 0.3, 0.7, 0.9], [0, 0.6, 0.6, 0])
+            }}
+          />
+          {/* Small decorative dots */}
+          <div className="absolute left-1/2 top-1/3 h-2 w-2 -translate-x-1/2 rounded-full bg-main-purple/30" />
+          <div className="absolute left-1/2 top-1/2 h-2 w-2 -translate-x-1/2 rounded-full bg-orange-main/30" />
+          <div className="absolute left-1/2 top-2/3 h-2 w-2 -translate-x-1/2 rounded-full bg-gradient-app-main-1/30" />
+        </div>
 
         {/* Soft gradient blobs */}
         <motion.div aria-hidden className="pointer-events-none absolute inset-0" style={{ y: yClouds }}>
@@ -112,14 +174,15 @@ export function HowItWorks() {
         </motion.div>
 
         {/* Content */}
-        <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col justify-center px-6">
+        <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col justify-start md:justify-center px-6 py-4 md:py-0">
           {/* Title */}
           <motion.div
             style={{ opacity: titleReveal, y: useTransform(titleReveal, [0, 1], [24, 0]) }}
-            className="mb-8 text-center transform-gpu"
+            className="mb-6 md:mb-8 text-center transform-gpu"
           >
-            <h2 className="text-4xl font-extrabold text-main-purple lg:text-6xl">How it works</h2>
-            <p className="mx-auto mt-3 max-w-2xl text-lg text-gray-600">Scroll—cards stay in one line with a gentle parallax.</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-main-purple lg:text-6xl">{howItWorksTranslations.title}</h2>
+            <p className="mx-auto mt-3 max-w-2xl text-lg text-gray-600 hidden md:block">{howItWorksTranslations.subtitle}</p>
+            <p className="mx-auto mt-2 md:mt-3 max-w-2xl text-sm md:text-base text-gray-600 md:hidden">{howItWorksTranslations.subtitleMobile}</p>
           </motion.div>
 
           {/* DESKTOP: one horizontal line, equal cards */}
@@ -162,32 +225,45 @@ export function HowItWorks() {
             </div>
           </div>
 
-          {/* MOBILE: one horizontal line with scroll-snap (still a single row) */}
+          {/* MOBILE: vertical layout with 2x2 grid */}
           <div className="md:hidden">
-            <div className="flex snap-x snap-mandatory overflow-x-auto gap-4 pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-sm sm:max-w-2xl mx-auto pb-8">
               {steps.map((s, i) => {
                 const reveal = useSpring(inWindow(progress, windows[i + 1]), { stiffness: 160, damping: 20 });
                 const dir = i % 2 === 0 ? 1 : -1;
-                const drift = useTransform(progress, [0, 1], [dir * 10, -dir * 10]);
+                const drift = useTransform(progress, [0, 1], [dir * 4, -dir * 4]); // Further reduced drift for mobile
                 const y = useSpring(drift, { stiffness: 120, damping: 18 });
-                const scale = useTransform(reveal, [0, 1], [0.98, 1]);
+                const scale = useTransform(reveal, [0, 1], [0.96, 1]);
 
                 return (
-                  <motion.div key={s.title} style={{ opacity: reveal, y, scale }} className="snap-center shrink-0 w-[78vw] max-w-[380px] transform-gpu">
-                    <div className="relative h-full rounded-3xl border border-gray-100 bg-white p-6 shadow">
-                      <div className="absolute -top-3 -left-3">
-                        <div className={`flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r ${s.color} text-white shadow-lg`}>
+                  <motion.div 
+                    key={s.title} 
+                    style={{ opacity: reveal, y, scale }} 
+                    className="transform-gpu"
+                  >
+                    <motion.div
+                      whileHover={{ rotateX: -2, rotateY: 2, translateZ: 4 }}
+                      transition={{ type: "spring", stiffness: 220, damping: 16 }}
+                      className="relative h-full rounded-2xl border border-gray-100 bg-white p-4 sm:p-5 shadow-lg hover:-translate-y-1 hover:shadow-xl transform-gpu"
+                    >
+                      <div className="absolute -top-2 -left-2 sm:-top-3 sm:-left-3">
+                        <div className={`flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-gradient-to-r ${s.color} text-white shadow-lg text-xs sm:text-sm font-bold`}>
                           {i + 1}
                         </div>
                       </div>
 
-                      <div className={`mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-r ${s.color}`}>
-                        <s.icon className="h-7 w-7 text-white" />
+                      <div className={`mx-auto mb-3 sm:mb-4 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-xl bg-gradient-to-r ${s.color}`}>
+                        <s.icon className="h-6 w-6 sm:h-7 sm:w-7 text-white" />
                       </div>
 
-                      <h3 className="mb-1 text-center text-lg font-semibold">{s.title}</h3>
-                      <p className="text-center text-sm leading-relaxed text-gray-600">{s.desc}</p>
-                    </div>
+                      <h3 className="mb-1 sm:mb-2 text-center text-base sm:text-lg font-bold text-gray-800">{s.title}</h3>
+                      <p className="text-center text-xs sm:text-sm leading-relaxed text-gray-600">{s.desc}</p>
+
+                      <motion.div 
+                        style={{ scaleX: reveal }} 
+                        className="mx-auto mt-3 sm:mt-4 h-0.5 w-12 sm:w-16 origin-left rounded-full bg-gradient-to-r from-gray-200 to-gray-100" 
+                      />
+                    </motion.div>
                   </motion.div>
                 );
               })}

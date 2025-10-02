@@ -55,14 +55,18 @@ export function Footer() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-2 relative"
           >
-            <motion.h3
+            <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-3xl font-bold mb-4 text-orange-main"
+              className="mb-4"
             >
-              {t('brand')}
-            </motion.h3>
+              <img 
+                src="/logo-bg-none.png" 
+                alt="Helpsta Logo" 
+                className="h-12 md:h-16 w-auto object-contain"
+              />
+            </motion.div>
             <motion.p
               initial={{ opacity: 0, x: -30 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -81,15 +85,15 @@ export function Footer() {
             >
               <div className="flex items-center gap-3 text-gray-300">
                 <Mail className="w-5 h-5" />
-                <span>hello@mobileapp.com</span>
+                <span>support@helpsta.com</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
                 <Phone className="w-5 h-5" />
-                <span>+1 (555) 123-4567</span>
+                <span>+49 (0) 30 12345678</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
                 <MapPin className="w-5 h-5" />
-                <span>San Francisco, CA</span>
+                <span>Berlin, Germany</span>
               </div>
             </motion.div>
 
