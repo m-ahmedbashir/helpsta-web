@@ -26,6 +26,8 @@ export function Hero() {
       ref={containerRef}
       className="relative h-[300svh] bg-gradient-to-br from-orange-main/90 via-gradient-app-main-1/80 to-gradient-app-main-2/70"
       id="home"
+      aria-label="Hero section - Helpsta community helping platform"
+      role="banner"
     >
       {/* Pinned Content Container */}
       <div className="sticky top-0 h-[100vh] overflow-hidden">
@@ -63,7 +65,7 @@ export function Hero() {
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <motion.div
+          <motion.header
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -89,10 +91,14 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-5xl lg:text-7xl font-bold mb-6 leading-tight"
             >
-              Revolutionary
-              <br />
               <span className="text-white drop-shadow-lg">
-                Mobile Experience
+                Have a problem<br />
+                that you can solve?
+              </span>
+              <br />
+              <span className="text-yellow-400 drop-shadow-lg">
+                Don't worry, let's<br />
+                get started.
               </span>
             </motion.h1>
 
@@ -102,8 +108,9 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.8 }}
               className="text-xl opacity-90 mb-8 leading-relaxed"
             >
-              Transform your daily routine with our cutting-edge mobile application. 
-              Experience seamless functionality, stunning design, and unparalleled performance.
+              Join Helpsta's community platform where neighbors help each other solve problems. 
+              Post your challenges, help others, earn reward points, and redeem them for discounts 
+              at partner stores. Building stronger communities, one helping hand at a time.
             </motion.p>
 
             <motion.div
@@ -114,35 +121,41 @@ export function Hero() {
             >
               {/* Google Play Store Badge */}
               <motion.a
-                href="#"
+                href="https://play.google.com/store/apps/details?id=com.helpsta.app"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-block transition-transform duration-200"
-                aria-label="Get it on Google Play"
+                className="inline-block transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent rounded-lg"
+                aria-label="Download Helpsta app on Google Play Store"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <img
                   src="/download-icons/google play.png"
                   alt="Get it on Google Play"
                   className="h-14 w-auto object-contain"
+                  loading="eager"
                 />
               </motion.a>
 
               {/* Apple App Store Badge */}
               <motion.a
-                href="#"
+                href="https://apps.apple.com/app/helpsta/id123456789"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-block transition-transform duration-200"
-                aria-label="Download on the App Store"
+                className="inline-block transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent rounded-lg"
+                aria-label="Download Helpsta app on Apple App Store"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <img
                   src="/download-icons/app store.png"
                   alt="Download on the App Store"
                   className="h-14 w-auto object-contain"
+                  loading="eager"
                 />
               </motion.a>
             </motion.div>
-          </motion.div>
+          </motion.header>
 
           {/* Dual Phone Mockup with Parallax Effect */}
           <motion.div
@@ -150,6 +163,8 @@ export function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative flex justify-center items-center"
+            role="img"
+            aria-label="Helpsta mobile app screenshots showing community help interface"
           >
             {/* First Phone - Home Screen (Left Tilted Initially) */}
             <motion.div
@@ -166,8 +181,9 @@ export function Hero() {
                   {/* Home Screen */}
                   <img
                     src="/mobile-images/Home.png"
-                    alt="Helpsta Mobile App Home Screen"
+                    alt="Helpsta mobile app home screen showing community problems and helping interface"
                     className="w-full h-full object-cover"
+                    loading="eager"
                   />
                 </div>
               </div>
@@ -188,8 +204,9 @@ export function Hero() {
                   {/* Sign In Screen */}
                   <img
                     src="/mobile-images/05-Sign-In.png"
-                    alt="Helpsta Mobile App Sign In Screen"
+                    alt="Helpsta mobile app sign-in screen for community members to access helping platform"
                     className="w-full h-full object-cover"
+                    loading="eager"
                   />
                 </div>
               </div>
