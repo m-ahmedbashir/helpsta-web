@@ -2,7 +2,7 @@
 
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
-import { Chrome as Home, Info, Zap, Users, Mail, Download, HelpCircle, Building } from "lucide-react";
+import { Chrome as Home, Info, Zap, Users, Mail, Download, HelpCircle, Building, UserCheck } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
@@ -18,6 +18,8 @@ export function Navigation() {
   const MENU: MenuItem[] = [
     { icon: Home, labelKey: "home",            href: "/" },
     { icon: Building, labelKey: "about",       href: "/about" },
+    { icon: UserCheck, labelKey: "team",       href: "/team" },
+    { icon: HelpCircle, labelKey: "whyHelpsta", href: "#why-helpsta" },
     { icon: Info,  labelKey: "rewards",         href: "#reward-partners" },
     { icon: Zap,   labelKey: "community",       href: "#community-partners" },
     { icon: Users, labelKey: "howItWorks",    href: "#how-it-works" },

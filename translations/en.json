@@ -2,25 +2,64 @@
   "navigation": {
     "home": "Home",
     "about": "About",
+    "team": "Team",
+    "whyHelpsta": "Why Helpsta?",
     "rewards": "Rewards",
     "community": "Community",
-    "howItWorks": "How It Works",
+    "howItWorks": "How does it work?",
     "faq": "FAQ",
     "contact": "Contact",
     "downloadApp": "Download App"
   },
   "hero": {
     "title1": "Have a problem",
-    "title2": "that you can solve?",
-    "subtitle1": "Don't worry, let's",
-    "subtitle2": "get started.",
-    "description": "Join Helpsta's community platform where neighbors help each other solve problems. Post your challenges, help others, earn reward points, and redeem them for discounts at partner stores. Building stronger communities, one helping hand at a time.",
+    "title2": "you can't solve alone?",
+    "subtitle1": "Don't worry, you're",
+    "subtitle2": "not alone!",
+    "description": "Join Helpsta's community platform where people help each other solve problems. Post your challenges, help others, collect reward points, and redeem discounts at partner stores. Make your life easier! :)",
     "downloadGoogle": "Get it on Google Play",
     "downloadApple": "Download on the App Store"
   },
+  "whyhelpsta": {
+    "title": "Why Helpsta?",
+    "subtitle": "Discover how Helpsta solves real problems in your neighborhood and builds a strong community",
+    "subtitleMobile": "Community help reimagined – digital, simple and rewarding",
+    "cards": [
+      {
+        "question": "\"Do you actually know your neighbors?\"",
+        "answer": "Many people live anonymously in the city – living door to door but remaining strangers. 👉 With Helpsta, you find people near you, get to know your neighborhood and strengthen the community.",
+        "phoneImage": "/mobile-images/Home.png"
+      },
+      {
+        "question": "\"You need help, but a professional is too expensive?\"",
+        "answer": "Whether it's assembling furniture, carrying groceries or small repairs – not everyone can or wants to hire a service provider right away. 👉 On Helpsta you quickly find someone from your neighborhood who helps you – for free, in exchange or for payment.",
+        "phoneImage": "/mobile-images/24-Bookings.png"
+      },
+      {
+        "question": "\"Is it difficult for you to ask someone for help directly?\"",
+        "answer": "In real life, the threshold is high: Who do I ask? Will it be awkward? 👉 With Helpsta you post your request digitally – clearly and openly visible to your neighborhood. Whoever wants to help contacts you directly. Simple, uncomplicated and safe.",
+        "phoneImage": "/mobile-images/27-Chat.png"
+      },
+      {
+        "question": "\"Why should anyone help at all?\"",
+        "answer": "Helping is beautiful – and with Helpsta it's additionally rewarded. 👉 For every completed help, both sides receive Helpsta Coins. You can redeem these at cafés, restaurants or shops – or use them for premium features in the app.",
+        "phoneImage": "/mobile-images/05-Sign-In.png"
+      },
+      {
+        "question": "\"What does this bring to the partners?\"",
+        "answer": "Local cafés, restaurants and shops want to attract new customers. 👉 With Helpsta they become part of the neighborhood help, gain visibility and new regular customers – a win-win situation for everyone.",
+        "phoneImage": "/mobile-images/Home.png"
+      },
+      {
+        "question": "\"Where does Helpsta start?\"",
+        "answer": "We start in Nuremberg-Gostenhof and grow step by step into other districts and cities. 👉 Soon you can easily find help or help yourself in every city – and become part of a strong community.",
+        "phoneImage": "/mobile-images/24-Bookings.png"
+      }
+    ]
+  },
   "HowItWorks": {
-    "title": "How it works",
-    "subtitle": "Join thousands of neighbors building stronger communities together",
+    "title": "How does it work?",
+    "subtitle": "Connect with people in your area and strengthen the community and togetherness",
     "subtitleMobile": "Follow these simple steps to start helping your community",
     "steps": {
       "download": {
@@ -28,12 +67,12 @@
         "description": "Get the Helpsta app and create your community profile in minutes."
       },
       "post": {
-        "title": "Post or Help", 
-        "description": "Share problems you need solved or offer help to neighbors in need."
+        "title": "Create help post or offer help yourself", 
+        "description": "Share problems you need solved or offer your help to neighbors."
       },
       "connect": {
         "title": "Connect & Solve",
-        "description": "Match with community members and collaborate to solve real problems."
+        "description": "Find members and connect with each other to solve everyday problems together."
       },
       "rewards": {
         "title": "Earn & Redeem",
@@ -58,13 +97,32 @@
     "verified": "Verified"
   },
   "communityPartners": {
-    "title": "Shaping the future together",
-    "subtitle": "Join our thriving ecosystem of innovative partners shaping the future of mobile technology and creating meaningful connections around the world.",
+    "title": "Shape the future together with us",
+    "subtitle": "Join our ecosystem and become an innovative partner. Helpsta connects neighborhood help with local businesses. For every completed help, both users receive Helpsta Coins. These coins can be redeemed at participating partners – like cafés, restaurants, shops, or service providers.",
     "badge": "Community Partners",
+    "explanation": {
+      "title": "How it works",
+      "description": "As a partner business, you accept Helpsta Coins and offer small discounts or benefits to customers in return. Redemption is digital and straightforward: users show a QR code that you scan or manually enter in the partner portal. The coins are automatically deducted from the user account – simple, secure, transparent."
+    },
+    "benefits": {
+      "title": "Benefits for you as a partner",
+      "items": [
+        "Gain new customers – through redemption, users come directly to your business.",
+        "More visibility – your business is prominently listed in the Helpsta app.",
+        "Image boost – you position yourself as a socially engaged company that strengthens the neighborhood.",
+        "No risk – you decide which discounts or benefits you offer.",
+        "Measurable results – you can see in the partner portal how many coins were redeemed and what reach you achieved."
+      ]
+    },
+    "community": "With Helpsta, you become part of an active community that connects neighborly help, sustainability, and local life.",
     "learnMore": "Learn More",
     "ctaTitle": "Ready to join our community?",
-    "ctaSubtitle": "Become our partner to reach millions of users and be part of the mobile revolution.",
+    "ctaSubtitle": "We're starting in Nuremberg – with the goal of connecting all of Europe. With Helpsta, a new network of togetherness is emerging. Help in everyday life becomes natural – because we believe: Together, life is easier.",
     "becomePartner": "Become a Partner"
+  },
+  "team": {
+    "title": "Our Team",
+    "subtitle": "Meet the people who make Helpsta what it is – a platform that connects neighborhoods and makes life easier."
   },
   "footer": {
     "brand": "Helpsta",
@@ -90,6 +148,7 @@
       "company": {
         "title": "Company",
         "about": "About",
+        "team": "Team",
         "careers": "Careers",
         "blog": "Blog",
         "press": "Press"
