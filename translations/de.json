@@ -2,6 +2,7 @@
   "navigation": {
     "home": "Startseite",
     "about": "Über uns",
+    "team": "Team",
     "whyHelpsta": "Warum Helpsta?",
     "rewards": "Belohnungen",
     "community": "Gemeinschaft",
@@ -119,6 +120,10 @@
     "ctaSubtitle": "Wir starten in Nürnberg – mit dem Ziel, ganz Europa zu verbinden. Mit Helpsta entsteht ein neues Netzwerk des Miteinanders. Hilfe im Alltag wird selbstverständlich – denn wir sind überzeugt: Zusammen ist das Leben leichter.",
     "becomePartner": "Partner werden"
   },
+  "team": {
+    "title": "Unser Team",
+    "subtitle": "Lerne die Menschen kennen, die Helpsta zu dem machen, was es ist – eine Plattform, die Nachbarschaften verbindet und das Leben einfacher macht."
+  },
   "footer": {
     "brand": "Helpsta",
     "description": "Die Art und Weise verändern, wie Sie mit mobiler Technologie interagieren. Treten Sie Millionen von Nutzern bei, die unserer Plattform für ihre täglichen Bedürfnisse vertrauen.",
@@ -143,6 +148,7 @@
       "company": {
         "title": "Unternehmen",
         "about": "Über uns",
+        "team": "Team",
         "careers": "Karriere",
         "blog": "Blog",
         "press": "Presse"

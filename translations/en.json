@@ -2,6 +2,7 @@
   "navigation": {
     "home": "Home",
     "about": "About",
+    "team": "Team",
     "whyHelpsta": "Why Helpsta?",
     "rewards": "Rewards",
     "community": "Community",
@@ -119,6 +120,10 @@
     "ctaSubtitle": "We're starting in Nuremberg – with the goal of connecting all of Europe. With Helpsta, a new network of togetherness is emerging. Help in everyday life becomes natural – because we believe: Together, life is easier.",
     "becomePartner": "Become a Partner"
   },
+  "team": {
+    "title": "Our Team",
+    "subtitle": "Meet the people who make Helpsta what it is – a platform that connects neighborhoods and makes life easier."
+  },
   "footer": {
     "brand": "Helpsta",
     "description": "Transforming the way you interact with mobile technology. Join millions of users who trust our platform for their daily needs.",
@@ -143,6 +148,7 @@
       "company": {
         "title": "Company",
         "about": "About",
+        "team": "Team",
         "careers": "Careers",
         "blog": "Blog",
         "press": "Press"
