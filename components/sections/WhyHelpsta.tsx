@@ -2,33 +2,8 @@
 
 import { motion, useScroll, useTransform, useSpring, useMotionValue, type MotionValue } from 'framer-motion';
 import { useRef, useMemo } from 'react';
+import { useTranslations } from 'next-intl';
 
-const whyHelpstaData = [
-  {
-    q: "„Kennst du deine Nachbarn eigentlich?“",
-    a: "Viele Menschen leben anonym in der Stadt – man wohnt Tür an Tür und bleibt trotzdem Fremde. 👉 Mit Helpsta findest du Menschen in deiner Nähe, lernst deine Nachbarschaft kennen und stärkst den Zusammenhalt."
-  },
-  {
-    q: "„Du brauchst Hilfe, aber ein Profi ist zu teuer?“",
-    a: "Ob Möbel aufbauen, Einkäufe tragen oder kleine Reparaturen – nicht jeder kann oder will gleich einen Dienstleister beauftragen. 👉 Auf Helpsta findest du schnell jemanden aus deiner Nachbarschaft, der dir hilft – kostenlos, im Tausch oder gegen Bezahlung."
-  },
-  {
-    q: "„Dir fällt es schwer, direkt jemanden um Hilfe zu bitten?“",
-    a: "Im echten Leben ist die Hemmschwelle groß: Wen frage ich? Wird es unangenehm? 👉 Mit Helpsta stellst du deine Anfrage digital – klar und offen sichtbar für deine Nachbarschaft. Wer helfen möchte, meldet sich direkt bei dir. Einfach, unkompliziert und sicher."
-  },
-  {
-    q: "„Warum sollte überhaupt jemand helfen?“",
-    a: "Helfen ist schön – und bei Helpsta wird es zusätzlich belohnt. 👉 Für jede abgeschlossene Hilfe erhalten beide Seiten Helpsta Coins. Diese kannst du bei Cafés, Restaurants oder Shops einlösen – oder für Premium-Features in der App nutzen."
-  },
-  {
-    q: "„Was bringt das den Partnern?“",
-    a: "Lokale Cafés, Restaurants und Läden wollen neue Kundschaft gewinnen. 👉 Mit Helpsta werden sie Teil der Nachbarschaftshilfe, gewinnen Sichtbarkeit und neue Stammkunden – eine Win-Win-Situation für alle."
-  },
-  {
-    q: "„Wo startet Helpsta?“",
-    a: "Wir starten in Nürnberg-Gostenhof und wachsen Schritt für Schritt in weitere Stadtteile und Städte. 👉 Schon bald kannst du in jeder Stadt unkompliziert Hilfe finden oder selbst helfen – und dabei Teil einer starken Gemeinschaft werden."
-  }
-];
 
 /** Build staggered reveal windows: title + one per card across 0.16..0.9 */
 function useRevealWindows(count: number) {
@@ -47,7 +22,15 @@ function useRevealWindows(count: number) {
 }
 
 export default function WhyHelpsta() {
+  const t = useTranslations('whyhelpsta');
   const outerRef = useRef<HTMLDivElement>(null);
+  
+  // Get translated data
+  const whyHelpstaData = t.raw('cards') as Array<{
+    question: string;
+    answer: string;
+    phoneImage: string;
+  }>;
   
   // Pin a bit longer so last card fully shows
   const { scrollYProgress } = useScroll({
@@ -88,7 +71,13 @@ export default function WhyHelpsta() {
             className="mb-8 text-center transform-gpu flex-shrink-0"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900">
-              Warum <span className="text-orange-500">Helpsta?</span>
+              {t('title').split(' ').map((word, index) => (
+                word === 'Helpsta?' || word === 'Helpsta' ? (
+                  <span key={index} className="text-orange-500">{word}</span>
+                ) : (
+                  <span key={index}>{word} </span>
+                )
+              ))}
             </h2>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -97,7 +86,7 @@ export default function WhyHelpsta() {
               viewport={{ once: true }}
               className="mx-auto mt-3 max-w-2xl text-lg text-gray-600 hidden md:block"
             >
-              Entdecke, wie Helpsta echte Probleme in deiner Nachbarschaft löst und eine starke Gemeinschaft aufbaut
+              {t('subtitle')}
             </motion.p>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -106,7 +95,7 @@ export default function WhyHelpsta() {
               viewport={{ once: true }}
               className="mx-auto mt-2 max-w-2xl text-sm text-gray-600 md:hidden px-4"
             >
-              Nachbarschaftshilfe neu gedacht – digital, einfach und belohnend
+              {t('subtitleMobile')}
             </motion.p>
           </motion.div>
 
@@ -169,8 +158,8 @@ export default function WhyHelpsta() {
                       }}
                     >
                       <div className="space-y-3">
-                        <h3 className="font-semibold text-lg mb-3 text-gray-800 leading-tight">{item.q}</h3>
-                        <p className="text-gray-600 text-sm leading-relaxed">{item.a}</p>
+                        <h3 className="font-semibold text-lg mb-3 text-gray-800 leading-tight">{item.question}</h3>
+                        <p className="text-gray-600 text-sm leading-relaxed">{item.answer}</p>
                         
                         {/* Decorative element */}
                         <motion.div 
@@ -244,8 +233,8 @@ export default function WhyHelpsta() {
                         }}
                         transition={{ type: "spring", stiffness: 200, damping: 20 }}
                       >
-                        <h3 className="font-semibold text-base mb-3 text-gray-800 leading-tight">{item.q}</h3>
-                        <p className="text-gray-600 text-sm leading-relaxed mb-3">{item.a}</p>
+                        <h3 className="font-semibold text-base mb-3 text-gray-800 leading-tight">{item.question}</h3>
+                        <p className="text-gray-600 text-sm leading-relaxed mb-3">{item.answer}</p>
                         
                         {/* Progress indicator */}
                         <motion.div 

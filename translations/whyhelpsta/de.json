@@ -1,0 +1,37 @@
+{
+  "title": "Warum Helpsta?",
+  "subtitle": "Entdecke, wie Helpsta echte Probleme in deiner Nachbarschaft löst und eine starke Gemeinschaft aufbaut",
+  "subtitleMobile": "Nachbarschaftshilfe neu gedacht – digital, einfach und belohnend",
+  "cards": [
+    {
+      "question": "\\u201EKennst du deine Nachbarn eigentlich?\\u201C",
+      "answer": "Viele Menschen leben anonym in der Stadt – man wohnt Tür an Tür und bleibt trotzdem Fremde. 👉 Mit Helpsta findest du Menschen in deiner Nähe, lernst deine Nachbarschaft kennen und stärkst den Zusammenhalt.",
+      "phoneImage": "/mobile-images/Home.png"
+    },
+    {
+      "question": "\\u201EDu brauchst Hilfe, aber ein Profi ist zu teuer?\\u201C",
+      "answer": "Ob Möbel aufbauen, Einkäufe tragen oder kleine Reparaturen – nicht jeder kann oder will gleich einen Dienstleister beauftragen. 👉 Auf Helpsta findest du schnell jemanden aus deiner Nachbarschaft, der dir hilft – kostenlos, im Tausch oder gegen Bezahlung.",
+      "phoneImage": "/mobile-images/24-Bookings.png"
+    },
+    {
+      "question": "\\u201EDir fällt es schwer, direkt jemanden um Hilfe zu bitten?\\u201C",
+      "answer": "Im echten Leben ist die Hemmschwelle groß: Wen frage ich? Wird es unangenehm? 👉 Mit Helpsta stellst du deine Anfrage digital – klar und offen sichtbar für deine Nachbarschaft. Wer helfen möchte, meldet sich direkt bei dir. Einfach, unkompliziert und sicher.",
+      "phoneImage": "/mobile-images/27-Chat.png"
+    },
+    {
+      "question": "\\u201EWarum sollte überhaupt jemand helfen?\\u201C",
+      "answer": "Helfen ist schön – und bei Helpsta wird es zusätzlich belohnt. 👉 Für jede abgeschlossene Hilfe erhalten beide Seiten Helpsta Coins. Diese kannst du bei Cafés, Restaurants oder Shops einlösen – oder für Premium-Features in der App nutzen.",
+      "phoneImage": "/mobile-images/05-Sign-In.png"
+    },
+    {
+      "question": "\\u201EWas bringt das den Partnern?\\u201C",
+      "answer": "Lokale Cafés, Restaurants und Läden wollen neue Kundschaft gewinnen. 👉 Mit Helpsta werden sie Teil der Nachbarschaftshilfe, gewinnen Sichtbarkeit und neue Stammkunden – eine Win-Win-Situation für alle.",
+      "phoneImage": "/mobile-images/Home.png"
+    },
+    {
+      "question": "\\u201EWo startet Helpsta?\\u201C",
+      "answer": "Wir starten in Nürnberg-Gostenhof und wachsen Schritt für Schritt in weitere Stadtteile und Städte. 👉 Schon bald kannst du in jeder Stadt unkompliziert Hilfe finden oder selbst helfen – und dabei Teil einer starken Gemeinschaft werden.",
+      "phoneImage": "/mobile-images/24-Bookings.png"
+    }
+  ]
+}

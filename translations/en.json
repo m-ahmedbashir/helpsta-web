@@ -18,6 +18,43 @@
     "downloadGoogle": "Get it on Google Play",
     "downloadApple": "Download on the App Store"
   },
+  "whyhelpsta": {
+    "title": "Why Helpsta?",
+    "subtitle": "Discover how Helpsta solves real problems in your neighborhood and builds a strong community",
+    "subtitleMobile": "Community help reimagined – digital, simple and rewarding",
+    "cards": [
+      {
+        "question": "\"Do you actually know your neighbors?\"",
+        "answer": "Many people live anonymously in the city – living door to door but remaining strangers. 👉 With Helpsta, you find people near you, get to know your neighborhood and strengthen the community.",
+        "phoneImage": "/mobile-images/Home.png"
+      },
+      {
+        "question": "\"You need help, but a professional is too expensive?\"",
+        "answer": "Whether it's assembling furniture, carrying groceries or small repairs – not everyone can or wants to hire a service provider right away. 👉 On Helpsta you quickly find someone from your neighborhood who helps you – for free, in exchange or for payment.",
+        "phoneImage": "/mobile-images/24-Bookings.png"
+      },
+      {
+        "question": "\"Is it difficult for you to ask someone for help directly?\"",
+        "answer": "In real life, the threshold is high: Who do I ask? Will it be awkward? 👉 With Helpsta you post your request digitally – clearly and openly visible to your neighborhood. Whoever wants to help contacts you directly. Simple, uncomplicated and safe.",
+        "phoneImage": "/mobile-images/27-Chat.png"
+      },
+      {
+        "question": "\"Why should anyone help at all?\"",
+        "answer": "Helping is beautiful – and with Helpsta it's additionally rewarded. 👉 For every completed help, both sides receive Helpsta Coins. You can redeem these at cafés, restaurants or shops – or use them for premium features in the app.",
+        "phoneImage": "/mobile-images/05-Sign-In.png"
+      },
+      {
+        "question": "\"What does this bring to the partners?\"",
+        "answer": "Local cafés, restaurants and shops want to attract new customers. 👉 With Helpsta they become part of the neighborhood help, gain visibility and new regular customers – a win-win situation for everyone.",
+        "phoneImage": "/mobile-images/Home.png"
+      },
+      {
+        "question": "\"Where does Helpsta start?\"",
+        "answer": "We start in Nuremberg-Gostenhof and grow step by step into other districts and cities. 👉 Soon you can easily find help or help yourself in every city – and become part of a strong community.",
+        "phoneImage": "/mobile-images/24-Bookings.png"
+      }
+    ]
+  },
   "HowItWorks": {
     "title": "How it works",
     "subtitle": "Join thousands of neighbors building stronger communities together",
