@@ -18,6 +18,7 @@ export function Navigation() {
   const MENU: MenuItem[] = [
     { icon: Home, labelKey: "home",            href: "/" },
     { icon: Building, labelKey: "about",       href: "/about" },
+    { icon: HelpCircle, labelKey: "whyHelpsta", href: "#why-helpsta" },
     { icon: Info,  labelKey: "rewards",         href: "#reward-partners" },
     { icon: Zap,   labelKey: "community",       href: "#community-partners" },
     { icon: Users, labelKey: "howItWorks",    href: "#how-it-works" },

@@ -114,7 +114,7 @@ export default function WhyHelpsta() {
                 >
                   <div className="w-full h-full bg-black rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden">
                     <img
-                      src="/mobile-images/05-Sign-In.png"
+                      src="/mobile-images/Home.png"
                       alt="Helpsta App"
                       className="w-full h-full object-cover"
                     />
