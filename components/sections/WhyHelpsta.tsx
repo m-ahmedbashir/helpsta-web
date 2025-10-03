@@ -148,7 +148,7 @@ export default function WhyHelpsta() {
                   return (
                     <motion.div
                       key={index}
-                      className="absolute w-[20rem] sm:w-[24rem] md:w-[26rem] lg:w-[28rem] bg-white shadow-xl rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 border border-gray-100 hover:shadow-2xl transition-shadow duration-300"
+                      className="absolute z-20 w-[20rem] sm:w-[24rem] md:w-[26rem] lg:w-[28rem] bg-white shadow-xl rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 border border-gray-100 hover:shadow-2xl transition-shadow duration-300"
                       style={{
                         x: useTransform(currentReveal, [0, 1], [`${direction * initialDistance}px`, `${direction * finalDistance}px`]),
                         y: `${yOffset}px`,
