@@ -28,6 +28,7 @@ export function Footer() {
   const footerLinks = {
     [t('sections.company.title')]: [
       { label: t('sections.company.about'), href: `/${locale}/about` },
+      { label: t('sections.company.team'), href: `/${locale}/team` },
       { label: t('sections.legal.privacy'), href: `/${locale}/privacy` },
       { label: t('sections.legal.terms'), href: `/${locale}/terms` },
     ],
