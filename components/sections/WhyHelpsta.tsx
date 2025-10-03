@@ -202,7 +202,7 @@ export default function WhyHelpsta() {
                     
                     {/* Dynamic card notifications - sliding from right like notifications */}
                     <div className="absolute inset-0 flex flex-col justify-start pt-4 xs:pt-6 px-2 xs:px-3 overflow-hidden">
-                      {whyHelpstaData.slice(0, 4).map((item, index) => {
+                      {whyHelpstaData.map((item, index) => {
                         const reveal = useSpring(inWindow(progress, windows[index + 1]), { stiffness: 160, damping: 20 });
                         const isActive = reveal.get() > 0.3;
                         
@@ -233,7 +233,7 @@ export default function WhyHelpsta() {
                                   </span>
                                 </div>
                                 <div className="text-[8px] xs:text-[9px] text-gray-400">
-                                  {index + 1}/4
+                                  {index + 1}/{whyHelpstaData.length}
                                 </div>
                               </div>
                               
