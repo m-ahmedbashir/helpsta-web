@@ -51,26 +51,26 @@ export default function WhyHelpsta() {
     <section
       ref={outerRef}
       id="why-helpsta"
-      className="relative h-[500svh] bg-gradient-to-b from-white to-gray-50"
+      className="relative h-[400svh] xs:h-[450svh] sm:h-[500svh] bg-gradient-to-b from-white to-gray-50"
     >
       <div className="sticky top-0 h-[100vh] overflow-hidden isolate flex flex-col">
         {/* Soft gradient background elements */}
         <motion.div aria-hidden className="pointer-events-none absolute inset-0" style={{ y: yBackground }}>
-          <div className="absolute -top-24 left-1/4 h-80 w-80 rounded-full bg-gradient-to-r from-orange-main/10 to-main-purple/10 blur-3xl" />
-          <div className="absolute -bottom-24 right-1/5 h-96 w-96 rounded-full bg-gradient-to-r from-gradient-app-main-1/10 to-gradient-app-main-2/10 blur-3xl" />
+          <div className="absolute -top-16 sm:-top-24 left-1/4 h-60 w-60 sm:h-80 sm:w-80 rounded-full bg-gradient-to-r from-orange-main/10 to-main-purple/10 blur-2xl sm:blur-3xl" />
+          <div className="absolute -bottom-16 sm:-bottom-24 right-1/5 h-72 w-72 sm:h-96 sm:w-96 rounded-full bg-gradient-to-r from-gradient-app-main-1/10 to-gradient-app-main-2/10 blur-2xl sm:blur-3xl" />
         </motion.div>
 
         {/* Content */}
-        <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col justify-center px-4 sm:px-6 py-4">
+        <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-center px-3 xs:px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
           {/* Title */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="mb-8 text-center transform-gpu flex-shrink-0"
+            className="mb-6 sm:mb-8 lg:mb-10 text-center transform-gpu flex-shrink-0"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900">
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 px-2 sm:px-0">
               {t('title').split(' ').map((word, index) => (
                 word === 'Helpsta?' || word === 'Helpsta' ? (
                   <span key={index} className="text-orange-500">{word}</span>
@@ -84,7 +84,7 @@ export default function WhyHelpsta() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="mx-auto mt-3 max-w-2xl text-lg text-gray-600 hidden md:block"
+              className="mx-auto mt-3 max-w-3xl text-base sm:text-lg lg:text-xl text-gray-600 hidden sm:block px-4"
             >
               {t('subtitle')}
             </motion.p>
@@ -93,7 +93,7 @@ export default function WhyHelpsta() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="mx-auto mt-2 max-w-2xl text-sm text-gray-600 md:hidden px-4"
+              className="mx-auto mt-2 max-w-2xl text-sm xs:text-base text-gray-600 sm:hidden px-4"
             >
               {t('subtitleMobile')}
             </motion.p>
@@ -101,8 +101,8 @@ export default function WhyHelpsta() {
 
           {/* Content Area */}
           <div className="flex-1 flex items-center justify-center">
-            {/* DESKTOP: Central phone with floating cards */}
-            <div className="relative hidden md:block w-full max-w-5xl">
+            {/* DESKTOP & TABLET: Central phone with floating cards */}
+            <div className="relative hidden sm:block w-full max-w-6xl">
               <div className="flex items-center justify-center">
                 {/* Central Phone */}
                 <motion.div
@@ -110,9 +110,9 @@ export default function WhyHelpsta() {
                   whileInView={{ opacity: 1, scale: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.6, type: "spring", stiffness: 100 }}
                   viewport={{ once: true }}
-                  className="relative z-10 w-[280px] h-[560px] bg-gray-900 rounded-[2.5rem] shadow-2xl p-2"
+                  className="relative z-10 w-[200px] h-[400px] sm:w-[240px] sm:h-[480px] md:w-[280px] md:h-[560px] bg-gray-900 rounded-[2rem] sm:rounded-[2.5rem] shadow-2xl p-1.5 sm:p-2"
                 >
-                  <div className="w-full h-full bg-black rounded-[2rem] overflow-hidden">
+                  <div className="w-full h-full bg-black rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden">
                     <img
                       src="/mobile-images/05-Sign-In.png"
                       alt="Helpsta App"
@@ -137,18 +137,18 @@ export default function WhyHelpsta() {
                   const isLeft = index % 2 === 0;
                   const direction = isLeft ? -1 : 1;
                   
-                  // Improved positioning with more space between cards
-                  const finalDistance = 380; // Increased distance from center
-                  const initialDistance = 480; // Start even further out
+                  // Responsive positioning - using CSS breakpoint logic
+                  const finalDistance = 320; // Base distance, will be adjusted via CSS
+                  const initialDistance = 420; // Start further out
                   
                   // Better vertical distribution to prevent overlap
-                  const yPositions = [-220, -80, 80, 220, -150, 150]; // More spread out
+                  const yPositions = [-200, -70, 70, 200, -135, 135]; // More spread out
                   const yOffset = yPositions[index] || 0;
 
                   return (
                     <motion.div
                       key={index}
-                      className="absolute w-[28rem] bg-white shadow-xl rounded-2xl p-6 border border-gray-100 hover:shadow-2xl transition-shadow duration-300"
+                      className="absolute w-[20rem] sm:w-[24rem] md:w-[26rem] lg:w-[28rem] bg-white shadow-xl rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 border border-gray-100 hover:shadow-2xl transition-shadow duration-300"
                       style={{
                         x: useTransform(currentReveal, [0, 1], [`${direction * initialDistance}px`, `${direction * finalDistance}px`]),
                         y: `${yOffset}px`,
@@ -157,13 +157,13 @@ export default function WhyHelpsta() {
                         rotate: useTransform(currentReveal, [0, 1], [direction * 8, direction * 2]),
                       }}
                     >
-                      <div className="space-y-3">
-                        <h3 className="font-semibold text-lg mb-3 text-gray-800 leading-tight">{item.question}</h3>
-                        <p className="text-gray-600 text-sm leading-relaxed">{item.answer}</p>
+                      <div className="space-y-2 sm:space-y-3">
+                        <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-gray-800 leading-tight">{item.question}</h3>
+                        <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{item.answer}</p>
                         
                         {/* Decorative element */}
                         <motion.div 
-                          className="mt-4 h-1 w-16 bg-gradient-to-r from-orange-main to-main-purple rounded-full"
+                          className="mt-3 sm:mt-4 h-1 w-12 sm:w-16 bg-gradient-to-r from-orange-main to-main-purple rounded-full"
                           style={{
                             scaleX: useTransform(currentReveal, [0.5, 1], [0, 1]),
                           }}
@@ -175,10 +175,10 @@ export default function WhyHelpsta() {
               </div>
             </div>
 
-            {/* MOBILE: Vertical layout */}
-            <div className="relative md:hidden w-full max-w-sm mx-auto">
-              <div className="flex flex-col space-y-6">
-                {/* Phone mockup on mobile - with bottom-up animation */}
+            {/* MOBILE: Cards overlaying on phone */}
+            <div className="relative sm:hidden w-full max-w-md mx-auto px-4">
+              <div className="relative flex justify-center items-center min-h-[500px] xs:min-h-[600px]">
+                {/* Phone mockup - static background */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8, y: 60 }}
                   whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -186,82 +186,98 @@ export default function WhyHelpsta() {
                     type: "spring", 
                     stiffness: 120, 
                     damping: 20,
-                    delay: 0.4
+                    delay: 0.2
                   }}
                   viewport={{ once: true }}
-                  className="mx-auto w-[200px] h-[400px] bg-gray-900 rounded-[2rem] shadow-xl p-1.5"
+                  className="relative w-[200px] h-[400px] xs:w-[240px] xs:h-[480px] bg-gray-900 rounded-[2rem] xs:rounded-[2.5rem] shadow-2xl p-2"
                 >
-                  <div className="w-full h-full bg-black rounded-[1.5rem] overflow-hidden">
+                  {/* Phone screen area */}
+                  <div className="relative w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 rounded-[1.5rem] xs:rounded-[2rem] overflow-hidden">
+                    {/* Background app image */}
                     <img
                       src="/mobile-images/05-Sign-In.png"
                       alt="Helpsta App"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover opacity-20"
                     />
+                    
+                    {/* Dynamic card notifications - sliding from right like notifications */}
+                    <div className="absolute inset-0 flex flex-col justify-start pt-4 xs:pt-6 px-2 xs:px-3 overflow-hidden">
+                      {whyHelpstaData.slice(0, 4).map((item, index) => {
+                        const reveal = useSpring(inWindow(progress, windows[index + 1]), { stiffness: 160, damping: 20 });
+                        const isActive = reveal.get() > 0.3;
+                        
+                        return (
+                          <motion.div
+                            key={index}
+                            style={{ 
+                              x: useTransform(reveal, [0, 0.3, 0.7, 1], [200, 0, 0, -200]),
+                              opacity: useTransform(reveal, [0, 0.2, 0.8, 1], [0, 1, 1, 0]),
+                              scale: useTransform(reveal, [0, 0.3, 0.7, 1], [0.9, 1, 1, 0.9]),
+                            }}
+                            className="absolute top-4 xs:top-6 left-2 xs:left-3 right-2 xs:right-3 z-10"
+                          >
+                            {/* Notification card */}
+                            <motion.div 
+                              className="bg-white/95 backdrop-blur-sm shadow-lg rounded-lg xs:rounded-xl p-3 xs:p-4 border-l-4 border-l-orange-main border border-white/50"
+                              animate={{
+                                y: isActive ? [0, -2, 0] : 0,
+                              }}
+                              transition={{ duration: 2, repeat: isActive ? Infinity : 0, ease: "easeInOut" }}
+                            >
+                              {/* Notification header */}
+                              <div className="flex items-start justify-between mb-2">
+                                <div className="flex items-center space-x-2">
+                                  <div className="w-2 h-2 xs:w-2.5 xs:h-2.5 bg-gradient-to-r from-orange-main to-main-purple rounded-full"></div>
+                                  <span className="text-[8px] xs:text-[9px] font-medium text-gray-500 uppercase tracking-wide">
+                                    Helpsta Feature
+                                  </span>
+                                </div>
+                                <div className="text-[8px] xs:text-[9px] text-gray-400">
+                                  {index + 1}/4
+                                </div>
+                              </div>
+                              
+                              {/* Notification content */}
+                              <h3 className="font-bold text-[10px] xs:text-xs mb-1.5 xs:mb-2 text-gray-800 leading-tight">
+                                {item.question}
+                              </h3>
+                              <p className="text-gray-600 text-[8px] xs:text-[9px] leading-relaxed">
+                                {item.answer}
+                              </p>
+                              
+                              {/* Notification progress bar */}
+                              <motion.div 
+                                className="mt-2 xs:mt-3 h-0.5 xs:h-1 w-full bg-gray-100 rounded-full overflow-hidden"
+                              >
+                                <motion.div 
+                                  className="h-full bg-gradient-to-r from-orange-main to-main-purple rounded-full"
+                                  style={{
+                                    scaleX: useTransform(reveal, [0.2, 0.8], [0, 1]),
+                                    originX: 0,
+                                  }}
+                                />
+                              </motion.div>
+                            </motion.div>
+                          </motion.div>
+                        );
+                      })}
+                    </div>
                   </div>
                   
                   {/* Phone reflection effect */}
                   <motion.div 
                     initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 0.6 }}
-                    transition={{ duration: 0.6, delay: 0.6 }}
+                    whileInView={{ opacity: 0.4 }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
                     viewport={{ once: true }}
-                    className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent rounded-[2rem] pointer-events-none"
+                    className="absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-transparent rounded-[2rem] xs:rounded-[2.5rem] pointer-events-none"
                   />
+                  
+                  {/* Phone notch */}
+                  <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-16 xs:w-20 h-1 xs:h-1.5 bg-gray-800 rounded-full"></div>
                 </motion.div>
 
-                {/* Cards in vertical layout with enhanced animations */}
-                {whyHelpstaData.slice(0, 4).map((item, index) => {
-                  const reveal = useSpring(inWindow(progress, windows[index + 1]), { stiffness: 160, damping: 20 });
-                  const isEven = index % 2 === 0;
 
-                  return (
-                    <motion.div
-                      key={index}
-                      style={{ 
-                        opacity: reveal, 
-                        scale: useTransform(reveal, [0, 1], [0.9, 1]),
-                        y: useTransform(reveal, [0, 1], [40, 0]),
-                        x: useTransform(reveal, [0, 1], [isEven ? -20 : 20, 0]),
-                      }}
-                      className="transform-gpu"
-                    >
-                      <motion.div 
-                        className="bg-white shadow-lg rounded-xl p-5 border border-gray-100 hover:shadow-xl transition-shadow duration-300"
-                        whileHover={{ 
-                          scale: 1.02,
-                          rotateY: isEven ? 2 : -2,
-                        }}
-                        transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                      >
-                        <h3 className="font-semibold text-base mb-3 text-gray-800 leading-tight">{item.question}</h3>
-                        <p className="text-gray-600 text-sm leading-relaxed mb-3">{item.answer}</p>
-                        
-                        {/* Progress indicator */}
-                        <motion.div 
-                          className="h-1 w-full bg-gray-100 rounded-full overflow-hidden"
-                        >
-                          <motion.div 
-                            className="h-full bg-gradient-to-r from-orange-main to-main-purple rounded-full"
-                            style={{
-                              scaleX: useTransform(reveal, [0.3, 1], [0, 1]),
-                              originX: 0,
-                            }}
-                          />
-                        </motion.div>
-                        
-                        {/* Card number indicator */}
-                        <motion.div 
-                          className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-orange-main to-main-purple text-white text-xs font-bold rounded-full flex items-center justify-center shadow-lg"
-                          style={{
-                            scale: useTransform(reveal, [0.5, 1], [0, 1]),
-                          }}
-                        >
-                          {index + 1}
-                        </motion.div>
-                      </motion.div>
-                    </motion.div>
-                  );
-                })}
               </div>
             </div>
           </div>
@@ -269,7 +285,7 @@ export default function WhyHelpsta() {
       </div>
 
       {/* Extra runway so last card fully reveals before unpin */}
-      <div className="h-[200vh]" />
+      <div className="h-[150vh] sm:h-[200vh]" />
     </section>
   );
 }
