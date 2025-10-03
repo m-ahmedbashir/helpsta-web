@@ -2,13 +2,24 @@
 
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
-import { Chrome as Home, Info, Zap, Users, Mail, Download, HelpCircle, Building, UserCheck } from "lucide-react";
+import { Chrome as Home, Info, Zap, Users, Mail, Download, HelpCircle, Building, UserCheck, ChevronDown, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
 import { useScrollToSection } from "@/hooks/useScrollToSection";
 
-type MenuItem = { icon: React.ComponentType<any>; labelKey: string; href: string };
+type SubMenuItem = { 
+  icon: React.ComponentType<any>; 
+  labelKey: string; 
+  href: string; 
+};
+
+type MenuItem = { 
+  icon: React.ComponentType<any>; 
+  labelKey: string; 
+  href?: string;
+  subItems?: SubMenuItem[];
+};
 
 export function Navigation() {
   const t = useTranslations('navigation');
@@ -16,17 +27,36 @@ export function Navigation() {
   const { scrollToSection } = useScrollToSection();
   
   const MENU: MenuItem[] = [
-    { icon: Home, labelKey: "home",            href: "/" },
-    { icon: Building, labelKey: "about",       href: "/about" },
-    { icon: UserCheck, labelKey: "team",       href: "/team" },
-    { icon: HelpCircle, labelKey: "whyHelpsta", href: "#why-helpsta" },
-    { icon: Info,  labelKey: "rewards",         href: "#reward-partners" },
-    { icon: Zap,   labelKey: "community",       href: "#community-partners" },
-    { icon: Users, labelKey: "howItWorks",    href: "#how-it-works" },
-    { icon: HelpCircle, labelKey: "faq",       href: "/faq" },
-    { icon: Mail,  labelKey: "contact",         href: "/contact" },
+    { icon: Home, labelKey: "home", href: "/" },
+    { 
+      icon: Building, 
+      labelKey: "about", 
+      subItems: [
+        { icon: Building, labelKey: "aboutUs", href: "/about" },
+        { icon: UserCheck, labelKey: "team", href: "/team" },
+        { icon: HelpCircle, labelKey: "whyHelpsta", href: "#why-helpsta" },
+      ]
+    },
+    {
+      icon: Zap,
+      labelKey: "platform",
+      subItems: [
+        { icon: Users, labelKey: "howItWorks", href: "#how-it-works" },
+        { icon: Info, labelKey: "rewards", href: "#reward-partners" },
+        { icon: Zap, labelKey: "community", href: "#community-partners" },
+      ]
+    },
+    {
+      icon: HelpCircle,
+      labelKey: "support",
+      subItems: [
+        { icon: HelpCircle, labelKey: "faq", href: "/faq" },
+        { icon: Mail, labelKey: "contact", href: "/contact" },
+      ]
+    },
   ];
   const [isOpen, setIsOpen] = useState(false);
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
   const [cx, setCx] = useState(0);
   const [cy, setCy] = useState(0);
   const [maxR, setMaxR] = useState(800);
@@ -167,42 +197,133 @@ export function Navigation() {
             </header>
 
             <motion.ul variants={listVariants} className="flex-1 px-6 md:px-7 py-8 md:py-6 space-y-3 md:space-y-2 overflow-y-auto">
-              {MENU.map(({ icon: Icon, labelKey, href }) => {
+              {MENU.map((item) => {
+                const { icon: Icon, labelKey, href, subItems } = item;
                 const label = t(labelKey);
-                const isHash = href.startsWith("#");
-                const localizedHref = getLocalizedHref(href);
-                const isActive = pathname === localizedHref || 
-                  (href !== "/" && pathname?.startsWith(localizedHref));
-
-                const linkProps = {
-                  className: `group flex items-center gap-4 md:gap-4 p-5 md:p-4 rounded-xl text-white hover:bg-white/10 active:bg-white/20 transition-all duration-300 ${isActive ? "bg-white/10" : ""}`,
-                  children: (
-                    <>
-                      <span className="grid place-items-center w-12 h-12 md:w-10 md:h-10 rounded-lg bg-white/10 group-hover:bg-orange-main transition-colors">
-                        <Icon className="w-6 h-6 md:w-5 md:h-5" />
-                      </span>
-                      <span className="text-xl md:text-lg font-medium">{label}</span>
-                    </>
-                  )
+                const hasSubItems = !!subItems;
+                const isExpanded = expandedItems.has(labelKey);
+                
+                const toggleExpanded = () => {
+                  const newExpanded = new Set(expandedItems);
+                  if (isExpanded) {
+                    newExpanded.delete(labelKey);
+                  } else {
+                    newExpanded.add(labelKey);
+                  }
+                  setExpandedItems(newExpanded);
                 };
 
                 return (
                   <motion.li key={labelKey} variants={itemVariants}>
-                    {isHash ? (
-                      <button
-                        onClick={() => handleNav(href)}
-                        className={linkProps.className.replace('group', 'w-full text-left group')}
-                      >
-                        {linkProps.children}
-                      </button>
+                    {hasSubItems ? (
+                      <div>
+                        <button
+                          onClick={toggleExpanded}
+                          className="group flex items-center justify-between w-full gap-4 md:gap-4 p-5 md:p-4 rounded-xl text-white hover:bg-white/10 active:bg-white/20 transition-all duration-300"
+                        >
+                          <div className="flex items-center gap-4 md:gap-4">
+                            <span className="grid place-items-center w-12 h-12 md:w-10 md:h-10 rounded-lg bg-white/10 group-hover:bg-orange-main transition-colors">
+                              <Icon className="w-6 h-6 md:w-5 md:h-5" />
+                            </span>
+                            <span className="text-xl md:text-lg font-medium">{label}</span>
+                          </div>
+                          {isExpanded ? (
+                            <ChevronDown className="w-5 h-5 text-white/60 transition-transform" />
+                          ) : (
+                            <ChevronRight className="w-5 h-5 text-white/60 transition-transform" />
+                          )}
+                        </button>
+                        
+                        <AnimatePresence>
+                          {isExpanded && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.2 }}
+                              className="ml-8 md:ml-6 mt-2 overflow-hidden"
+                            >
+                              {subItems?.map((subItem) => {
+                                const { icon: SubIcon, labelKey: subLabelKey, href: subHref } = subItem;
+                                const subLabel = t(subLabelKey);
+                                const isHash = subHref.startsWith("#");
+                                const localizedHref = getLocalizedHref(subHref);
+                                const isActive = pathname === localizedHref || 
+                                  (subHref !== "/" && pathname?.startsWith(localizedHref));
+
+                                return (
+                                  <motion.div
+                                    key={subLabelKey}
+                                    initial={{ x: -10, opacity: 0 }}
+                                    animate={{ x: 0, opacity: 1 }}
+                                    transition={{ delay: 0.1 }}
+                                    className="mb-2"
+                                  >
+                                    {isHash ? (
+                                      <button
+                                        onClick={() => handleNav(subHref)}
+                                        className={`group flex items-center gap-3 md:gap-3 p-4 md:p-3 rounded-lg text-white/80 hover:bg-white/5 active:bg-white/10 transition-all duration-300 w-full text-left ${isActive ? "bg-white/5" : ""}`}
+                                      >
+                                        <span className="grid place-items-center w-8 h-8 md:w-7 md:h-7 rounded-md bg-white/5 group-hover:bg-orange-main/50 transition-colors">
+                                          <SubIcon className="w-4 h-4 md:w-3.5 md:h-3.5" />
+                                        </span>
+                                        <span className="text-lg md:text-base font-medium">{subLabel}</span>
+                                      </button>
+                                    ) : (
+                                      <Link
+                                        href={localizedHref}
+                                        onClick={() => setIsOpen(false)}
+                                        className={`group flex items-center gap-3 md:gap-3 p-4 md:p-3 rounded-lg text-white/80 hover:bg-white/5 active:bg-white/10 transition-all duration-300 ${isActive ? "bg-white/5" : ""}`}
+                                      >
+                                        <span className="grid place-items-center w-8 h-8 md:w-7 md:h-7 rounded-md bg-white/5 group-hover:bg-orange-main/50 transition-colors">
+                                          <SubIcon className="w-4 h-4 md:w-3.5 md:h-3.5" />
+                                        </span>
+                                        <span className="text-lg md:text-base font-medium">{subLabel}</span>
+                                      </Link>
+                                    )}
+                                  </motion.div>
+                                );
+                              })}
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
                     ) : (
-                      <Link
-                        href={localizedHref}
-                        onClick={() => setIsOpen(false)}
-                        {...linkProps}
-                      >
-                        {linkProps.children}
-                      </Link>
+                      (() => {
+                        const isHash = href!.startsWith("#");
+                        const localizedHref = getLocalizedHref(href!);
+                        const isActive = pathname === localizedHref || 
+                          (href !== "/" && pathname?.startsWith(localizedHref));
+
+                        const linkProps = {
+                          className: `group flex items-center gap-4 md:gap-4 p-5 md:p-4 rounded-xl text-white hover:bg-white/10 active:bg-white/20 transition-all duration-300 ${isActive ? "bg-white/10" : ""}`,
+                          children: (
+                            <>
+                              <span className="grid place-items-center w-12 h-12 md:w-10 md:h-10 rounded-lg bg-white/10 group-hover:bg-orange-main transition-colors">
+                                <Icon className="w-6 h-6 md:w-5 md:h-5" />
+                              </span>
+                              <span className="text-xl md:text-lg font-medium">{label}</span>
+                            </>
+                          )
+                        };
+
+                        return isHash ? (
+                          <button
+                            onClick={() => handleNav(href!)}
+                            className={linkProps.className.replace('group', 'w-full text-left group')}
+                          >
+                            {linkProps.children}
+                          </button>
+                        ) : (
+                          <Link
+                            href={localizedHref}
+                            onClick={() => setIsOpen(false)}
+                            {...linkProps}
+                          >
+                            {linkProps.children}
+                          </Link>
+                        );
+                      })()
                     )}
                   </motion.li>
                 );

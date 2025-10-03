@@ -2,11 +2,14 @@
   "navigation": {
     "home": "Home",
     "about": "About",
+    "aboutUs": "About Us",
     "team": "Team",
     "whyHelpsta": "Why Helpsta?",
+    "platform": "Platform",
     "rewards": "Rewards",
     "community": "Community",
     "howItWorks": "How does it work?",
+    "support": "Support",
     "faq": "FAQ",
     "contact": "Contact",
     "downloadApp": "Download App"
