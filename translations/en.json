@@ -5,17 +5,17 @@
     "whyHelpsta": "Why Helpsta?",
     "rewards": "Rewards",
     "community": "Community",
-    "howItWorks": "How It Works",
+    "howItWorks": "How does it work?",
     "faq": "FAQ",
     "contact": "Contact",
     "downloadApp": "Download App"
   },
   "hero": {
     "title1": "Have a problem",
-    "title2": "that you can solve?",
-    "subtitle1": "Don't worry, let's",
-    "subtitle2": "get started.",
-    "description": "Join Helpsta's community platform where neighbors help each other solve problems. Post your challenges, help others, earn reward points, and redeem them for discounts at partner stores. Building stronger communities, one helping hand at a time.",
+    "title2": "you can't solve alone?",
+    "subtitle1": "Don't worry, you're",
+    "subtitle2": "not alone!",
+    "description": "Join Helpsta's community platform where people help each other solve problems. Post your challenges, help others, collect reward points, and redeem discounts at partner stores. Make your life easier! :)",
     "downloadGoogle": "Get it on Google Play",
     "downloadApple": "Download on the App Store"
   },
@@ -57,8 +57,8 @@
     ]
   },
   "HowItWorks": {
-    "title": "How it works",
-    "subtitle": "Join thousands of neighbors building stronger communities together",
+    "title": "How does it work?",
+    "subtitle": "Connect with people in your area and strengthen the community and togetherness",
     "subtitleMobile": "Follow these simple steps to start helping your community",
     "steps": {
       "download": {
@@ -66,12 +66,12 @@
         "description": "Get the Helpsta app and create your community profile in minutes."
       },
       "post": {
-        "title": "Post or Help", 
-        "description": "Share problems you need solved or offer help to neighbors in need."
+        "title": "Create help post or offer help yourself", 
+        "description": "Share problems you need solved or offer your help to neighbors."
       },
       "connect": {
         "title": "Connect & Solve",
-        "description": "Match with community members and collaborate to solve real problems."
+        "description": "Find members and connect with each other to solve everyday problems together."
       },
       "rewards": {
         "title": "Earn & Redeem",
@@ -96,12 +96,27 @@
     "verified": "Verified"
   },
   "communityPartners": {
-    "title": "Shaping the future together",
-    "subtitle": "Join our thriving ecosystem of innovative partners shaping the future of mobile technology and creating meaningful connections around the world.",
+    "title": "Shape the future together with us",
+    "subtitle": "Join our ecosystem and become an innovative partner. Helpsta connects neighborhood help with local businesses. For every completed help, both users receive Helpsta Coins. These coins can be redeemed at participating partners – like cafés, restaurants, shops, or service providers.",
     "badge": "Community Partners",
+    "explanation": {
+      "title": "How it works",
+      "description": "As a partner business, you accept Helpsta Coins and offer small discounts or benefits to customers in return. Redemption is digital and straightforward: users show a QR code that you scan or manually enter in the partner portal. The coins are automatically deducted from the user account – simple, secure, transparent."
+    },
+    "benefits": {
+      "title": "Benefits for you as a partner",
+      "items": [
+        "Gain new customers – through redemption, users come directly to your business.",
+        "More visibility – your business is prominently listed in the Helpsta app.",
+        "Image boost – you position yourself as a socially engaged company that strengthens the neighborhood.",
+        "No risk – you decide which discounts or benefits you offer.",
+        "Measurable results – you can see in the partner portal how many coins were redeemed and what reach you achieved."
+      ]
+    },
+    "community": "With Helpsta, you become part of an active community that connects neighborly help, sustainability, and local life.",
     "learnMore": "Learn More",
     "ctaTitle": "Ready to join our community?",
-    "ctaSubtitle": "Become our partner to reach millions of users and be part of the mobile revolution.",
+    "ctaSubtitle": "We're starting in Nuremberg – with the goal of connecting all of Europe. With Helpsta, a new network of togetherness is emerging. Help in everyday life becomes natural – because we believe: Together, life is easier.",
     "becomePartner": "Become a Partner"
   },
   "footer": {

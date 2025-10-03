@@ -5,17 +5,17 @@
     "whyHelpsta": "Warum Helpsta?",
     "rewards": "Belohnungen",
     "community": "Gemeinschaft",
-    "howItWorks": "Wie es funktioniert",
+    "howItWorks": "Wie funktioniert es?",
     "faq": "FAQ",
     "contact": "Kontakt",
     "downloadApp": "App herunterladen"
   },
   "hero": {
-    "title1": "Haben Sie ein Problem",
-    "title2": "das Sie lösen können?",
-    "subtitle1": "Keine Sorge, lassen",
-    "subtitle2": "Sie uns anfangen.",
-    "description": "Treten Sie Helpstas Community-Plattform bei, wo Nachbarn einander bei der Lösung von Problemen helfen. Posten Sie Ihre Herausforderungen, helfen Sie anderen, sammeln Sie Belohnungspunkte und lösen Sie sie für Rabatte in Partnershops ein. Stärkere Gemeinschaften aufbauen, eine helfende Hand nach der anderen.",
+    "title1": "Du hast ein Problem",
+    "title2": "das du alleine nicht lösen kannst?",
+    "subtitle1": "Keine Sorge, du bist",
+    "subtitle2": "nicht allein!",
+    "description": "Trete Helpstas Community-Plattform bei, wo Menschen einander bei der Lösung von Problemen helfen. Poste deine Herausforderungen, helfe anderen, sammle Belohnungspunkte und löse Rabatte in Partnershops ein. Mache dein Leben einfacher! :)",
     "downloadGoogle": "Bei Google Play herunterladen",
     "downloadApple": "Im App Store herunterladen"
   },
@@ -57,8 +57,8 @@
     ]
   },
   "HowItWorks": {
-    "title": "Wie es funktioniert",
-    "subtitle": "Schließe dich Tausenden von Nachbarn an, die gemeinsam stärkere Gemeinschaften aufbauen",
+    "title": "Wie funktioniert es?",
+    "subtitle": "Connecte dich mit Menschen in deiner Gegend und stärke somit auch den Zusammenhalt und die Gemeinschaft",
     "subtitleMobile": "Folge diesen einfachen Schritten, um deiner Gemeinschaft zu helfen", 
     "steps": {
       "download": {
@@ -66,12 +66,12 @@
         "description": "Lade die Helpsta-App herunter und erstelle in wenigen Minuten dein Community-Profil."
       },
       "post": {
-        "title": "Posten oder Helfen",
-        "description": "Teile Probleme mit, die du gelöst haben möchtest, oder biete Nachbarn in Not deine Hilfe an."
+        "title": "Hilfe-Post erstellen oder selbst Hilfe anbieten",
+        "description": "Teile Probleme mit, die du gelöst haben möchtest, oder biete Nachbarn deine Hilfe an."
       },
       "connect": {
         "title": "Vernetzen & Lösen", 
-        "description": "Finde Community-Mitglieder und arbeitet zusammen, um echte Probleme zu lösen."
+        "description": "Finde Mitglieder und connected euch, um gemeinsam Alltagsprobleme zu lösen."
       },
       "rewards": {
         "title": "Sammeln & Einlösen",
@@ -96,12 +96,27 @@
     "verified": "Verifiziert"
   },
   "communityPartners": {
-    "title": "Die Zukunft gemeinsam gestalten",
-    "subtitle": "Treten Sie unserem florierenden Ökosystem innovativer Partner bei, die die Zukunft der mobilen Technologie prägen und weltweit bedeutungsvolle Verbindungen schaffen.",
+    "title": "Gestaltet mit uns gemeinsam die Zukunft",
+    "subtitle": "Trete unserem Ökosystem bei und werde innovativer Partner. Helpsta verbindet Nachbarschaftshilfe mit dem lokalen Handel. Für jede abgeschlossene Hilfe erhalten beide Nutzer:innen Helpsta Coins. Diese Coins können sie bei teilnehmenden Partnern – wie Cafés, Restaurants, Läden oder Dienstleistern – einlösen.",
     "badge": "Gemeinschaftspartner",
+    "explanation": {
+      "title": "Erklärung",
+      "description": "Als Partnerbetrieb nehmen Sie Helpsta Coins an und geben dafür kleine Rabatte oder Vorteile für die Kunden. Die Einlösung läuft digital und unkompliziert: Nutzer zeigen einen QR-Code, den Sie scannen oder manuell im Partner-Portal eintragen. Die Coins werden automatisch vom Nutzerkonto abgezogen – einfach, sicher, transparent."
+    },
+    "benefits": {
+      "title": "Vorteile für sie als Partner",
+      "items": [
+        "Neue Kundschaft gewinnen – durch die Einlösung kommen Nutzer:innen direkt in Ihr Geschäft.",
+        "Mehr Sichtbarkeit – Ihr Betrieb wird prominent in der Helpsta-App gelistet.",
+        "Imagegewinn – Sie positionieren sich als sozial engagiertes Unternehmen, das die Nachbarschaft stärkt.",
+        "Kein Risiko – Sie entscheiden selbst, welche Rabatte oder Vorteile Sie anbieten.",
+        "Messbare Ergebnisse – Sie sehen im Partner-Portal jederzeit, wie viele Coins eingelöst wurden und welche Reichweite Sie erzielt haben."
+      ]
+    },
+    "community": "Mit Helpsta werden Sie Teil einer aktiven Community, die Nächstenhilfe, Nachhaltigkeit und lokales Leben verbindet.",
     "learnMore": "Mehr erfahren",
     "ctaTitle": "Bereit, unserer Gemeinschaft beizutreten?",
-    "ctaSubtitle": "Werden Sie unser Partner, um Millionen von Nutzern zu erreichen und Teil der mobilen Revolution zu sein.",
+    "ctaSubtitle": "Wir starten in Nürnberg – mit dem Ziel, ganz Europa zu verbinden. Mit Helpsta entsteht ein neues Netzwerk des Miteinanders. Hilfe im Alltag wird selbstverständlich – denn wir sind überzeugt: Zusammen ist das Leben leichter.",
     "becomePartner": "Partner werden"
   },
   "footer": {
