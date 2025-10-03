@@ -10,6 +10,7 @@ import { CommunityPartners } from '@/components/sections/CommunityPartners';
 import { LoadingScreen } from '@/components/LoadingScreen';
 import { Footer } from '@/components/sections/Footer';
 import { useHashScrollOnLoad } from '@/hooks/useHashScrollOnLoad';
+import WhyHelpsta  from '@/components/sections/WhyHelpsta';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -60,6 +61,7 @@ export default function Home() {
             <HowItWorks />
             <RewardPartners />
             <CommunityPartners />
+            <WhyHelpsta/>
             <Footer />
           </main>
         )}
